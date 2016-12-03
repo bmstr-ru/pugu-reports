@@ -6,11 +6,23 @@ package ru.bmstr.pugu.domain;
 public class SuitSumm {
     private double summ;
 
+    public SuitSumm() {
+
+    }
+
     public SuitSumm (double summ) {
-        this.summ = summ;
+        this.setSumm(summ);
+    }
+
+    public double getSumm() {
+        return summ;
     }
 
     public String toString() {
-        return Double.toString(summ);
+        return Double.toString(getSumm());
+    }
+
+    public void setSumm(double summ) {
+        this.summ = summ;
     }
 }
