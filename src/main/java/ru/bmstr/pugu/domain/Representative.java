@@ -4,6 +4,7 @@ package ru.bmstr.pugu.domain;
  * Created by bmstr on 03.12.2016.
  */
 public enum Representative {
+    EMPTY("","",""),
     BOITSOVA("Ольга", "Николаевна", "Бойцова"),
     AZARENKO("Илья", "Викторович", "Азаренко"),
     RANEVA("Анна", "Александровна", "Ранева"),

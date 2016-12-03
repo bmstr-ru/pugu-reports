@@ -4,13 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ru.bmstr.pugu.domain.*;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 /**
@@ -26,6 +22,9 @@ public class MainFrame extends JFrame {
 
     @Autowired
     private TableData contentTable;
+
+    @Autowired
+    private RowModifyDialog rowModifyDialog;
 
     static {
         try {
@@ -98,6 +97,9 @@ public class MainFrame extends JFrame {
         panel.setLayout(new FlowLayout());
         panel.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
         JButton add = new JButton("+");
+        add.addActionListener( actionEvent -> {
+            SwingUtilities.invokeLater(() -> rowModifyDialog.showAddRow());
+        });
         JButton substract = new JButton("-");
         substract.addActionListener( action -> {
 

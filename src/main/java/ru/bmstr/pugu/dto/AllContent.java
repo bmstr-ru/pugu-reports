@@ -68,9 +68,9 @@ public class AllContent {
 
     public Object getValueAt(int rowIndex, int columnIndex) {
         Suit suit = suits.get(rowIndex);
-        switch(columnIndex) {
+        switch (columnIndex) {
             case 0:
-                return rowIndex+1;
+                return rowIndex + 1;
             case 1:
                 return suit.getCategory();
             case 2:
@@ -80,11 +80,13 @@ public class AllContent {
             case 4:
                 return suit.getDefendant();
             case 5:
-                return suit.getResult();
+                return suit.getRepresentative();
             case 6:
+                return suit.getResult();
+            case 7:
                 return suit.getAgreedSumm();
             default:
-                throw new RuntimeException("Tried to get column number "+columnIndex+" which is missing");
+                throw new RuntimeException("Tried to get column number " + columnIndex + " which is missing");
         }
     }
 }
