@@ -102,7 +102,17 @@ public class MainFrame extends JFrame {
         });
         JButton substract = new JButton("-");
         substract.addActionListener( action -> {
-
+            if (contentTable.noRowsSelected()) {
+                JOptionPane.showMessageDialog(window, "Выберете хотя бы один иск для удаления");
+            } else {
+                int n = JOptionPane.showConfirmDialog(
+                        window, "Вы действительно хотите удалить выбранные иски?",
+                        "Удалить",
+                        JOptionPane.YES_NO_OPTION);
+                if (n == JOptionPane.YES_OPTION) {
+                    contentTable.deleteSelected();
+                }
+            }
         });
         panel.add(add);
         panel.add(substract);

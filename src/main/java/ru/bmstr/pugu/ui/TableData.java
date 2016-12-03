@@ -20,4 +20,14 @@ public class TableData extends JTable {
         this.setModel(tableModel);
     }
 
+    public void deleteSelected() {
+        if (this.getSelectedRows().length != 0) {
+            tableModel.deleteSelected(this.getSelectedRows());
+        }
+    }
+
+    public boolean noRowsSelected() {
+        return this.getSelectedRows().length == 0;
+    }
+
 }

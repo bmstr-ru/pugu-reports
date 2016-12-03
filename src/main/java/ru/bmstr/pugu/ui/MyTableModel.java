@@ -2,8 +2,10 @@ package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.domain.Suit;
 import ru.bmstr.pugu.dto.AllContent;
 
+import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -35,5 +37,19 @@ public class MyTableModel extends AbstractTableModel {
     @Override
     public String getColumnName(int col) {
         return COLUMN_NAMES[col];
+    }
+
+    public void addRow(Suit suit) {
+        allContent.addRow(suit);
+        reDraw();
+    }
+
+    public void deleteSelected(int[] selected) {
+        allContent.deleteRows(selected);
+        reDraw();
+    }
+
+    public void reDraw() {
+        SwingUtilities.invokeLater(() -> this.fireTableDataChanged() );
     }
 }

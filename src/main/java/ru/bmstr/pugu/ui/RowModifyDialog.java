@@ -1,6 +1,8 @@
 package ru.bmstr.pugu.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import ru.bmstr.pugu.domain.*;
+import ru.bmstr.pugu.dto.AllContent;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,6 +12,8 @@ import java.awt.*;
  */
 public class RowModifyDialog extends JDialog {
 
+    private static final int DEFAULT_WIDTH = 500;
+    private static final int DEFAULT_HEIGHT = 300;
     private JComboBox categoryChoise;
     private JComboBox defendantChoise;
     private JTextField plaintiffChoise;
@@ -18,11 +22,17 @@ public class RowModifyDialog extends JDialog {
     private JComboBox resultChoise;
     private JComboBox representativeChoise;
 
+    @Autowired
+    private MyTableModel tableModel;
+
     public RowModifyDialog(Frame owner, String title, boolean isModal) {
         super(owner, title, isModal);
-        this.setSize(new Dimension(400, 500));
+        this.setSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
         this.setLocationRelativeTo(this.getOwner());
-        initComponents();
+        Container pane = this.getContentPane();
+        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
+        pane.add(getInputDataPanel());
+        pane.add(getControlButtonsPanel());
     }
 
     public void showAddRow() {
@@ -42,17 +52,11 @@ public class RowModifyDialog extends JDialog {
         this.setVisible(true);
     }
 
-    private void initComponents() {
-        GridBagLayout layout = new GridBagLayout();
+    private JPanel getInputDataPanel() {
+        GridLayout layout = new GridLayout(7,2);
         JPanel dataPanel = new JPanel(layout);
-//        Container contentPane = getContentPane();
-        GridBagConstraints c = new GridBagConstraints();
-        c.ipadx = 5;
-        c.ipady = 5;
-        c.weightx = 0.5;
-        c.weighty = 0.5;
-        c.fill = GridBagConstraints.HORIZONTAL;
 
+        JLabel representativeLabel = new JLabel("Представитель:");
         JLabel categoryLabel = new JLabel("Категория:");
         JLabel defendantLabel = new JLabel("Ответчик:");
         JLabel plaintiffLabel = new JLabel("Истец:");
@@ -68,54 +72,49 @@ public class RowModifyDialog extends JDialog {
         resultChoise = new JComboBox(Result.values());
         representativeChoise = new JComboBox(Representative.values());
 
-        c.gridx = 0;
-        c.gridy = 0;
-        layout.setConstraints(categoryLabel, c);
+        dataPanel.add(representativeLabel);
+        dataPanel.add(representativeChoise);
+
         dataPanel.add(categoryLabel);
-        c.gridx = 1;
-        layout.setConstraints(categoryChoise, c);
         dataPanel.add(categoryChoise);
 
-        c.gridx = 0;
-        c.gridy = 1;
-        layout.setConstraints(defendantLabel, c);
         dataPanel.add(defendantLabel);
-        c.gridx = 1;
-        layout.setConstraints(defendantChoise, c);
         dataPanel.add(defendantChoise);
 
-        c.gridx = 0;
-        c.gridy = 2;
-        layout.setConstraints(plaintiffLabel, c);
         dataPanel.add(plaintiffLabel);
-        c.gridx = 1;
-        layout.setConstraints(plaintiffChoise, c);
         dataPanel.add(plaintiffChoise);
 
-        c.gridx = 0;
-        c.gridy = 3;
-        layout.setConstraints(initialSummLabel, c);
         dataPanel.add(initialSummLabel);
-        c.gridx = 1;
-        layout.setConstraints(initialSummChoise, c);
         dataPanel.add(initialSummChoise);
 
-        c.gridx = 0;
-        c.gridy = 4;
-        layout.setConstraints(resultLabel, c);
         dataPanel.add(resultLabel);
-        c.gridx = 1;
-        layout.setConstraints(resultChoise, c);
         dataPanel.add(resultChoise);
 
-        c.gridx = 0;
-        c.gridy = 5;
-        layout.setConstraints(agreedSummLabel, c);
         dataPanel.add(agreedSummLabel);
-        c.gridx = 1;
-        layout.setConstraints(agreedSummChoise, c);
         dataPanel.add(agreedSummChoise);
 
-        this.add(dataPanel);
+        return dataPanel;
+    }
+
+    private JPanel getControlButtonsPanel() {
+        JPanel controlPanel = new JPanel();
+        JButton save = new JButton("Сохранить");
+
+        final JDialog thisDialog = this;
+        save.addActionListener( action -> {
+            Suit suit = new Suit(
+                    (Category) categoryChoise.getSelectedItem(),
+                    new Plaintiff(plaintiffChoise.getText()),
+                    (Defendant) defendantChoise.getSelectedItem(),
+                    new SuitSumm(Double.valueOf(initialSummChoise.getText())),
+                    new SuitSumm(Double.valueOf(agreedSummChoise.getText())),
+                    (Result) resultChoise.getSelectedItem(),
+                    (Representative) representativeChoise.getSelectedItem()
+            );
+            tableModel.addRow(suit);
+            thisDialog.setVisible(false);
+        });
+        controlPanel.add(save);
+        return controlPanel;
     }
 }

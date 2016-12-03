@@ -7,7 +7,7 @@ public enum Category {
     EMPTY(""),
     TYSHA_69("1069"),
     OSPARIVANII_RESH_GOS_ORG("Об оспаривании решения гос. органов"),
-    IZYATIE_IMUSHESTVA("Изъятие имущзества"),
+    IZYATIE_IMUSHESTVA("Изъятие имущества"),
     IVS("ИВС"),
     TYSHA_70("1070"),
     SUDOPROIZVODSTVO("Судопроизводство"),

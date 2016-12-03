@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,10 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.io.File;
 import java.io.IOException;
+import java.io.InterruptedIOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -35,7 +39,6 @@ public class AllContent {
             mapper.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
             suits = mapper.readValue(new File(DEFAULT_READ_FILEPATH), mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
-//            mapper.rea(new File(DEFAULT_CONTENT_FILEPATH), suits);
         } catch (IOException e) {
             log.error("Error while storing data to json file", e);
         }
@@ -54,12 +57,17 @@ public class AllContent {
         }
     }
 
-    public void restore() {
-
+    public void addRow(Suit suit) {
+        suits.add(suit);
     }
 
-    public void draw() {
-
+    public void deleteRows(int[] rows) {
+        Arrays.asList(ArrayUtils.toObject(rows))
+                .stream()
+                .sorted((i1,i2) -> Integer.compare(i2,i1))
+                .forEach( i -> {
+            suits.remove(i.intValue());
+        });
     }
 
     public int getRowCount() {
