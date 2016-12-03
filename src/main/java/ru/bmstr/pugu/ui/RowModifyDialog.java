@@ -2,10 +2,15 @@ package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.bmstr.pugu.domain.*;
-import ru.bmstr.pugu.dto.AllContent;
 
 import javax.swing.*;
+import javax.swing.text.DefaultFormatterFactory;
+import javax.swing.text.NumberFormatter;
+import javax.swing.text.PlainDocument;
 import java.awt.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 /**
  * Created by bmstr on 27.11.2016.
@@ -16,11 +21,13 @@ public class RowModifyDialog extends JDialog {
     private static final int DEFAULT_HEIGHT = 300;
     private JComboBox categoryChoise;
     private JComboBox defendantChoise;
-    private JTextField plaintiffChoise;
-    private JTextField initialSummChoise;
-    private JTextField agreedSummChoise;
+    private JTextField plaintiffInput;
+    private JFormattedTextField initialSummInput;
+    private JFormattedTextField agreedSummInput;
     private JComboBox resultChoise;
     private JComboBox representativeChoise;
+
+    private Suit modifiableSuit;
 
     @Autowired
     private MyTableModel tableModel;
@@ -36,19 +43,28 @@ public class RowModifyDialog extends JDialog {
     }
 
     public void showAddRow() {
+        modifiableSuit = null;
         this.setTitle("Введите данные иска");
         categoryChoise.setSelectedItem(Category.EMPTY);
         defendantChoise.setSelectedItem(Defendant.EMPTY);
-        plaintiffChoise.setText("");
-        initialSummChoise.setText("");
-        agreedSummChoise.setText("");
+        plaintiffInput.setText("");
+        initialSummInput.setValue(new Double(0));
+        agreedSummInput.setValue(new Double(0));
         resultChoise.setSelectedItem(Result.EMPTY);
         representativeChoise.setSelectedItem(Representative.EMPTY);
         this.setVisible(true);
     }
 
     public void showModifyRow(Suit suit) {
+        modifiableSuit = suit;
         this.setTitle("Иск от гр. " + suit.getPlaintiff());
+        categoryChoise.setSelectedItem(suit.getCategory());
+        defendantChoise.setSelectedItem(suit.getDefendant());
+        plaintiffInput.setText(suit.getPlaintiff().getName());
+        initialSummInput.setValue(suit.getInitialSumm().getSumm());
+        agreedSummInput.setValue(suit.getAgreedSumm().getSumm());
+        resultChoise.setSelectedItem(suit.getResult());
+        representativeChoise.setSelectedItem(suit.getRepresentative());
         this.setVisible(true);
     }
 
@@ -64,11 +80,13 @@ public class RowModifyDialog extends JDialog {
         JLabel resultLabel = new JLabel("Решение:");
         JLabel agreedSummLabel = new JLabel("Сумма удовлетворённых требований:");
 
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+        numberFormat.setMinimumFractionDigits(2);
         categoryChoise = new JComboBox(Category.values());
         defendantChoise = new JComboBox(Defendant.values());
-        plaintiffChoise = new JTextField();
-        initialSummChoise = new JTextField();
-        agreedSummChoise = new JTextField();
+        plaintiffInput = new JTextField();
+        initialSummInput = new JFormattedTextField(numberFormat);
+        agreedSummInput = new JFormattedTextField(numberFormat);
         resultChoise = new JComboBox(Result.values());
         representativeChoise = new JComboBox(Representative.values());
 
@@ -82,16 +100,16 @@ public class RowModifyDialog extends JDialog {
         dataPanel.add(defendantChoise);
 
         dataPanel.add(plaintiffLabel);
-        dataPanel.add(plaintiffChoise);
+        dataPanel.add(plaintiffInput);
 
         dataPanel.add(initialSummLabel);
-        dataPanel.add(initialSummChoise);
+        dataPanel.add(initialSummInput);
 
         dataPanel.add(resultLabel);
         dataPanel.add(resultChoise);
 
         dataPanel.add(agreedSummLabel);
-        dataPanel.add(agreedSummChoise);
+        dataPanel.add(agreedSummInput);
 
         return dataPanel;
     }
@@ -102,16 +120,27 @@ public class RowModifyDialog extends JDialog {
 
         final JDialog thisDialog = this;
         save.addActionListener( action -> {
-            Suit suit = new Suit(
-                    (Category) categoryChoise.getSelectedItem(),
-                    new Plaintiff(plaintiffChoise.getText()),
-                    (Defendant) defendantChoise.getSelectedItem(),
-                    new SuitSumm(Double.valueOf(initialSummChoise.getText())),
-                    new SuitSumm(Double.valueOf(agreedSummChoise.getText())),
-                    (Result) resultChoise.getSelectedItem(),
-                    (Representative) representativeChoise.getSelectedItem()
-            );
-            tableModel.addRow(suit);
+            if (modifiableSuit != null) {
+                modifiableSuit.setCategory((Category) categoryChoise.getSelectedItem());
+                modifiableSuit.setPlaintiff(new Plaintiff(plaintiffInput.getText()));
+                modifiableSuit.setDefendant((Defendant) defendantChoise.getSelectedItem());
+                modifiableSuit.setInitialSumm(new SuitSumm(((Number) initialSummInput.getValue()).doubleValue()));
+                modifiableSuit.setAgreedSumm(new SuitSumm(((Number) agreedSummInput.getValue()).doubleValue()));
+                modifiableSuit.setResult((Result) resultChoise.getSelectedItem());
+                modifiableSuit.setRepresentative((Representative) representativeChoise.getSelectedItem());
+                tableModel.reDraw();
+            } else {
+                Suit suit = new Suit(
+                        (Category) categoryChoise.getSelectedItem(),
+                        new Plaintiff(plaintiffInput.getText()),
+                        (Defendant) defendantChoise.getSelectedItem(),
+                        new SuitSumm(((Number) initialSummInput.getValue()).doubleValue()),
+                        new SuitSumm(((Number) agreedSummInput.getValue()).doubleValue()),
+                        (Result) resultChoise.getSelectedItem(),
+                        (Representative) representativeChoise.getSelectedItem()
+                );
+                tableModel.addRow(suit);
+            }
             thisDialog.setVisible(false);
         });
         controlPanel.add(save);

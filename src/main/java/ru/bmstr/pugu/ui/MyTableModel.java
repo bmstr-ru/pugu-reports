@@ -44,6 +44,10 @@ public class MyTableModel extends AbstractTableModel {
         reDraw();
     }
 
+    public Suit getRow(int rowId) {
+        return allContent.getSuit(rowId);
+    }
+
     public void deleteSelected(int[] selected) {
         allContent.deleteRows(selected);
         reDraw();

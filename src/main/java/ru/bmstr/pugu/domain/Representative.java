@@ -18,7 +18,7 @@ public enum Representative {
     GILYAZOVA("Альмира", "Рашидовна", "Гилязова"),
     BASTRAKOVA("Екатерина", "", "Екатерина"),
     CHUGINA("Ирина", "Валерьевна", "Чугина"),
-    DARIA("Дарья", "", "")
+    DARIA("Даша", "Даша", "Даша")
     ;
     private String name;
     private String midname;

@@ -74,6 +74,10 @@ public class AllContent {
         return suits.size();
     }
 
+    public Suit getSuit(int rowId) {
+        return suits.get(rowId);
+    }
+
     public Object getValueAt(int rowIndex, int columnIndex) {
         Suit suit = suits.get(rowIndex);
         switch (columnIndex) {

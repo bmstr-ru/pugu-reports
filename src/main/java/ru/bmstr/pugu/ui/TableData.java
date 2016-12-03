@@ -1,10 +1,14 @@
 package ru.bmstr.pugu.ui;
 
+import org.opendope.answers.Repeat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * Created by bmstr on 03.12.2016.
@@ -15,9 +19,24 @@ public class TableData extends JTable {
     @Autowired
     private MyTableModel tableModel;
 
+    @Autowired
+    private RowModifyDialog rowModifyDialog;
+
     @PostConstruct
     private void loadDefaultValues() {
         this.setModel(tableModel);
+
+        this.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent event) {
+                JTable table = (JTable) event.getSource();
+                Point p = event.getPoint();
+                int rowId = table.rowAtPoint(p);
+                if (event.getClickCount() == 2) {
+                    SwingUtilities.invokeLater(() -> rowModifyDialog.showModifyRow(tableModel.getRow(rowId)));
+                }
+            }
+        });
     }
 
     public void deleteSelected() {

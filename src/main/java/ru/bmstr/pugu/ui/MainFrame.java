@@ -105,10 +105,17 @@ public class MainFrame extends JFrame {
             if (contentTable.noRowsSelected()) {
                 JOptionPane.showMessageDialog(window, "Выберете хотя бы один иск для удаления");
             } else {
-                int n = JOptionPane.showConfirmDialog(
-                        window, "Вы действительно хотите удалить выбранные иски?",
+                Object[] choices = {"Удалить", "Отмена"};
+                Object defaultChoice = choices[1];
+                int n = JOptionPane.showOptionDialog(
+                        window,
+                        "Вы действительно хотите удалить выбранные иски?",
                         "Удалить",
-                        JOptionPane.YES_NO_OPTION);
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        choices,
+                        defaultChoice);
                 if (n == JOptionPane.YES_OPTION) {
                     contentTable.deleteSelected();
                 }
