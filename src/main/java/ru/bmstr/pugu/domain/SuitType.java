@@ -4,7 +4,13 @@ package ru.bmstr.pugu.domain;
  * Created by bmstr on 04.12.2016.
  */
 public enum SuitType {
-    USUAL("Иск к нам"), OUR("Иск наш"), APPELATION("Жалобы не вступившие"), CASSATION("Жалобы вступившие");
+    USUAL("Иск к нам"),
+    OUR("Иск наш"),
+    APPELATION("Жалобы не вступившие"),
+    CASSATION("Жалобы вступившие"),
+    OUR_APPELATION("Жалобы наши не вступившие"),
+    OUR_CASSATION("Жалобы наши вступившие"),
+    ;
 
     String name;
     SuitType(String name) {

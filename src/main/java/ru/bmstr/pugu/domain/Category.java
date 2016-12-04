@@ -49,6 +49,10 @@ public enum Category {
         return name;
     }
 
+    public SuitType getType() {
+        return type;
+    }
+
     public String toString() {
         return name;
     }
