@@ -17,7 +17,7 @@ public class MyTableModel extends AbstractTableModel {
     @Autowired
     private AllContent allContent;
 
-    private final static String[] COLUMN_NAMES = {"№", "Категория", "Истец", "Сумма", "Ответчик", "Представитель", "Решение", "Удовлетворённая сумма"};
+    private final static String[] COLUMN_NAMES = {"№", "Год", "Тип иска", "Категория", "Истец", "Сумма", "Ответчик", "Решение", "Удовлетворённая сумма"};
 
     @Override
     public int getRowCount() {

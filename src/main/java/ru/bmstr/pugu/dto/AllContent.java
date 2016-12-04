@@ -38,10 +38,12 @@ public class AllContent {
         DATA_PATH.mkdirs();
         File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
         try {
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
-            mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            suits = mapper.readValue(dataFile, mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
+            if (dataFile.exists()) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
+                mapper.enable(SerializationFeature.INDENT_OUTPUT);
+                suits = mapper.readValue(dataFile, mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
+            }
         } catch (IOException e) {
             log.error("Error while storing data to json file", e);
         }
@@ -106,18 +108,20 @@ public class AllContent {
             case 0:
                 return rowIndex + 1;
             case 1:
-                return suit.getCategory();
+                return suit.getYear();
             case 2:
-                return suit.getPlaintiff();
+                return suit.getType();
             case 3:
-                return suit.getInitialSumm();
+                return suit.getCategory();
             case 4:
-                return suit.getDefendant();
+                return suit.getPlaintiff();
             case 5:
-                return suit.getRepresentative();
+                return suit.getInitialSumm();
             case 6:
-                return suit.getResult();
+                return suit.getDefendant();
             case 7:
+                return suit.getResult();
+            case 8:
                 return suit.getAgreedSumm();
             default:
                 throw new RuntimeException("Tried to get column number " + columnIndex + " which is missing");
