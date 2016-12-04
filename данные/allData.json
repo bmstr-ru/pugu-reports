@@ -69,20 +69,6 @@
   "result" : "NONE",
   "representative" : "ERMASHEVA"
 }, {
-  "category" : "MIGRATSIYA",
-  "defendant" : "KAZNA",
-  "plaintiff" : {
-    "name" : "Фигов"
-  },
-  "initialSumm" : {
-    "summ" : 3000.0
-  },
-  "agreedSumm" : {
-    "summ" : 2000.0
-  },
-  "result" : "APPROVE",
-  "representative" : "AZARENKO"
-}, {
   "category" : "TYSHA_69",
   "defendant" : "MVD",
   "plaintiff" : {
@@ -139,31 +125,31 @@
   "result" : "DECLINE",
   "representative" : "RANEVA"
 }, {
-  "category" : "TYSHA_70",
+  "category" : "IZYATIE_IMUSHESTVA",
   "defendant" : "MVD",
   "plaintiff" : {
-    "name" : "Срачкин"
+    "name" : "Ты"
   },
   "initialSumm" : {
-    "summ" : 500.0
+    "summ" : 50000.0
+  },
+  "agreedSumm" : {
+    "summ" : 700000.0
+  },
+  "result" : "APPROVE",
+  "representative" : "RANEVA"
+}, {
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "KAZNA",
+  "plaintiff" : {
+    "name" : ""
+  },
+  "initialSumm" : {
+    "summ" : 0.0
   },
   "agreedSumm" : {
     "summ" : 0.0
   },
-  "result" : "NONE",
-  "representative" : "ERMASHEVA"
-}, {
-  "category" : "MIGRATSIYA",
-  "defendant" : "KAZNA",
-  "plaintiff" : {
-    "name" : "Фигов"
-  },
-  "initialSumm" : {
-    "summ" : 3000.0
-  },
-  "agreedSumm" : {
-    "summ" : 2000.0
-  },
-  "result" : "APPROVE",
+  "result" : "EMPTY",
   "representative" : "AZARENKO"
 } ]

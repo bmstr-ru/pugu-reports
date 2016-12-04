@@ -15,6 +15,7 @@ import javax.annotation.PreDestroy;
 import java.io.File;
 import java.io.IOException;
 import java.io.InterruptedIOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -27,18 +28,20 @@ import java.util.List;
 public class AllContent {
 
     private static final Logger log = LogManager.getLogger(AllContent.class);
-    private static final String DEFAULT_CONTENT_FILEPATH = "allData.json";
-    private static final String DEFAULT_READ_FILEPATH = "allData.bck.json";
+    private static final File DATA_PATH = new File("данные");
+    private static final String DEFAULT_CONTENT_FILENAME = "allData.json";
 
     private List<Suit> suits = new ArrayList<>();
 
     @PostConstruct
-    private void loadDefaultValues() {
+    private void loadLastData() {
+        DATA_PATH.mkdirs();
+        File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
         try {
             ObjectMapper mapper = new ObjectMapper();
             mapper.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            suits = mapper.readValue(new File(DEFAULT_READ_FILEPATH), mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
+            suits = mapper.readValue(dataFile, mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
         } catch (IOException e) {
             log.error("Error while storing data to json file", e);
         }
@@ -48,13 +51,32 @@ public class AllContent {
     @PreDestroy
     public void store() {
         try {
+            File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
+            if (dataFile.exists()) {
+                backUp(dataFile);
+            }
+
             ObjectMapper mapper = new ObjectMapper();
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            mapper.writeValue(new File(DEFAULT_CONTENT_FILEPATH), suits);
-            System.out.println(mapper.writeValueAsString(suits));
+            mapper.writeValue(dataFile, suits);
         } catch (IOException e) {
             log.error("Error while storing data to json file", e);
         }
+    }
+
+    public void backUp(File file) {
+        LocalDateTime timePoint = LocalDateTime.now();
+        String backUpFilePath = file.getAbsolutePath()
+                .replace(
+                        ".json",
+                        "_" + timePoint.getYear() + "-" +
+                                timePoint.getMonthValue() + "-" +
+                                timePoint.getDayOfMonth() + "_" +
+                                timePoint.getHour() + "-" +
+                                timePoint.getMinute() + "-" +
+                                timePoint.getSecond() + ".json");
+        file.renameTo(new File(backUpFilePath));
+
     }
 
     public void addRow(Suit suit) {
@@ -64,10 +86,10 @@ public class AllContent {
     public void deleteRows(int[] rows) {
         Arrays.asList(ArrayUtils.toObject(rows))
                 .stream()
-                .sorted((i1,i2) -> Integer.compare(i2,i1))
-                .forEach( i -> {
-            suits.remove(i.intValue());
-        });
+                .sorted((i1, i2) -> Integer.compare(i2, i1))
+                .forEach(i -> {
+                    suits.remove(i.intValue());
+                });
     }
 
     public int getRowCount() {
