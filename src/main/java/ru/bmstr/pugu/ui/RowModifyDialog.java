@@ -17,8 +17,14 @@ public class RowModifyDialog extends JDialog {
     private static final int DEFAULT_WIDTH = 500;
     private static final int DEFAULT_HEIGHT = 300;
 
-    private static final String DEFENDANT = "Ответчик:";
-    private static final String PLAINTIFF = "Истец:";
+    private static final String YEAR_STRING = "Год:";
+    private static final String CATEGORY_STRING = "Категория:";
+    private static final String PLAINTIFF_STRING = "Истец:";
+    private static final String DEFENDANT_STRING = "Ответчик:";
+    private static final String INITIAL_SUMM_STRING = "Сумма иска:";
+    private static final String RESULT_STRING = "Решение:";
+    private static final String AGREED_SUMM_STRING = "Сумма удовлетворённых требований:";
+
     private JComboBox yearChoise;
     private JComboBox categoryChoise;
     private DefaultComboBoxModel usualCategories;
@@ -98,12 +104,21 @@ public class RowModifyDialog extends JDialog {
         initialSummInput.setValue(suit.getInitialSumm());
         agreedSummInput.setValue(suit.getAgreedSumm());
         resultChoise.setSelectedItem(suit.getResult());
-        switch (suit.getType()) {
+        setDependantComponents(suit.getType());
+        this.setVisible(true);
+    }
+
+    private void setDependantComponents(SuitType type) {
+        switch (type) {
             case USUAL:
                 usualButton.setSelected(true);
+                plaintiffLabel.setText(PLAINTIFF_STRING);
+                defendantLabel.setText(DEFENDANT_STRING);
                 break;
             case OUR:
                 ourButton.setSelected(true);
+                plaintiffLabel.setText(DEFENDANT_STRING);
+                defendantLabel.setText(PLAINTIFF_STRING);
                 break;
             case APPELATION:
                 appelationButton.setSelected(true);
@@ -111,8 +126,13 @@ public class RowModifyDialog extends JDialog {
             case CASSATION:
                 cassationButton.setSelected(true);
                 break;
+            case OUR_APPELATION:
+                ourAppelationButton.setSelected(true);
+                break;
+            case OUR_CASSATION:
+                ourCassationButton.setSelected(true);
+                break;
         }
-        this.setVisible(true);
     }
 
     private JPanel getTypeChoisePanel() {
@@ -124,16 +144,14 @@ public class RowModifyDialog extends JDialog {
                 switch (SuitType.valueOf(command)) {
                     case USUAL:
                         categoryChoise.setModel(usualCategories);
-                        defendantLabel.setText(DEFENDANT);
-                        plaintiffLabel.setText(PLAINTIFF);
                         break;
                     case OUR:
                         categoryChoise.setModel(ourCategories);
                         break;
                     case APPELATION:
-                        categoryChoise.setModel(emptyCategories);
-                        break;
                     case CASSATION:
+                    case OUR_APPELATION:
+                    case OUR_CASSATION:
                         categoryChoise.setModel(emptyCategories);
                         break;
                 }
