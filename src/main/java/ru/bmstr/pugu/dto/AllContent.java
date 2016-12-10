@@ -52,15 +52,18 @@ public class AllContent {
 
     @PreDestroy
     public void store() {
+        store(new File(DATA_PATH, DEFAULT_CONTENT_FILENAME));
+    }
+
+    public void store(File saveTo) {
         try {
-            File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
-            if (dataFile.exists()) {
-                backUp(dataFile);
+            if (saveTo.exists()) {
+                backUp(saveTo);
             }
 
             ObjectMapper mapper = new ObjectMapper();
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            mapper.writeValue(dataFile, suits);
+            mapper.writeValue(saveTo, suits);
         } catch (IOException e) {
             log.error("Error while storing data to json file", e);
         }

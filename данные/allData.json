@@ -1,1 +1,5347 @@
-[ ]
+[ {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ушаков",
+  "initialSumm" : 403500,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кремень",
+  "initialSumm" : 859811,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "малышева",
+  "initialSumm" : 38539,
+  "agreedSumm" : 38539,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "замятин",
+  "initialSumm" : 2730,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Доброзорова 2",
+  "initialSumm" : 25000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ильин",
+  "initialSumm" : 150000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лаврова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лавренов",
+  "initialSumm" : 78901,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Киреленко 1",
+  "initialSumm" : 34760,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кириленко 2",
+  "initialSumm" : 34760,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "кириленко 3",
+  "initialSumm" : 34760,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "буйновский",
+  "initialSumm" : 9128,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лазарев",
+  "initialSumm" : 80482,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Белкин",
+  "initialSumm" : 22708,
+  "agreedSumm" : 22708,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Галанцев",
+  "initialSumm" : 37204,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Савин",
+  "initialSumm" : 30134,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лысых",
+  "initialSumm" : 600000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Радочин",
+  "initialSumm" : 125000,
+  "agreedSumm" : 37000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Разумахин",
+  "initialSumm" : 52600,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Блинкова",
+  "initialSumm" : 278864,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Федорова",
+  "initialSumm" : 110000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Казаков",
+  "initialSumm" : 120000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Петухова",
+  "initialSumm" : 279391,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лентцков",
+  "initialSumm" : 135000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дремов",
+  "initialSumm" : 73065,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Волкова",
+  "initialSumm" : 52764,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колесникова",
+  "initialSumm" : 105000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Доброзорова 2239",
+  "initialSumm" : 99000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ноздрачев",
+  "initialSumm" : 156732,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Калинин",
+  "initialSumm" : 53702,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Корнеева-Зоненко",
+  "initialSumm" : 22680,
+  "agreedSumm" : 15400,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ларьков 2-1",
+  "initialSumm" : 15618,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ларьков 2-11",
+  "initialSumm" : 15600,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Смоляков",
+  "initialSumm" : 21300,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Криман",
+  "initialSumm" : 32130,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ивакин",
+  "initialSumm" : 32320,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колосова",
+  "initialSumm" : 3164,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дедовский",
+  "initialSumm" : 2850,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лазарашвили",
+  "initialSumm" : 331487,
+  "agreedSumm" : 2300,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Мельник",
+  "initialSumm" : 10388,
+  "agreedSumm" : 6388,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бокарев",
+  "initialSumm" : 3228,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Надеина",
+  "initialSumm" : 13164,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Романов В.Г.",
+  "initialSumm" : 73121,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Никитин",
+  "initialSumm" : 54320,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Грудинский",
+  "initialSumm" : 44072,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Торчило",
+  "initialSumm" : 10160,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Гричанов",
+  "initialSumm" : 16154,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Стадняя",
+  "initialSumm" : 34620,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Тихомиров",
+  "initialSumm" : 112000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "усков",
+  "initialSumm" : 12324,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кобринский",
+  "initialSumm" : 13400,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Панов",
+  "initialSumm" : 20000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Разыграев",
+  "initialSumm" : 550000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Карпов",
+  "initialSumm" : 18560,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Черная",
+  "initialSumm" : 1120318000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Данилов",
+  "initialSumm" : 228000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Баранов",
+  "initialSumm" : 57800,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зарубин 2266",
+  "initialSumm" : 200000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Емельянов",
+  "initialSumm" : 18628,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зубчанинов",
+  "initialSumm" : 187805,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Шишко",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бекарев",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Резникова",
+  "initialSumm" : 25700,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Яковлев",
+  "initialSumm" : 23200,
+  "agreedSumm" : 9200,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Осипов 1266",
+  "initialSumm" : 91100,
+  "agreedSumm" : 10400,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сорочко",
+  "initialSumm" : 43100,
+  "agreedSumm" : 31000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Иванов 5849",
+  "initialSumm" : 131350,
+  "agreedSumm" : 35300,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бойцов",
+  "initialSumm" : 4267,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Рудаков",
+  "initialSumm" : 45100,
+  "agreedSumm" : 9100,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Калашников",
+  "initialSumm" : 9160,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Арсеньев",
+  "initialSumm" : 41884,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зубчанинов",
+  "initialSumm" : 308378,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колтува",
+  "initialSumm" : 112439,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Макаров",
+  "initialSumm" : 77160,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Фурасьев",
+  "initialSumm" : 30000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бичаев",
+  "initialSumm" : 13100,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Александров",
+  "initialSumm" : 53164,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Шульгин",
+  "initialSumm" : 54760,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ситдиков",
+  "initialSumm" : 1025000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бобрикова",
+  "initialSumm" : 243095,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лентцков 2 (Маши)",
+  "initialSumm" : 200000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Петров",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колчев",
+  "initialSumm" : 45988,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Алексеев",
+  "initialSumm" : 66890,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Досов",
+  "initialSumm" : 31100,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Красин, Красина",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Баженов",
+  "initialSumm" : 9292,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Байрамов",
+  "initialSumm" : 125000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Красовец",
+  "initialSumm" : 900000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Карманов",
+  "initialSumm" : 17043,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сабитов",
+  "initialSumm" : 103626,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лентцков 3 (маши)",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Шахнин",
+  "initialSumm" : 28930,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Никулин",
+  "initialSumm" : 11661,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Воронин",
+  "initialSumm" : 33228,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зарубин",
+  "initialSumm" : 15000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Герасимов",
+  "initialSumm" : 20300,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Угаров",
+  "initialSumm" : 20300,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зепин",
+  "initialSumm" : 382570,
+  "agreedSumm" : 50670,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лопанов",
+  "initialSumm" : 44220,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дубок ",
+  "initialSumm" : 44220,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Цыбанев",
+  "initialSumm" : 132960,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "MVD",
+  "plaintiff" : "Сити Инвест Банк",
+  "initialSumm" : 50000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "MVD",
+  "plaintiff" : "Промышленные газовые технологии",
+  "initialSumm" : 2042941,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дедовская",
+  "initialSumm" : 2850,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "ООО Лада",
+  "initialSumm" : 16893706,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "MVD",
+  "plaintiff" : "Завьялова ",
+  "initialSumm" : 24560,
+  "agreedSumm" : 14560,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Котов",
+  "initialSumm" : 17500,
+  "agreedSumm" : 17500,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Петрова",
+  "initialSumm" : 22990,
+  "agreedSumm" : 6790,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "кириленко 1513",
+  "initialSumm" : 38760,
+  "agreedSumm" : 10000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "кириленко 1584",
+  "initialSumm" : 38760,
+  "agreedSumm" : 24760,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Мусолин",
+  "initialSumm" : 225000,
+  "agreedSumm" : 5000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кобринский 6163",
+  "initialSumm" : 13490,
+  "agreedSumm" : 4790,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Шидловская",
+  "initialSumm" : 500000,
+  "agreedSumm" : 300000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Чумаков",
+  "initialSumm" : 400000,
+  "agreedSumm" : 60000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Коновалов",
+  "initialSumm" : 40000,
+  "agreedSumm" : 20000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Арефьев",
+  "initialSumm" : 13000,
+  "agreedSumm" : 6400,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Брагинец",
+  "initialSumm" : 21260,
+  "agreedSumm" : 8670,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Юрова",
+  "initialSumm" : 102764,
+  "agreedSumm" : 2764,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сергеенков",
+  "initialSumm" : 65090,
+  "agreedSumm" : 43000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сулоев",
+  "initialSumm" : 541800,
+  "agreedSumm" : 526800,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Миркин",
+  "initialSumm" : 827396,
+  "agreedSumm" : 9490,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Иванов 3793",
+  "initialSumm" : 354060,
+  "agreedSumm" : 4400,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Гусев",
+  "initialSumm" : 116400,
+  "agreedSumm" : 50700,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Андреев",
+  "initialSumm" : 172600,
+  "agreedSumm" : 20400,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Иванов 4314",
+  "initialSumm" : 13464,
+  "agreedSumm" : 3164,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Петров 5354",
+  "initialSumm" : 48310,
+  "agreedSumm" : 10000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "гришин",
+  "initialSumm" : 80000,
+  "agreedSumm" : 11000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Мушкет",
+  "initialSumm" : 78601,
+  "agreedSumm" : 26751,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Битци",
+  "initialSumm" : 41530,
+  "agreedSumm" : 7230,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Береговой",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Снетков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Голубков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сакович",
+  "initialSumm" : 13100,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "мазин",
+  "initialSumm" : 15000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Рассохин",
+  "initialSumm" : 13010,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Миронова",
+  "initialSumm" : 200000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Качнов",
+  "initialSumm" : 649958,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Краснов",
+  "initialSumm" : 13580,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Иванов 326",
+  "initialSumm" : 97280,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Черник",
+  "initialSumm" : 30000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Журкин",
+  "initialSumm" : 60000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Томсон",
+  "initialSumm" : 38090,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сигнер",
+  "initialSumm" : 9300,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Казилов",
+  "initialSumm" : 50310,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Львов",
+  "initialSumm" : 48010,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Меркушев",
+  "initialSumm" : 27106,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "сныткина",
+  "initialSumm" : 71353,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Цветкова",
+  "initialSumm" : 3291796,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зуев",
+  "initialSumm" : 51000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ниязи",
+  "initialSumm" : 2244070,
+  "agreedSumm" : 2062720,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Горева",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Безнин",
+  "initialSumm" : 83000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кудрявцев 5291",
+  "initialSumm" : 200000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Толоконников",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Мусолина",
+  "initialSumm" : 271500,
+  "agreedSumm" : 5000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кукушкин",
+  "initialSumm" : 116400,
+  "agreedSumm" : 21400,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колмаков",
+  "initialSumm" : 134200,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Суворинов",
+  "initialSumm" : 100300,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Седов",
+  "initialSumm" : 150000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Терехов",
+  "initialSumm" : 72026,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кузнецов",
+  "initialSumm" : 22660,
+  "agreedSumm" : 6660,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Прус",
+  "initialSumm" : 93930,
+  "agreedSumm" : 49610,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Угаров 3794",
+  "initialSumm" : 354195,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Пирогова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Клюев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Петербургская палата права",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Прокурор ЦЛЛР",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сидорин",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бернштейн",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Красильникова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Салтыкова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Сеник",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бокситогорский полимер 73086",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бокситогорский полимер 77620",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ярославская транспортная компания",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ИП Иванов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Фонд имущества",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSPARIVANII_RESH_GOS_ORG",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Токарев 4759",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ООО Ривер",
+  "initialSumm" : 104925,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "MVD",
+  "plaintiff" : "ООО Роскон",
+  "initialSumm" : 9535956,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Легас",
+  "initialSumm" : 410000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Щербаков",
+  "initialSumm" : 560000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Рычков",
+  "initialSumm" : 907800,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Чеишвили",
+  "initialSumm" : 1538862,
+  "agreedSumm" : 460631,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Коновалов",
+  "initialSumm" : 4614800,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дегтяренко",
+  "initialSumm" : 1404500,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Винный торговый дом",
+  "initialSumm" : 30441038,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Руссу",
+  "initialSumm" : 912200,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "KAZNA",
+  "plaintiff" : "ИП Быков",
+  "initialSumm" : 10335535,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IZYATIE_IMUSHESTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ТДК",
+  "initialSumm" : 25205,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "IVS",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Агапов",
+  "initialSumm" : 45000,
+  "agreedSumm" : 5000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зарубин 1760",
+  "initialSumm" : 90000,
+  "agreedSumm" : 3000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Джуманиязов",
+  "initialSumm" : 1042000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Муртузалиев",
+  "initialSumm" : 457200,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Филатов",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Давидович",
+  "initialSumm" : 70000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Клюев 1712",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зарубин 2174",
+  "initialSumm" : 900000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Никитин",
+  "initialSumm" : 104000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Анисимов",
+  "initialSumm" : 600000,
+  "agreedSumm" : 1500,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Павлюков",
+  "initialSumm" : 1900000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дорош",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Токарев",
+  "initialSumm" : 1070000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Гайдуков",
+  "initialSumm" : 200000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Новикова",
+  "initialSumm" : 2000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Булыгин",
+  "initialSumm" : 150000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Олейников",
+  "initialSumm" : 150000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Осипов",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бушманов",
+  "initialSumm" : 5000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Должникова",
+  "initialSumm" : 10240000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кравцов",
+  "initialSumm" : 500000,
+  "agreedSumm" : 50000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "леонтьев",
+  "initialSumm" : 300000,
+  "agreedSumm" : 5000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Баранов",
+  "initialSumm" : 150000,
+  "agreedSumm" : 10000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Питиримов",
+  "initialSumm" : 300000,
+  "agreedSumm" : 5000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Алексеева",
+  "initialSumm" : 50000,
+  "agreedSumm" : 10000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "пономаренко",
+  "initialSumm" : 5000000,
+  "agreedSumm" : 30000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "глущенко",
+  "initialSumm" : 700000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Добряков",
+  "initialSumm" : 6000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колесников",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Быстров",
+  "initialSumm" : 10000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Кузнецов",
+  "initialSumm" : 95000,
+  "agreedSumm" : 20000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колпаков",
+  "initialSumm" : 400000,
+  "agreedSumm" : 10000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "TYSHA_70",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Яковлев",
+  "initialSumm" : 2000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Петров",
+  "initialSumm" : 299640,
+  "agreedSumm" : 40000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Криппендорф",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зарубин 1",
+  "initialSumm" : 30000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "ООО Адамсон Истейн",
+  "initialSumm" : 5174779,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бушманов 3-71",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Жмур",
+  "initialSumm" : 1340000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Амиргамзаев",
+  "initialSumm" : 190000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Панченко",
+  "initialSumm" : 10000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бережной",
+  "initialSumm" : 5000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Тостановский",
+  "initialSumm" : 10000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Иванов",
+  "initialSumm" : 525000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Рошал",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 60000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лоскутова",
+  "initialSumm" : 900000,
+  "agreedSumm" : 50000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Шорина",
+  "initialSumm" : 6000000,
+  "agreedSumm" : 90000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "SUDOPROIZVODSTVO",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Петров",
+  "initialSumm" : 299640,
+  "agreedSumm" : 40000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Титенков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бушманов 2489",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "долгушев",
+  "initialSumm" : 45847,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "кун  2-1004",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "франков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "экерт",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Орлова 4980",
+  "initialSumm" : 10000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Орлова 3681",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Арбинский",
+  "initialSumm" : 115066,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Белоусов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бурханов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OBZHALOV_PRIKAZ_3_3",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Серов",
+  "initialSumm" : 1892451,
+  "agreedSumm" : 277732,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Фадеева",
+  "initialSumm" : 111082,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "MVD",
+  "plaintiff" : "Стацкий",
+  "initialSumm" : 50000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Рождественская",
+  "initialSumm" : 192874,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "пушкарь",
+  "initialSumm" : 151808,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "беляев",
+  "initialSumm" : 103460,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Игнатьев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кондрат",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Мальцев",
+  "initialSumm" : 30000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Олейник",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Горелый",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Козлов",
+  "initialSumm" : 40336,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кулагин",
+  "initialSumm" : 1000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "разепин",
+  "initialSumm" : 2960000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кульпина",
+  "initialSumm" : 750000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Герасимов",
+  "initialSumm" : 48125,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Ховякова",
+  "initialSumm" : 688626,
+  "agreedSumm" : 646626,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "серов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "латышев",
+  "initialSumm" : 403609,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "сударикова",
+  "initialSumm" : 154297,
+  "agreedSumm" : 987,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "королева",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Демьянов",
+  "initialSumm" : 55285,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кукушкин",
+  "initialSumm" : 603699,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "литвинов",
+  "initialSumm" : 5000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "хубуа",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лаптев",
+  "initialSumm" : 200000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Мазепов",
+  "initialSumm" : 15000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Попова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Королев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSSTANOVLENIE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Тельпук",
+  "initialSumm" : 1107348,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "SNYATIYE_DISC_VZYSK",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бушманов 1471",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SNYATIYE_DISC_VZYSK",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бушманов 76",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SNYATIYE_DISC_VZYSK",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "беляев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "SNYATIYE_DISC_VZYSK",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "курникова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "кун",
+  "initialSumm" : 2000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Цыплятниковы",
+  "initialSumm" : 3000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Минин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Анцупов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Трошкина",
+  "initialSumm" : 300,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Любина",
+  "initialSumm" : 26232,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Фоменко",
+  "initialSumm" : 1798085,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Павлова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "федотов",
+  "initialSumm" : 94600,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "буянов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "акимов",
+  "initialSumm" : 117800,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Селиверстов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Осипчук",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Далимов 3002",
+  "initialSumm" : 9820193,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Васильева",
+  "initialSumm" : 203794,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Андреев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Дьяконова",
+  "initialSumm" : 165000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Дорохин",
+  "initialSumm" : 539000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Егоров",
+  "initialSumm" : 5923276,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Левашев",
+  "initialSumm" : 546075,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Буякова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Микулинская",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Сырица",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кнутов",
+  "initialSumm" : 4492578,
+  "agreedSumm" : 4492578,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "RESHENIE_PO_ZHILISH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Усиков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Князев",
+  "initialSumm" : 575000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Почепко",
+  "initialSumm" : 476368,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Николаев",
+  "initialSumm" : 100000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "преображенскицй",
+  "initialSumm" : 386000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Полозов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лаврова",
+  "initialSumm" : 59573,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "колосова",
+  "initialSumm" : 151200,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Берденев",
+  "initialSumm" : 6825145,
+  "agreedSumm" : 22937,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Беляев",
+  "initialSumm" : 165000,
+  "agreedSumm" : 162000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Иванов",
+  "initialSumm" : 182366,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Гришин",
+  "initialSumm" : 222150,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "MVD",
+  "plaintiff" : "Рабаданов",
+  "initialSumm" : 264000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "VSYSK_OBYAZAT_PLATEZH",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Хайбулаев",
+  "initialSumm" : 622000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "PENSIONNIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "кудрявцев",
+  "initialSumm" : 79296,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "PENSIONNIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бугаева",
+  "initialSumm" : 53821,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "PENSIONNIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Круглова",
+  "initialSumm" : 115748,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "PENSIONNIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Далимов",
+  "initialSumm" : 676867,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "PENSIONNIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Гущин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Первая Эксплуатирующая орг.",
+  "initialSumm" : 51000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Местная администрация Шушары",
+  "initialSumm" : 66901,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "MVD",
+  "plaintiff" : "Петербургтеплоэнерго 28229",
+  "initialSumm" : 2095699,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "MVD",
+  "plaintiff" : "Петербургтеплоэнерго 45106",
+  "initialSumm" : 179643,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "MVD",
+  "plaintiff" : "Петербургтеплоэнерго 28206",
+  "initialSumm" : 138054,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Газпром Межрегионгаз Санкт-Петербург",
+  "initialSumm" : 115205,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "MVD",
+  "plaintiff" : "Петербургтеплоэнерго 46666",
+  "initialSumm" : 270009,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ГУП «Водоканал» 61949",
+  "initialSumm" : 56459,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ГУП «Водоканал 61946",
+  "initialSumm" : 39420,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ГУП «Водоканал 61947",
+  "initialSumm" : 83733,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ГУП «Водоканал 61948",
+  "initialSumm" : 154604,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ПАО Петербургская сбытовая 85929",
+  "initialSumm" : 31336,
+  "agreedSumm" : 4983,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Территориальная генерирующая компания",
+  "initialSumm" : 203905,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "ISPOLN_DOGOVOR_OBYAZ",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "РСУ Приморского района",
+  "initialSumm" : 297024,
+  "agreedSumm" : 297024,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "NARUSH_PORYADKA_RASSMOTR_OBRASHENIYA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Колоскова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "MIGRATSIYA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ИП Гынку",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Рысева",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Губченко",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "яковлев н.а.",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "гордиевский",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Пирогов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Гущин 2-1029",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Тюрин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Лаунова",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Тукалевский",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Барышева",
+  "initialSumm" : 712600,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Мельников",
+  "initialSumm" : 157000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Мирошниченко",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Попов",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ГУП Водоканал 7062",
+  "initialSumm" : 64433,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Водоканал 1283",
+  "initialSumm" : 30289,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Водоканал 1281",
+  "initialSumm" : 59464,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Водоканал 808",
+  "initialSumm" : 47744,
+  "agreedSumm" : 27730,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Водоканал 801",
+  "initialSumm" : 112442,
+  "agreedSumm" : 68255,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Водоканал 1279",
+  "initialSumm" : 54339,
+  "agreedSumm" : 31304,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 1798",
+  "initialSumm" : 49342,
+  "agreedSumm" : 33881,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 804",
+  "initialSumm" : 66601,
+  "agreedSumm" : 50689,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 2704",
+  "initialSumm" : 102423,
+  "agreedSumm" : 102423,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал5317",
+  "initialSumm" : 44461,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 96880",
+  "initialSumm" : 65418,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 4452",
+  "initialSumm" : 53808,
+  "agreedSumm" : 29663,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 4449",
+  "initialSumm" : 118189,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 4450",
+  "initialSumm" : 109984,
+  "agreedSumm" : 47554,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "водоканал 5304",
+  "initialSumm" : 102110,
+  "agreedSumm" : 102110,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ОАО Ленинградская областная",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Рыцев",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Руденко",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Емельяненко",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бородулин",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сухоцкая",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Милославская",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лобанов",
+  "initialSumm" : 1238796,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Шемяков",
+  "initialSumm" : 1788234,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Далимов 4176",
+  "initialSumm" : 542001,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Половников",
+  "initialSumm" : 68500,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бордошев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Добровольцев",
+  "initialSumm" : 700000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Алексеев",
+  "initialSumm" : 2392581,
+  "agreedSumm" : 2392446,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Билдинг",
+  "initialSumm" : 327875,
+  "agreedSumm" : 327875,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Гудзъ",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Хохлов",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Литвиненко",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Зайков",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Гарусова",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Левошкин",
+  "initialSumm" : 542350,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сербин",
+  "initialSumm" : 266050,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Крутиков",
+  "initialSumm" : 550000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лукин",
+  "initialSumm" : 157000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Моргун",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Бабинцев",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Дрозжина",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Беляев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Ольховик",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "дегтярева",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Соловьев",
+  "initialSumm" : 372600,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Вихрова",
+  "initialSumm" : 384700,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сенько",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Рождественский",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Курбанов",
+  "initialSumm" : 1400000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Аксенкин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Чурашев",
+  "initialSumm" : 520701,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Беглов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Храмцевич",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Беняковкин",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ТУ ФАУГИ",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ОАО Заслон",
+  "initialSumm" : 15152778,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ГУП ТЭК 78260",
+  "initialSumm" : 600000,
+  "agreedSumm" : 600000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лонисера 51038",
+  "initialSumm" : 575338000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Рыжкова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Фисун",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Ганин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Васильева",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кузнецова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Березина",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Корженевский",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Сучок",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Борисова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Засыпкин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Баранов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Верина",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Повереннов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Яцунова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Ким 6313",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Герасимова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Тупикова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Муравьева",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Меликова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лабутина",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "OSOBOGO_PROIZVODSTVA",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Попадько",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "МанфайненшиалСервис",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Анохин",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Прокурор Волосовского района",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ТСЖ Московская 1-3",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Кочнев 2592",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Кочнев 3025",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ТУ ФАУГИ ",
+  "initialSumm" : 1050,
+  "agreedSumm" : 1050,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Прокурор Московского 5938",
+  "initialSumm" : 15500,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Прокурор Кировского 4445",
+  "initialSumm" : 21600,
+  "agreedSumm" : 21600,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Пушкарь",
+  "initialSumm" : 2000000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Кирилин",
+  "initialSumm" : 859571,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Кочигин",
+  "initialSumm" : 3751213,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Выборгская таможня",
+  "initialSumm" : 3274208,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Рыжонков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Цымбалюк",
+  "initialSumm" : 777169,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Мусийко",
+  "initialSumm" : 1016000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ДОСААФ, ТУ ФАУГИ",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Комитет имущ. Отношений 66933",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Устименко к МИФНС",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ЗАО Зенит",
+  "initialSumm" : 350000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Косолапов",
+  "initialSumm" : 52800,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Лебедевы",
+  "initialSumm" : 432127,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Белоногов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Лонисера 41053",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Лонесера 41053 - 1",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE8",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Лонисера 3",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Вачуков",
+  "initialSumm" : 1200000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кулапин",
+  "initialSumm" : 1500,
+  "agreedSumm" : 1500,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Румянцев",
+  "initialSumm" : 9638792,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "ZHILISHNYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Овчарук",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZHILISHNYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Чемшитов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZHILISHNYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Судариков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZHILISHNYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Тагиев",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZHILISHNYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Пешкин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZHILISHNYE",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Полозов 5032",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "ZASHITE_DELOVOY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "плаксин",
+  "initialSumm" : 525300,
+  "agreedSumm" : 75300,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZASHITE_DELOVOY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "колесов",
+  "initialSumm" : 30000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "ZASHITE_DELOVOY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "кутуев",
+  "initialSumm" : 390000,
+  "agreedSumm" : 111600,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Шайтанов",
+  "initialSumm" : 129709,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "скроба",
+  "initialSumm" : 17294,
+  "agreedSumm" : 17294,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "столетов",
+  "initialSumm" : 66948,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "федоров а.с.",
+  "initialSumm" : 549292,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "василева",
+  "initialSumm" : 96709,
+  "agreedSumm" : 96709,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "левандовский",
+  "initialSumm" : 501142,
+  "agreedSumm" : 501142,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "каштанов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "чуняев",
+  "initialSumm" : 154272,
+  "agreedSumm" : 154272,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "никонов",
+  "initialSumm" : 162967,
+  "agreedSumm" : 162967,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "максимчик",
+  "initialSumm" : 25403,
+  "agreedSumm" : 25403,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "голованова",
+  "initialSumm" : 11665,
+  "agreedSumm" : 11665,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "павлова",
+  "initialSumm" : 258797,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "соколов",
+  "initialSumm" : 18160,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "МИФНС 11 5468",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "ИФНС Всеволожского р.",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "МИФНС 11 8026",
+  "initialSumm" : 7197,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Сахновская",
+  "initialSumm" : 147000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Скоморохова",
+  "initialSumm" : 32955,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Малеваному",
+  "initialSumm" : 34423,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Шаповалов",
+  "initialSumm" : 30258,
+  "agreedSumm" : 30258,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Гатилов",
+  "initialSumm" : 35839,
+  "agreedSumm" : 35839,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Лаврова",
+  "initialSumm" : 23303,
+  "agreedSumm" : 23303,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Шляев",
+  "initialSumm" : 16499,
+  "agreedSumm" : 16499,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Сек",
+  "initialSumm" : 122606,
+  "agreedSumm" : 122606,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Кукс",
+  "initialSumm" : 439,
+  "agreedSumm" : 439,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "петров",
+  "initialSumm" : 7920,
+  "agreedSumm" : 7920,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "сподин",
+  "initialSumm" : 1200,
+  "agreedSumm" : 1200,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "язиков",
+  "initialSumm" : 10688,
+  "agreedSumm" : 10688,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "молчанов",
+  "initialSumm" : 5691,
+  "agreedSumm" : 5691,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "михайлов",
+  "initialSumm" : 2055,
+  "agreedSumm" : 2055,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Туманова",
+  "initialSumm" : 25071,
+  "agreedSumm" : 25071,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "никитин",
+  "initialSumm" : 32658,
+  "agreedSumm" : 32658,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "прокофьев",
+  "initialSumm" : 19000,
+  "agreedSumm" : 19000,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Тульский патронный завод",
+  "initialSumm" : 278120,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "СКИФ",
+  "initialSumm" : 14013917,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Киселев",
+  "initialSumm" : 128667,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Давыдова",
+  "initialSumm" : 15492,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Грязина",
+  "initialSumm" : 117285,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Шмакова",
+  "initialSumm" : 22741,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR",
+  "category" : "INIYE95",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Емельянова",
+  "initialSumm" : 21631,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Серов",
+  "initialSumm" : 277732,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ниязи",
+  "initialSumm" : 2072720,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "кнутов",
+  "initialSumm" : 4492578,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "гарусова",
+  "initialSumm" : 1000000,
+  "agreedSumm" : 1000000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "храмцевич",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "малышева",
+  "initialSumm" : 38539,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "преображенский",
+  "initialSumm" : 9704,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "зарубин",
+  "initialSumm" : 3000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "доброзорова",
+  "initialSumm" : 22360,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "петров",
+  "initialSumm" : 40000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "кудрявцев",
+  "initialSumm" : 30000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "белкин",
+  "initialSumm" : 22708,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "гущин",
+  "initialSumm" : 500000,
+  "agreedSumm" : 500000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "фисун",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "радочин",
+  "initialSumm" : 31100,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "федорова",
+  "initialSumm" : 10000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "волкова",
+  "initialSumm" : 4164,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "доброзорова",
+  "initialSumm" : 33000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "кобринский",
+  "initialSumm" : 4790,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "агапов",
+  "initialSumm" : 12000,
+  "agreedSumm" : 7000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "мусолина",
+  "initialSumm" : 5000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "мусолин",
+  "initialSumm" : 5000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "кукушкин",
+  "initialSumm" : 51400,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "усиков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "питиримов",
+  "initialSumm" : 20000,
+  "agreedSumm" : 15000,
+  "result" : "APPROVE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "алексеева",
+  "initialSumm" : 10000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "арефьев",
+  "initialSumm" : 6400,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "корнеев-зоненко",
+  "initialSumm" : 15400,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "брагинец",
+  "initialSumm" : 8670,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "юрова",
+  "initialSumm" : 2764,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "сергеенков",
+  "initialSumm" : 43000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "сулоев",
+  "initialSumm" : 526800,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ГУП водоканал 5304",
+  "initialSumm" : 102110,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "водоканал 2706",
+  "initialSumm" : 102423,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ГУП ТЭК 78260 ",
+  "initialSumm" : 600000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Воронин",
+  "initialSumm" : 33228,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Калашников",
+  "initialSumm" : 9160,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "сербин",
+  "initialSumm" : 266050,
+  "agreedSumm" : 266050,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "петрова 3937",
+  "initialSumm" : 7490,
+  "agreedSumm" : 700,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "киреленко",
+  "initialSumm" : 24760,
+  "agreedSumm" : 14760,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "меликова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "лоскутова",
+  "initialSumm" : 50000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "шорина",
+  "initialSumm" : 90000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "рошал",
+  "initialSumm" : 10300,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "кравцов",
+  "initialSumm" : 50000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "завьялова",
+  "initialSumm" : 14560,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "леонтьев",
+  "initialSumm" : 5000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "котов",
+  "initialSumm" : 17500,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "баранов",
+  "initialSumm" : 10000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "киреленко 2",
+  "initialSumm" : 24760,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ким",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "герасимова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "тупикова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "гущин  888",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "буякова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "ховякова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "лоскутова",
+  "initialSumm" : 50000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "шорина",
+  "initialSumm" : 90000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "рошал",
+  "initialSumm" : 10300,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "кравцов",
+  "initialSumm" : 50000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "шидловская",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "алексеева",
+  "initialSumm" : 10000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "арефьев",
+  "initialSumm" : 6400,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "корнеев-зоненко",
+  "initialSumm" : 15400,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "брагинец",
+  "initialSumm" : 8670,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "юрова",
+  "initialSumm" : 2764,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "сергеенков",
+  "initialSumm" : 43000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "сулоев",
+  "initialSumm" : 526800,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "михайлов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "алексеев",
+  "initialSumm" : 2392446,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "давыдов",
+  "initialSumm" : 1850000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "быков",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "шидловская",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR_APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "полозов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR_APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "каштанов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR_APPELATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "СКИФ",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+}, {
+  "type" : "OUR_CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Полозов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR_CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Дехтяр",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR_CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "Давыдова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016"
+}, {
+  "type" : "OUR_CASSATION",
+  "category" : "EMPTY",
+  "defendant" : "EMPTY",
+  "plaintiff" : "СКИФ",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2015"
+} ]
