@@ -1,11 +1,11 @@
 package ru.bmstr.pugu.ui;
 
-import org.opendope.answers.Repeat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -49,4 +49,7 @@ public class TableData extends JTable {
         return this.getSelectedRows().length == 0;
     }
 
+    public void reDraw() {
+        tableModel.reDraw();
+    }
 }

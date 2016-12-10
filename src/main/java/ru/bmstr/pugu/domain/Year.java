@@ -4,9 +4,9 @@ package ru.bmstr.pugu.domain;
  * Created by bmstr on 04.12.2016.
  */
 public enum Year {
-    Y2015(2015),
+    Y2017(2017),
     Y2016(2016),
-    Y2017(2017);
+    Y2015(2015);
 
     int year;
     Year(int year) {

@@ -1,5 +1,7 @@
 package ru.bmstr.pugu.domain;
 
+import java.util.Comparator;
+
 /**
  * Created by bmstr on 27.11.2016.
  */
@@ -60,14 +62,6 @@ public class Suit {
     public void setResult(Result result) {
         this.result = result;
     }
-
-//    public Representative getRepresentative() {
-//        return representative;
-//    }
-
-//    public void setRepresentative(Representative representative) {
-//        this.representative = representative;
-//    }
 
     public Year getYear() {
         return year;

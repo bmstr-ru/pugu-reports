@@ -4,10 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.dto.AllContent;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
+import java.io.File;
 
 /**
  * Created by bmstr on 19.11.2016.
@@ -24,7 +26,13 @@ public class MainFrame extends JFrame {
     private TableData contentTable;
 
     @Autowired
+    private AllContent allContent;
+
+    @Autowired
     private RowModifyDialog rowModifyDialog;
+
+    @Autowired
+    private JFileChooser saveAsFileChooser;
 
     static {
         try {
@@ -57,10 +65,51 @@ public class MainFrame extends JFrame {
         JMenu menu = new JMenu("Файл");
         menuBar.add(menu);
 
-        // Сохранить как
-        JMenuItem menuItem = new JMenuItem("Сохранить как...");
+        // Сохранить данные
+        JMenuItem menuItem = new JMenuItem("Сохранить данные");
+        menuItem.addActionListener( action -> {
+            SwingUtilities.invokeLater( () -> {
+                int saveChoise = saveAsFileChooser.showSaveDialog(window);
+                if (saveChoise == JFileChooser.APPROVE_OPTION) {
+                    File file = saveAsFileChooser.getSelectedFile();
+                    if (!file.getName().endsWith(".json")) {
+                        file = new File(file.getAbsolutePath()+".json");
+                    }
+                    allContent.store(file);
+                }
+            });
+        });
         menu.add(menuItem);
 
+        // Сохранить данные
+        menuItem = new JMenuItem("Восстановить данные");
+        menuItem.addActionListener( action -> {
+            SwingUtilities.invokeLater( () -> {
+                int openChoise = saveAsFileChooser.showOpenDialog(window);
+                if (openChoise == JFileChooser.APPROVE_OPTION) {
+                    String[] choiseButtons = {"Перезаписать",
+                            "Добавить"};
+                    int choise = JOptionPane.showOptionDialog(window,
+                            "Перезаписать  или добавить к имеющимся данным?",
+                            "Перезаписать",
+                            JOptionPane.YES_NO_OPTION,
+                            JOptionPane.QUESTION_MESSAGE,
+                            null,     //do not use a custom Icon
+                            choiseButtons,  //the titles of buttons
+                            choiseButtons[0]);
+                    File file = saveAsFileChooser.getSelectedFile();
+                    if (choise == 0) {
+                        allContent.restoreAndOverwrite(file);
+                    } else {
+                        allContent.restoreAndAdd(file);
+                    }
+                    contentTable.reDraw();
+                }
+            });
+        });
+        menu.add(menuItem);
+
+        menu.addSeparator();
         // Выход
         menuItem = new JMenuItem("Выход");
         menuItem.addActionListener( event -> {
