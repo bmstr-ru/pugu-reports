@@ -5,11 +5,14 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.bmstr.pugu.dto.AllContent;
+import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.io.File;
+
+import static ru.bmstr.pugu.properties.PropertyNames.*;
 
 /**
  * Created by bmstr on 19.11.2016.
@@ -21,6 +24,9 @@ public class MainFrame extends JFrame {
     private final JFrame window = this;
     private final static int DEFAULT_WIDTH = 800;
     private final static int DEFAULT_HEIGHT = 600;
+
+    @Autowired
+    private PropertyLoader properties;
 
     @Autowired
     private TableData contentTable;
@@ -44,7 +50,7 @@ public class MainFrame extends JFrame {
 
     public void initialize () {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setTitle("Отчёты ПУГУ");
+        this.setTitle(properties.getProperty(FRAME_TITLE));
         addMenuBar();
         adjustSize();
         addMainContentArea(window.getContentPane());
@@ -62,11 +68,11 @@ public class MainFrame extends JFrame {
     private JMenuBar addMenuBar() {
         JMenuBar menuBar = new JMenuBar();
 
-        JMenu menu = new JMenu("Файл");
+        JMenu menu = new JMenu(properties.getProperty(MENU_FILE));
         menuBar.add(menu);
 
         // Сохранить данные
-        JMenuItem menuItem = new JMenuItem("Сохранить данные");
+        JMenuItem menuItem = new JMenuItem(properties.getProperty(MENU_DATA_STORE));
         menuItem.addActionListener( action -> {
             SwingUtilities.invokeLater( () -> {
                 int saveChoise = saveAsFileChooser.showSaveDialog(window);
@@ -82,16 +88,16 @@ public class MainFrame extends JFrame {
         menu.add(menuItem);
 
         // Сохранить данные
-        menuItem = new JMenuItem("Восстановить данные");
+        menuItem = new JMenuItem(properties.getProperty(MENU_DATA_RESTORE));
         menuItem.addActionListener( action -> {
             SwingUtilities.invokeLater( () -> {
                 int openChoise = saveAsFileChooser.showOpenDialog(window);
                 if (openChoise == JFileChooser.APPROVE_OPTION) {
-                    String[] choiseButtons = {"Перезаписать",
-                            "Добавить"};
+                    String[] choiseButtons = {properties.getProperty(BUTTON_OVERWRITE),
+                            properties.getProperty(BUTTON_ADD)};
                     int choise = JOptionPane.showOptionDialog(window,
-                            "Перезаписать  или добавить к имеющимся данным?",
-                            "Перезаписать",
+                            properties.getProperty(QUESTION),
+                            properties.getProperty(QUESTION_TITLE),
                             JOptionPane.YES_NO_OPTION,
                             JOptionPane.QUESTION_MESSAGE,
                             null,     //do not use a custom Icon
@@ -111,7 +117,7 @@ public class MainFrame extends JFrame {
 
         menu.addSeparator();
         // Выход
-        menuItem = new JMenuItem("Выход");
+        menuItem = new JMenuItem(properties.getProperty(MENU_EXIT));
         menuItem.addActionListener( event -> {
             window.dispatchEvent(
                     new WindowEvent(window, WindowEvent.WINDOW_CLOSING)
@@ -126,7 +132,7 @@ public class MainFrame extends JFrame {
 
     private JTabbedPane addMainContentArea(Container pane) {
         JTabbedPane tabbedPane = new JTabbedPane();
-        tabbedPane.addTab("Судебно-исковая работа", createSuitReportPanel());
+        tabbedPane.addTab(properties.getProperty(REPORT_TITLE), createSuitReportPanel());
 //        tabbedPane.addTab("Заявительские", new JPanel());
         pane.add(tabbedPane);
         return tabbedPane;
@@ -152,14 +158,14 @@ public class MainFrame extends JFrame {
         JButton substract = new JButton("-");
         substract.addActionListener( action -> {
             if (contentTable.noRowsSelected()) {
-                JOptionPane.showMessageDialog(window, "Выберете хотя бы один иск для удаления");
+                JOptionPane.showMessageDialog(window, properties.getProperty(CHOOSE_AT_LEAST_ONE));
             } else {
-                Object[] choices = {"Удалить", "Отмена"};
+                Object[] choices = {properties.getProperty(BUTTON_DELETE), properties.getProperty(BUTTON_CANCEL)};
                 Object defaultChoice = choices[1];
                 int n = JOptionPane.showOptionDialog(
                         window,
-                        "Вы действительно хотите удалить выбранные иски?",
-                        "Удалить",
+                        properties.getProperty(DELETE_QUESTION),
+                        properties.getProperty(BUTTON_DELETE),
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE,
                         null,

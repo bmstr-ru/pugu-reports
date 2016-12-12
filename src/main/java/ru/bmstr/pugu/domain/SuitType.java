@@ -1,27 +1,21 @@
 package ru.bmstr.pugu.domain;
 
+import ru.bmstr.pugu.beans.AllBeans;
+import ru.bmstr.pugu.properties.EnumNameHelper;
+import ru.bmstr.pugu.properties.PropertyLoader;
+
 /**
  * Created by bmstr on 04.12.2016.
  */
 public enum SuitType {
-    USUAL("Иск к нам"),
-    OUR("Иск наш"),
-    APPELATION("Жалобы не вступившие"),
-    CASSATION("Жалобы вступившие"),
-    OUR_APPELATION("Жалобы наши не вступившие"),
-    OUR_CASSATION("Жалобы наши вступившие"),
-    ;
-
-    String name;
-    SuitType(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
+    USUAL,
+    OUR,
+    APPELATION,
+    CASSATION,
+    OUR_APPELATION,
+    OUR_CASSATION;
 
     public String toString() {
-        return name;
+        return EnumNameHelper.getName(name());
     }
 }

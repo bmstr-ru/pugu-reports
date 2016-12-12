@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.bmstr.pugu.domain.Suit;
 import ru.bmstr.pugu.dto.AllContent;
+import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
@@ -17,7 +18,8 @@ public class MyTableModel extends AbstractTableModel {
     @Autowired
     private AllContent allContent;
 
-    private final static String[] COLUMN_NAMES = {"№", "Год", "Тип иска", "Категория", "Истец", "Сумма", "Ответчик", "Решение", "Удовлетворённая сумма"};
+    @Autowired
+    private PropertyLoader propertyLoader;
 
     @Override
     public int getRowCount() {
@@ -26,7 +28,7 @@ public class MyTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return COLUMN_NAMES.length;
+        return 9;
     }
 
     @Override
@@ -36,7 +38,7 @@ public class MyTableModel extends AbstractTableModel {
 
     @Override
     public String getColumnName(int col) {
-        return COLUMN_NAMES[col];
+        return propertyLoader.getProperty("enum.tableHeader.n"+(col+1));
     }
 
     public void addRow(Suit suit) {

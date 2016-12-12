@@ -2,12 +2,15 @@ package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.bmstr.pugu.domain.*;
+import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.util.Arrays;
+
+import static ru.bmstr.pugu.properties.PropertyNames.*;
 
 /**
  * Created by bmstr on 27.11.2016.
@@ -16,14 +19,6 @@ public class RowModifyDialog extends JDialog {
 
     private static final int DEFAULT_WIDTH = 500;
     private static final int DEFAULT_HEIGHT = 300;
-
-    private static final String YEAR_STRING = "Год:";
-    private static final String CATEGORY_STRING = "Категория:";
-    private static final String PLAINTIFF_STRING = "Истец:";
-    private static final String DEFENDANT_STRING = "Ответчик:";
-    private static final String INITIAL_SUMM_STRING = "Сумма иска:";
-    private static final String RESULT_STRING = "Решение:";
-    private static final String AGREED_SUMM_STRING = "Сумма удовлетворённых требований:";
 
     private JComboBox yearChoise;
     private JComboBox categoryChoise;
@@ -50,14 +45,20 @@ public class RowModifyDialog extends JDialog {
     JRadioButton cassationButton;
     JRadioButton ourAppelationButton;
     JRadioButton ourCassationButton;
+    JButton save;
 
     private Suit modifiableSuit;
 
     @Autowired
     private MyTableModel tableModel;
 
-    public RowModifyDialog(Frame owner, java.lang.String title, boolean isModal) {
-        super(owner, title, isModal);
+    @Autowired
+    private PropertyLoader propertyLoader;
+
+    private boolean labelsInitialized = false;
+
+    public RowModifyDialog(Frame owner) {
+        super(owner, "", true);
         usualCategories = new DefaultComboBoxModel(
                 Arrays.asList(Category.values())
                         .stream()
@@ -80,9 +81,33 @@ public class RowModifyDialog extends JDialog {
         pane.add(getControlButtonsPanel());
     }
 
+    private void setLabels() {
+        if (!labelsInitialized) {
+            usualButton.setText(propertyLoader.getProperty("enum." + SuitType.USUAL.name()));
+            ourButton.setText(propertyLoader.getProperty("enum." + SuitType.OUR.name()));
+            appelationButton.setText(propertyLoader.getProperty("enum." + SuitType.APPELATION.name()));
+            cassationButton.setText(propertyLoader.getProperty("enum." + SuitType.CASSATION.name()));
+            ourAppelationButton.setText(propertyLoader.getProperty("enum." + SuitType.OUR_APPELATION.name()));
+            ourCassationButton.setText(propertyLoader.getProperty("enum." + SuitType.OUR_CASSATION.name()));
+
+            yearLabel.setText(propertyLoader.getProperty(LABEL_YEAR));
+            categoryLabel.setText(propertyLoader.getProperty(LABEL_CATEGORY));
+            plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+            defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+            initialSummLabel.setText(propertyLoader.getProperty(LABEL_INITIAL_SUMM));
+            resultLabel.setText(propertyLoader.getProperty(LABEL_RESULT));
+            agreedSummLabel.setText(propertyLoader.getProperty(LABEL_AGREED_SUMM));
+
+            save.setText(propertyLoader.getProperty(BUTTON_SAVE));
+
+            labelsInitialized = true;
+        }
+    }
+
     public void showAddRow() {
+        setLabels();
         modifiableSuit = null;
-        this.setTitle("Введите данные иска");
+        this.setTitle(propertyLoader.getProperty(SUIT_ENTER));
         usualButton.setSelected(true);
         yearChoise.setSelectedItem(Year.Y2016);
         categoryChoise.setSelectedItem(Category.EMPTY);
@@ -95,8 +120,9 @@ public class RowModifyDialog extends JDialog {
     }
 
     public void showModifyRow(Suit suit) {
+        setLabels();
         modifiableSuit = suit;
-        this.setTitle("Иск от гр. " + suit.getPlaintiff());
+        this.setTitle(propertyLoader.getProperty(SUIT_FROM) + suit.getPlaintiff());
         yearChoise.setSelectedItem(suit.getYear());
         categoryChoise.setSelectedItem(suit.getCategory());
         defendantChoise.setSelectedItem(suit.getDefendant());
@@ -112,25 +138,39 @@ public class RowModifyDialog extends JDialog {
         switch (type) {
             case USUAL:
                 usualButton.setSelected(true);
-                plaintiffLabel.setText(PLAINTIFF_STRING);
-                defendantLabel.setText(DEFENDANT_STRING);
+                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                categoryChoise.setModel(usualCategories);
                 break;
             case OUR:
                 ourButton.setSelected(true);
-                plaintiffLabel.setText(DEFENDANT_STRING);
-                defendantLabel.setText(PLAINTIFF_STRING);
+                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                categoryChoise.setModel(ourCategories);
                 break;
             case APPELATION:
                 appelationButton.setSelected(true);
+                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                categoryChoise.setModel(emptyCategories);
                 break;
             case CASSATION:
+                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
                 cassationButton.setSelected(true);
+                categoryChoise.setModel(emptyCategories);
                 break;
             case OUR_APPELATION:
                 ourAppelationButton.setSelected(true);
+                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                categoryChoise.setModel(emptyCategories);
                 break;
             case OUR_CASSATION:
                 ourCassationButton.setSelected(true);
+                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                categoryChoise.setModel(emptyCategories);
                 break;
         }
     }
@@ -141,45 +181,32 @@ public class RowModifyDialog extends JDialog {
         ActionListener listener = event -> {
             SwingUtilities.invokeLater(() -> {
                 String command = event.getActionCommand();
-                switch (SuitType.valueOf(command)) {
-                    case USUAL:
-                        categoryChoise.setModel(usualCategories);
-                        break;
-                    case OUR:
-                        categoryChoise.setModel(ourCategories);
-                        break;
-                    case APPELATION:
-                    case CASSATION:
-                    case OUR_APPELATION:
-                    case OUR_CASSATION:
-                        categoryChoise.setModel(emptyCategories);
-                        break;
-                }
+                setDependantComponents(SuitType.valueOf(command));
             });
         };
 
-        usualButton = new JRadioButton(SuitType.USUAL.getName());
+        usualButton = new JRadioButton();
         usualButton.setActionCommand(SuitType.USUAL.name());
         usualButton.setSelected(true);
         usualButton.addActionListener(listener);
 
-        ourButton = new JRadioButton(SuitType.OUR.getName());
+        ourButton = new JRadioButton();
         ourButton.setActionCommand(SuitType.OUR.name());
         ourButton.addActionListener(listener);
 
-        appelationButton = new JRadioButton(SuitType.APPELATION.getName());
+        appelationButton = new JRadioButton();
         appelationButton.setActionCommand(SuitType.APPELATION.name());
         appelationButton.addActionListener(listener);
 
-        cassationButton = new JRadioButton(SuitType.CASSATION.getName());
+        cassationButton = new JRadioButton();
         cassationButton.setActionCommand(SuitType.CASSATION.name());
         cassationButton.addActionListener(listener);
 
-        ourAppelationButton = new JRadioButton(SuitType.OUR_APPELATION.getName());
+        ourAppelationButton = new JRadioButton();
         ourAppelationButton.setActionCommand(SuitType.OUR_APPELATION.name());
         ourAppelationButton.addActionListener(listener);
 
-        ourCassationButton = new JRadioButton(SuitType.OUR_CASSATION.getName());
+        ourCassationButton = new JRadioButton();
         ourCassationButton.setActionCommand(SuitType.OUR_CASSATION.name());
         ourCassationButton.addActionListener(listener);
 
@@ -205,13 +232,13 @@ public class RowModifyDialog extends JDialog {
         GridLayout layout = new GridLayout(7, 2);
         JPanel dataPanel = new JPanel(layout);
 
-        yearLabel = new JLabel("Год:");
-        categoryLabel = new JLabel("Категория:");
-        plaintiffLabel = new JLabel("Истец:");
-        defendantLabel = new JLabel("Ответчик:");
-        initialSummLabel = new JLabel("Сумма иска:");
-        resultLabel = new JLabel("Решение:");
-        agreedSummLabel = new JLabel("Сумма удовлетворённых требований:");
+        yearLabel = new JLabel();
+        categoryLabel = new JLabel();
+        plaintiffLabel = new JLabel();
+        defendantLabel = new JLabel();
+        initialSummLabel = new JLabel();
+        resultLabel = new JLabel();
+        agreedSummLabel = new JLabel();
 
         NumberFormat numberFormat = NumberFormat.getNumberInstance();
         numberFormat.setMinimumFractionDigits(0);
@@ -249,7 +276,7 @@ public class RowModifyDialog extends JDialog {
 
     private JPanel getControlButtonsPanel() {
         JPanel controlPanel = new JPanel();
-        JButton save = new JButton("Сохранить");
+        save = new JButton();
 
         final JDialog thisDialog = this;
         save.addActionListener(action -> {

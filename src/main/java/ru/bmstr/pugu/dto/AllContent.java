@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.bmstr.pugu.domain.*;
+import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -19,7 +20,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import static ru.bmstr.pugu.properties.PropertyNames.*;
 
 /**
  * Created by bmstr on 30.11.2016.
@@ -28,16 +30,20 @@ import java.util.stream.Collectors;
 public class AllContent {
 
     private static final Logger log = LogManager.getLogger(AllContent.class);
-    private static final File DATA_PATH = new File("данные");
     private static final String DEFAULT_CONTENT_FILENAME = "allData.json";
+    private File DATA_PATH;
 
     private List<Suit> suits = new ArrayList<>();
 
     @Autowired
     private SuitComparator comparator;
 
+    @Autowired
+    private PropertyLoader propertyLoader;
+
     @PostConstruct
     private void loadLastData() {
+        DATA_PATH = new File(propertyLoader.getProperty(DATA_FOLDER));
         DATA_PATH.mkdirs();
         File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
         restoreAndOverwrite(dataFile);

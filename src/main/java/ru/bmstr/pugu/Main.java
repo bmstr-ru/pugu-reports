@@ -16,6 +16,7 @@ public class Main {
 
     public static void doRun() {
         final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AllBeans.class);
+        AllBeans.setContext(ctx);
         final MainFrame window = ctx.getBean(MainFrame.class);
         SwingUtilities.invokeLater( () -> window.initialize() );
         Runtime.getRuntime().addShutdownHook(new Thread() {
