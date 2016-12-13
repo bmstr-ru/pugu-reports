@@ -7,6 +7,8 @@
     <entry key="menu.file">Файл</entry>
     <entry key="menu.data.store">Сохранить данные</entry>
     <entry key="menu.data.restore">Восстановить данные</entry>
+    <entry key="menu.report">Отчёт</entry>
+    <entry key="menu.report.generate">Создать отчёт</entry>
     <entry key="question">Перезаписать или добавить к имеющимся данным?</entry>
     <entry key="question.title">Перезаписать</entry>
     <entry key="button.overwrite">Перезаписать</entry>
@@ -128,4 +130,11 @@
     <entry key="enum.tableHeader.n7">Ответчик</entry>
     <entry key="enum.tableHeader.n8">Решение</entry>
     <entry key="enum.tableHeader.n9">Удовлетворённая сумма</entry>
+
+    <entry key="report.template">шаблон отчёта.docx</entry>
+    <entry key="report.filename">Отчёт по судебно-исковой работе.docx</entry>
+
+    <entry key="report.template.missing">Не найден файл шаблона отчёта "шаблон отчёта.docx"</entry>
+    <entry key="menu.report.info.title">Отчёт создан</entry>
+    <entry key="menu.report.info.message">Отчёт успешно создан! Проверьте файл "filename"</entry>
 </properties>

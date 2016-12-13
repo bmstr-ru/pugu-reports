@@ -16,10 +16,7 @@ import javax.annotation.PreDestroy;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
 
@@ -158,5 +155,10 @@ public class AllContent {
             default:
                 throw new RuntimeException("Tried to get column number " + columnIndex + " which is missing");
         }
+    }
+
+    public HashMap<String, String> calculateTags() {
+        HashMap<String, String> result = new HashMap<>();
+        return result;
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.PropertyLoader;
+import ru.bmstr.pugu.reports.ReportGenerator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +27,7 @@ public class MainFrame extends JFrame {
     private final static int DEFAULT_HEIGHT = 600;
 
     @Autowired
-    private PropertyLoader properties;
+    private PropertyLoader propertyLoader;
 
     @Autowired
     private TableData contentTable;
@@ -40,6 +41,9 @@ public class MainFrame extends JFrame {
     @Autowired
     private JFileChooser saveAsFileChooser;
 
+    @Autowired
+    private ReportGenerator reportGenerator;
+
     static {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -50,7 +54,7 @@ public class MainFrame extends JFrame {
 
     public void initialize () {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setTitle(properties.getProperty(FRAME_TITLE));
+        this.setTitle(propertyLoader.getProperty(FRAME_TITLE));
         addMenuBar();
         adjustSize();
         addMainContentArea(window.getContentPane());
@@ -68,11 +72,11 @@ public class MainFrame extends JFrame {
     private JMenuBar addMenuBar() {
         JMenuBar menuBar = new JMenuBar();
 
-        JMenu menu = new JMenu(properties.getProperty(MENU_FILE));
+        JMenu menu = new JMenu(propertyLoader.getProperty(MENU_FILE));
         menuBar.add(menu);
 
         // Сохранить данные
-        JMenuItem menuItem = new JMenuItem(properties.getProperty(MENU_DATA_STORE));
+        JMenuItem menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_STORE));
         menuItem.addActionListener( action -> {
             SwingUtilities.invokeLater( () -> {
                 int saveChoise = saveAsFileChooser.showSaveDialog(window);
@@ -88,16 +92,16 @@ public class MainFrame extends JFrame {
         menu.add(menuItem);
 
         // Сохранить данные
-        menuItem = new JMenuItem(properties.getProperty(MENU_DATA_RESTORE));
+        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_RESTORE));
         menuItem.addActionListener( action -> {
             SwingUtilities.invokeLater( () -> {
                 int openChoise = saveAsFileChooser.showOpenDialog(window);
                 if (openChoise == JFileChooser.APPROVE_OPTION) {
-                    String[] choiseButtons = {properties.getProperty(BUTTON_OVERWRITE),
-                            properties.getProperty(BUTTON_ADD)};
+                    String[] choiseButtons = {propertyLoader.getProperty(BUTTON_OVERWRITE),
+                            propertyLoader.getProperty(BUTTON_ADD)};
                     int choise = JOptionPane.showOptionDialog(window,
-                            properties.getProperty(QUESTION),
-                            properties.getProperty(QUESTION_TITLE),
+                            propertyLoader.getProperty(QUESTION),
+                            propertyLoader.getProperty(QUESTION_TITLE),
                             JOptionPane.YES_NO_OPTION,
                             JOptionPane.QUESTION_MESSAGE,
                             null,     //do not use a custom Icon
@@ -117,13 +121,30 @@ public class MainFrame extends JFrame {
 
         menu.addSeparator();
         // Выход
-        menuItem = new JMenuItem(properties.getProperty(MENU_EXIT));
+        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_EXIT));
         menuItem.addActionListener( event -> {
             window.dispatchEvent(
                     new WindowEvent(window, WindowEvent.WINDOW_CLOSING)
             );
         });
         menu.add(menuItem);
+
+        menu = new JMenu(propertyLoader.getProperty(MENU_REPORT));
+        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_REPORT_GENERATE));
+        menuItem.addActionListener( event -> {
+            SwingUtilities.invokeLater( () -> {
+                window.setEnabled(false);
+                reportGenerator.generateReport();
+                window.setEnabled(true);
+                JOptionPane.showMessageDialog(window,
+                        propertyLoader.getProperty(REPORT_INFO_MESSAGE).replace("filename", propertyLoader.getProperty(REPORT_FILENAME)),
+                        propertyLoader.getProperty(REPORT_INFO_TITLE),
+                        JOptionPane.INFORMATION_MESSAGE);
+            });
+        });
+        menu.add(menuItem);
+        menuBar.add(menu);
+
 
         this.setJMenuBar(menuBar);
 
@@ -132,7 +153,7 @@ public class MainFrame extends JFrame {
 
     private JTabbedPane addMainContentArea(Container pane) {
         JTabbedPane tabbedPane = new JTabbedPane();
-        tabbedPane.addTab(properties.getProperty(REPORT_TITLE), createSuitReportPanel());
+        tabbedPane.addTab(propertyLoader.getProperty(REPORT_TITLE), createSuitReportPanel());
 //        tabbedPane.addTab("Заявительские", new JPanel());
         pane.add(tabbedPane);
         return tabbedPane;
@@ -158,14 +179,14 @@ public class MainFrame extends JFrame {
         JButton substract = new JButton("-");
         substract.addActionListener( action -> {
             if (contentTable.noRowsSelected()) {
-                JOptionPane.showMessageDialog(window, properties.getProperty(CHOOSE_AT_LEAST_ONE));
+                JOptionPane.showMessageDialog(window, propertyLoader.getProperty(CHOOSE_AT_LEAST_ONE));
             } else {
-                Object[] choices = {properties.getProperty(BUTTON_DELETE), properties.getProperty(BUTTON_CANCEL)};
+                Object[] choices = {propertyLoader.getProperty(BUTTON_DELETE), propertyLoader.getProperty(BUTTON_CANCEL)};
                 Object defaultChoice = choices[1];
                 int n = JOptionPane.showOptionDialog(
                         window,
-                        properties.getProperty(DELETE_QUESTION),
-                        properties.getProperty(BUTTON_DELETE),
+                        propertyLoader.getProperty(DELETE_QUESTION),
+                        propertyLoader.getProperty(BUTTON_DELETE),
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE,
                         null,

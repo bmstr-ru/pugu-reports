@@ -8,6 +8,10 @@ public class PropertyNames {
     public static final String MENU_EXIT = "menu.exit";
     public static final String MENU_DATA_STORE = "menu.data.store";
     public static final String MENU_DATA_RESTORE = "menu.data.restore";
+    public static final String MENU_REPORT = "menu.report";
+    public static final String MENU_REPORT_GENERATE = "menu.report.generate";
+    public static final String REPORT_INFO_TITLE = "menu.report.info.title";
+    public static final String REPORT_INFO_MESSAGE = "menu.report.info.message";
     public static final String FRAME_TITLE = "frame.title";
     public static final String BUTTON_OVERWRITE = "button.overwrite";
     public static final String BUTTON_ADD = "button.add";
@@ -29,5 +33,7 @@ public class PropertyNames {
     public static final String LABEL_INITIAL_SUMM = "label.initialSumm";
     public static final String LABEL_RESULT = "label.result";
     public static final String LABEL_AGREED_SUMM = "label.agreedSumm";
-
+    public static final String REPORT_TEMPLATE = "report.template";
+    public static final String REPORT_FILENAME = "report.filename";
+    public static final String REPORT_TEMPLATE_MISSING = "report.template.missing";
 }
