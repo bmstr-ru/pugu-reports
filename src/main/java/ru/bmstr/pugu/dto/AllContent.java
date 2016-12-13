@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
 
@@ -159,6 +160,63 @@ public class AllContent {
 
     public HashMap<String, String> calculateTags() {
         HashMap<String, String> result = new HashMap<>();
+        result.put("tag_01_01", String.valueOf(suits.stream().filter(suit -> suit.getType() == SuitType.USUAL).count()));
+        result.put("tag_02_01", String.valueOf(
+                suits.stream()
+                        .filter(suit -> suit.getType() == SuitType.USUAL)
+                        .mapToInt(suit -> suit.getInitialSumm())
+                        .sum() / 1000)
+        );
+        result.put("tag_01_02", "");
+        result.put("tag_01_03", "");
+        result.put("tag_01_04", "");
+        result.put("tag_01_05", "");
+        result.put("tag_01_06", "");
+        result.put("tag_01_07", "");
+        result.put("tag_01_08", "");
+        result.put("tag_01_09", "");
+        result.put("tag_01_10", "");
+        result.put("tag_01_11", "");
+        result.put("tag_01_12", "");
+        result.put("tag_01_13", "");
+        result.put("tag_01_14", "");
+        result.put("tag_01_15", "");
+        result.put("tag_01_16", "");
+        result.put("tag_01_17", "");
+        result.put("tag_01_18", "");
+        result.put("tag_01_19", "");
+        result.put("tag_01_20", "");
+        result.put("tag_01_21", "");
+        result.put("tag_01_22", "");
+        result.put("tag_01_23", "");
+        result.put("tag_01_24", "");
+        result.put("tag_01_25", "");
+        result.put("tag_01_26", "");
+        result.put("tag_01_27", "");
+        result.put("tag_01_28", "");
+        result.put("tag_01_29", "");
+        result.put("tag_01_30", String.valueOf(suits.stream().filter(suit -> suit.getType() == SuitType.OUR).count()));
+        result.put("tag_02_30", String.valueOf(
+                suits.stream()
+                        .filter(suit -> suit.getType() == SuitType.OUR)
+                        .mapToInt(suit -> suit.getInitialSumm())
+                        .sum() / 1000)
+        );
+        result.put("tag_01_31", "");
+        result.put("tag_01_32", "");
+        result.put("tag_01_33", "");
+        result.put("tag_01_34", "");
+        result.put("tag_01_35", "");
+        result.put("tag_01_36", "");
+        result.put("tag_01_37", "");
+        result.put("tag_01_38", "");
+        result.put("tag_01_39", "");
+        result.put("tag_01_40", "");
+        result.forEach( (k,v) -> {
+            if (!v.isEmpty()) {
+                log.info(k+": "+v);
+            }
+        });
         return result;
     }
 }

@@ -14,6 +14,7 @@ import ru.bmstr.pugu.properties.PropertyLoader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.HashMap;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
 
