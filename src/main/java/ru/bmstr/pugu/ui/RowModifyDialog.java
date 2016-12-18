@@ -233,12 +233,12 @@ public class RowModifyDialog extends JDialog {
                         JOptionPane.ERROR_MESSAGE);
             } else if (!(sumIsValid(initialSummInput))) {
                 JOptionPane.showMessageDialog(iAm,
-                        propertyLoader.getProperty(SAVE_ERROR_TYPE_EMPTY),
+                        propertyLoader.getProperty(SAVE_ERROR_INVALID_INITIAL_SUMM),
                         propertyLoader.getProperty(SAVE_ERROR_TITLE),
                         JOptionPane.ERROR_MESSAGE);
             } else if (!(sumIsValid(agreedSummInput))) {
                 JOptionPane.showMessageDialog(iAm,
-                        propertyLoader.getProperty(SAVE_ERROR_TYPE_EMPTY),
+                        propertyLoader.getProperty(SAVE_ERROR_INVALID_AGREED_SUMM),
                         propertyLoader.getProperty(SAVE_ERROR_TITLE),
                         JOptionPane.ERROR_MESSAGE);
             } else {
