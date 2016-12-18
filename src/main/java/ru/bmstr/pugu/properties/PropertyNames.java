@@ -41,4 +41,6 @@ public class PropertyNames {
     public static final String SEARCH_TEXT_FIELD = "search.textField";
     public static final String SAVE_ERROR_TITLE = "save.error.title";
     public static final String SAVE_ERROR_TYPE_EMPTY = "save.error.type.empty";
+    public static final String SAVE_ERROR_INVALID_INITIAL_SUMM = "save.error.invalid.summ.initial";
+    public static final String SAVE_ERROR_INVALID_AGREED_SUMM = "save.error.invalid.summ.agreed";
 }
