@@ -2,6 +2,7 @@ package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.domain.Representative;
 
 import javax.annotation.PostConstruct;
 import javax.swing.*;
@@ -53,8 +54,8 @@ public class TableData extends JTable {
         tableModel.reDraw();
     }
 
-    public void filter(String searchString) {
-        tableModel.filter(searchString);
+    public void filter(Representative representative, String searchString) {
+        tableModel.filter(representative, searchString);
     }
 
     public void unFilter() {

@@ -89,6 +89,9 @@
     <entry key="enum.KAZNA">Казна</entry>
     <entry key="enum.MVD">МВД</entry>
 
+    <entry key="enum.ALL.surname">Все представители</entry>
+    <entry key="enum.EMPTY_REPRESENTATIVE.surname">-- не назначен --</entry>
+
     <entry key="enum.BOITSOVA.name">Ольга</entry>
     <entry key="enum.BOITSOVA.midname">Николаевна</entry>
     <entry key="enum.BOITSOVA.surname">Бойцова</entry>
@@ -141,13 +144,13 @@
     <entry key="enum.CHUGINA.midname">Валерьевна</entry>
     <entry key="enum.CHUGINA.surname">Чугина</entry>
 
-    <entry key="enum.DARIA.name">Даша</entry>
-    <entry key="enum.DARIA.midname"></entry>
-    <entry key="enum.DARIA.surname">Меркулова</entry>
+    <entry key="enum.MERKULOVA.name">Даша</entry>
+    <entry key="enum.MERKULOVA.midname"></entry>
+    <entry key="enum.MERKULOVA.surname">Меркулова</entry>
 
     <entry key="enum.tableHeader.n1">№</entry>
-    <entry key="enum.tableHeader.n2">Год</entry>
-    <entry key="enum.tableHeader.n3">Тип иска</entry>
+    <entry key="enum.tableHeader.n2">Представитель</entry>
+    <entry key="enum.tableHeader.n3">Год</entry>
     <entry key="enum.tableHeader.n4">Категория</entry>
     <entry key="enum.tableHeader.n5">Истец</entry>
     <entry key="enum.tableHeader.n6">Сумма</entry>
@@ -161,4 +164,7 @@
     <entry key="report.template.missing">Не найден файл шаблона отчёта "шаблон отчёта.docx"</entry>
     <entry key="menu.report.info.title">Отчёт создан</entry>
     <entry key="menu.report.info.message">Отчёт успешно создан! Проверьте файл "filename"</entry>
+
+    <entry key="save.error.title">Ошибка</entry>
+    <entry key="save.error.type.empty">Тип иска не может быть пустым!</entry>
 </properties>

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.domain.Representative;
 import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.PropertyLoader;
 import ru.bmstr.pugu.reports.ReportGenerator;
@@ -25,6 +26,8 @@ public class MainFrame extends JFrame {
     private final JFrame window = this;
     private final static int DEFAULT_WIDTH = 800;
     private final static int DEFAULT_HEIGHT = 600;
+    JComboBox representativeChoise;
+    JTextField searchTextField;
 
     @Autowired
     private PropertyLoader propertyLoader;
@@ -52,7 +55,7 @@ public class MainFrame extends JFrame {
         }
     }
 
-    public void initialize () {
+    public void initialize() {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setTitle(propertyLoader.getProperty(FRAME_TITLE));
         addMenuBar();
@@ -65,8 +68,8 @@ public class MainFrame extends JFrame {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
         this.setLocation(
-                (screenSize.width - this.getWidth())/2,
-                (screenSize.height - this.getHeight())/2);
+                (screenSize.width - this.getWidth()) / 2,
+                (screenSize.height - this.getHeight()) / 2);
     }
 
     private JMenuBar addMenuBar() {
@@ -77,13 +80,13 @@ public class MainFrame extends JFrame {
 
         // Сохранить данные
         JMenuItem menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_STORE));
-        menuItem.addActionListener( action -> {
-            SwingUtilities.invokeLater( () -> {
+        menuItem.addActionListener(action -> {
+            SwingUtilities.invokeLater(() -> {
                 int saveChoise = saveAsFileChooser.showSaveDialog(window);
                 if (saveChoise == JFileChooser.APPROVE_OPTION) {
                     File file = saveAsFileChooser.getSelectedFile();
                     if (!file.getName().endsWith(".json")) {
-                        file = new File(file.getAbsolutePath()+".json");
+                        file = new File(file.getAbsolutePath() + ".json");
                     }
                     allContent.store(file);
                 }
@@ -93,8 +96,8 @@ public class MainFrame extends JFrame {
 
         // Сохранить данные
         menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_RESTORE));
-        menuItem.addActionListener( action -> {
-            SwingUtilities.invokeLater( () -> {
+        menuItem.addActionListener(action -> {
+            SwingUtilities.invokeLater(() -> {
                 int openChoise = saveAsFileChooser.showOpenDialog(window);
                 if (openChoise == JFileChooser.APPROVE_OPTION) {
                     String[] choiseButtons = {propertyLoader.getProperty(BUTTON_OVERWRITE),
@@ -122,7 +125,7 @@ public class MainFrame extends JFrame {
         menu.addSeparator();
         // Выход
         menuItem = new JMenuItem(propertyLoader.getProperty(MENU_EXIT));
-        menuItem.addActionListener( event -> {
+        menuItem.addActionListener(event -> {
             window.dispatchEvent(
                     new WindowEvent(window, WindowEvent.WINDOW_CLOSING)
             );
@@ -131,8 +134,8 @@ public class MainFrame extends JFrame {
 
         menu = new JMenu(propertyLoader.getProperty(MENU_REPORT));
         menuItem = new JMenuItem(propertyLoader.getProperty(MENU_REPORT_GENERATE));
-        menuItem.addActionListener( event -> {
-            SwingUtilities.invokeLater( () -> {
+        menuItem.addActionListener(event -> {
+            SwingUtilities.invokeLater(() -> {
                 window.setEnabled(false);
                 reportGenerator.generateReport();
                 window.setEnabled(true);
@@ -172,12 +175,18 @@ public class MainFrame extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         panel.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+
+        representativeChoise = new JComboBox(Representative.values());
+        representativeChoise.addActionListener(event -> {
+            applyFilter();
+        });
+        panel.add(representativeChoise);
         JButton add = new JButton("+");
-        add.addActionListener( actionEvent -> {
+        add.addActionListener(actionEvent -> {
             SwingUtilities.invokeLater(() -> rowModifyDialog.showAddRow());
         });
         JButton substract = new JButton("-");
-        substract.addActionListener( action -> {
+        substract.addActionListener(action -> {
             if (contentTable.noRowsSelected()) {
                 JOptionPane.showMessageDialog(window, propertyLoader.getProperty(CHOOSE_AT_LEAST_ONE));
             } else {
@@ -200,14 +209,14 @@ public class MainFrame extends JFrame {
         panel.add(add);
         panel.add(substract);
         panel.add(new JLabel("                               "));
-        final JTextField searchTextField = new JTextField();
+        searchTextField = new JTextField();
         searchTextField.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
                 if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchTextField.getText())) {
                     searchTextField.setText("");
                     searchTextField.setForeground(Color.BLACK);
-                    searchTextField.setFont(new Font("searchText",Font.PLAIN,11));
+                    searchTextField.setFont(new Font("searchText", Font.PLAIN, 11));
                 }
             }
 
@@ -216,29 +225,38 @@ public class MainFrame extends JFrame {
                 if (searchTextField.getText().isEmpty()) {
                     searchTextField.setText(propertyLoader.getProperty(SEARCH_TEXT_FIELD));
                     searchTextField.setForeground(Color.GRAY);
-                    searchTextField.setFont(new Font("stub",Font.ITALIC,11));
+                    searchTextField.setFont(new Font("stub", Font.ITALIC, 11));
                 }
             }
         });
         searchTextField.setText(propertyLoader.getProperty(SEARCH_TEXT_FIELD));
         searchTextField.setForeground(Color.GRAY);
-        searchTextField.setFont(new Font("stub",Font.ITALIC,11));
+        searchTextField.setFont(new Font("stub", Font.ITALIC, 11));
 
         searchTextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                if (searchTextField.getText().isEmpty()) {
-                    contentTable.unFilter();
-                } else {
-                    contentTable.filter(searchTextField.getText());
-                }
+                applyFilter();
             }
         });
 
-        searchTextField.setPreferredSize(new Dimension(200,23));
+        searchTextField.setPreferredSize(new Dimension(200, 23));
         panel.add(searchTextField);
 
         return panel;
+    }
+
+    private void applyFilter() {
+        if (searchTextField.getText().isEmpty() && representativeChoise.getSelectedItem() == Representative.ALL) {
+            contentTable.unFilter();
+        } else {
+            String searchText = searchTextField.getText();
+            if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchText)) {
+                searchText = "";
+            }
+            contentTable.filter(((Representative)representativeChoise.getSelectedItem()), searchText);
+        }
+
     }
 
     private JScrollPane createTablePanel() {

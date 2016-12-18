@@ -2,6 +2,7 @@ package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.domain.Representative;
 import ru.bmstr.pugu.domain.Suit;
 import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.PropertyLoader;
@@ -59,8 +60,8 @@ public class MyTableModel extends AbstractTableModel {
         SwingUtilities.invokeLater(() -> this.fireTableDataChanged() );
     }
 
-    public void filter(String searchString) {
-        allContent.filter(searchString);
+    public void filter(Representative representative, String searchString) {
+        allContent.filter(representative, searchString);
         reDraw();
     }
 

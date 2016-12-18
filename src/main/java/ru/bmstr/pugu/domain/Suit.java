@@ -2,8 +2,6 @@ package ru.bmstr.pugu.domain;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import java.util.Comparator;
-
 /**
  * Created by bmstr on 27.11.2016.
  */
@@ -21,17 +19,56 @@ public class Suit {
     public Object getAt(int index) {
         switch (index) {
             case 1:
-                return getYear();
+                return getRepresentative();
             case 2:
-                return getType();
+                return getYear();
             case 3:
-                return getCategory();
+                switch (getType()) {
+                    case USUAL:
+                    case OUR:
+                        return getCategory();
+                    case SPECIAL:
+                    case THIRD_PARTY:
+                    case APPELATION:
+                    case CASSATION:
+                    case OUR_APPELATION:
+                    case OUR_CASSATION:
+                        return getType();
+                    case EMPTY:
+                        return "---";
+                }
             case 4:
-                return getPlaintiff();
+                switch (getType()) {
+                    case USUAL:
+                    case SPECIAL:
+                    case THIRD_PARTY:
+                    case APPELATION:
+                    case CASSATION:
+                        return getPlaintiff();
+                    case OUR:
+                    case OUR_APPELATION:
+                    case OUR_CASSATION:
+                        return getDefendant();
+                    case EMPTY:
+                        return "---";
+                }
             case 5:
                 return getInitialSumm();
             case 6:
-                return getDefendant();
+                switch (getType()) {
+                    case USUAL:
+                    case SPECIAL:
+                    case THIRD_PARTY:
+                    case APPELATION:
+                    case CASSATION:
+                        return getDefendant();
+                    case OUR:
+                    case OUR_APPELATION:
+                    case OUR_CASSATION:
+                        return getPlaintiff();
+                    case EMPTY:
+                        return "---";
+                }
             case 7:
                 return getResult();
             case 8:
@@ -173,15 +210,15 @@ public class Suit {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("representative",getRepresentative().toString())
-                .append("category",getCategory().toString())
+                .append("representative", getRepresentative().toString())
+                .append("category", getCategory().toString())
                 .append("type", getType().toString())
-                .append("plaintiff",getPlaintiff().toString())
-                .append("defendant",getDefendant().toString())
-                .append("initialSumm",String.valueOf(initialSumm))
-                .append("agreedSumm",String.valueOf(agreedSumm))
-                .append("year",getYear().toString())
-                .append("result",getResult().toString())
+                .append("plaintiff", getPlaintiff().toString())
+                .append("defendant", getDefendant().toString())
+                .append("initialSumm", String.valueOf(initialSumm))
+                .append("agreedSumm", String.valueOf(agreedSumm))
+                .append("year", getYear().toString())
+                .append("result", getResult().toString())
                 .toString()
                 ;
     }

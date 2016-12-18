@@ -47,8 +47,11 @@ public class AllContent {
     private void loadLastData() {
         DATA_PATH = new File(propertyLoader.getProperty(DATA_FOLDER));
         DATA_PATH.mkdirs();
-        File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
-        restoreAndOverwrite(dataFile);
+        for (Representative representative : Representative.values()) {
+            restoreAndAdd(new File(DATA_PATH, representative.name() + ".json"));
+        }
+//        File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
+//        restoreAndOverwrite(dataFile);
     }
 
     public void sort() {
@@ -81,7 +84,27 @@ public class AllContent {
 
     @PreDestroy
     public void store() {
+        storeSplit(DATA_PATH);
         store(new File(DATA_PATH, DEFAULT_CONTENT_FILENAME));
+    }
+
+    public void storeSplit(File directoryTo) {
+        try {
+            directoryTo.mkdirs();
+            if (directoryTo.exists()) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.enable(SerializationFeature.INDENT_OUTPUT);
+                for (Representative representative : Representative.values()) {
+                    mapper.writeValue(
+                            new File(directoryTo, representative.name() + ".json"),
+                            suits.stream().filter(suit -> suit.getRepresentative() == representative).collect(Collectors.toList()));
+                }
+            } else {
+                log.error("Unable to create directory " + directoryTo.getAbsolutePath());
+            }
+        } catch (IOException e) {
+            log.error("Error while storing data to json file", e);
+        }
     }
 
     public void store(File saveTo) {
@@ -279,12 +302,29 @@ public class AllContent {
         return result;
     }
 
-    public void filter(String searchString) {
-        filtered = true;
+    private List<Suit> filterRepresentative(List<Suit> toFilterSuits, final Representative representative) {
+        return toFilterSuits.stream()
+                .filter(suit -> suit.getRepresentative() == representative)
+                .collect(Collectors.toList());
+    }
+
+    private List<Suit> filterString(List<Suit> toFilterSuits, String searchString) {
         final String finalSearchString = searchString.toLowerCase();
-        filteredSuits = suits.stream()
+        return toFilterSuits.stream()
                 .filter(suit -> suit.toString().toLowerCase().contains(finalSearchString))
                 .collect(Collectors.toList());
+    }
+
+    public void filter(Representative representative, String searchString) {
+        filtered = true;
+
+        filteredSuits = suits;
+        if (representative != Representative.ALL) {
+            filteredSuits = filterRepresentative(filteredSuits, representative);
+        }
+        if (!searchString.isEmpty()) {
+            filteredSuits = filterString(filteredSuits, searchString);
+        }
     }
 
     public void unFilter() {

@@ -1,0 +1,151 @@
+[ {
+  "type" : "USUAL",
+  "category" : "TYSHA_69",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Колтува",
+  "initialSumm" : 112439,
+  "agreedSumm" : 4439,
+  "result" : "APPROVE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "USUAL",
+  "category" : "VOSM_VREDA_ZDOROV",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Анцупов",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE211",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Бородулин",
+  "initialSumm" : 300000,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE211",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Добровольцев",
+  "initialSumm" : 700000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE211",
+  "defendant" : "KAZNA",
+  "plaintiff" : "Сухоцкая",
+  "initialSumm" : 500000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE211",
+  "defendant" : "MVD",
+  "plaintiff" : "Язиджян М. А.",
+  "initialSumm" : 157000,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "USUAL",
+  "category" : "INIYE211",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Аксенкин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2015",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Борисова С.В.",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Воевод О.И.",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Дроздова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Засыпкин",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Корженевский",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "DECLINE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Русанова Т.М.",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Сучок",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "APPROVE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+}, {
+  "type" : "SPECIAL",
+  "category" : "EMPTY",
+  "defendant" : "PODRAZDELENIE",
+  "plaintiff" : "Яцунова",
+  "initialSumm" : 0,
+  "agreedSumm" : 0,
+  "result" : "NONE",
+  "year" : "Y2016",
+  "representative" : "HARCHOV"
+} ]

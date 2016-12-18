@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * Created by bmstr on 27.11.2016.
  */
 public enum Category {
-    EMPTY(SuitType.USUAL),
+    EMPTY,
 
     OSPARIVANII_RESH_GOS_ORG(SuitType.USUAL),
         TYSHA_69(SuitType.USUAL, OSPARIVANII_RESH_GOS_ORG),
@@ -56,6 +56,10 @@ public enum Category {
 
     SuitType type;
     Category parent;
+
+    Category() {
+    }
+
     Category(SuitType type) {
         this.type = type;
     }

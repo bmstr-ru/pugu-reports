@@ -6,21 +6,22 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
  * Created by bmstr on 03.12.2016.
  */
 public enum Representative {
-    EMPTY,
-    BOITSOVA,
+    ALL,
+    ABASOVA,
     AZARENKO,
+    BALANDINA,
+    BARANOVSKAYA,
+    BASTRAKOVA,
+    BOITSOVA,
+    GILYAZOVA,
+    ERMASHEVA,
+    MERKULOVA,
     RANEVA,
     STRELNIKOV,
-    BALANDINA,
-    ABASOVA,
-    ERMASHEVA,
     SUKHARNIKOVA,
-    HARCHOV,
-    BARANOVSKAYA,
-    GILYAZOVA,
-    BASTRAKOVA,
     CHUGINA,
-    DARIA;
+    HARCHOV,
+    EMPTY_REPRESENTATIVE;
 
     public String toString() {
         return EnumNameHelper.getName(name()+".surname");

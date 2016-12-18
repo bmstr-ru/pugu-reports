@@ -39,4 +39,6 @@ public class PropertyNames {
     public static final String REPORT_FILENAME = "report.filename";
     public static final String REPORT_TEMPLATE_MISSING = "report.template.missing";
     public static final String SEARCH_TEXT_FIELD = "search.textField";
+    public static final String SAVE_ERROR_TITLE = "save.error.title";
+    public static final String SAVE_ERROR_TYPE_EMPTY = "save.error.type.empty";
 }
