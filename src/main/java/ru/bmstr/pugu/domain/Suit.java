@@ -1,5 +1,7 @@
 package ru.bmstr.pugu.domain;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import java.util.Comparator;
 
 /**
@@ -14,6 +16,30 @@ public class Suit {
     private Integer agreedSumm;
     private Result result;
     private Year year;
+    private Representative representative;
+
+    public Object getAt(int index) {
+        switch (index) {
+            case 1:
+                return getYear();
+            case 2:
+                return getType();
+            case 3:
+                return getCategory();
+            case 4:
+                return getPlaintiff();
+            case 5:
+                return getInitialSumm();
+            case 6:
+                return getDefendant();
+            case 7:
+                return getResult();
+            case 8:
+                return getAgreedSumm();
+            default:
+                throw new RuntimeException("Tried to get column number " + index + " which is missing");
+        }
+    }
 
     public Category getCategory() {
         return category;
@@ -83,6 +109,14 @@ public class Suit {
         this.type = type;
     }
 
+    public Representative getRepresentative() {
+        return representative;
+    }
+
+    public void setRepresentative(Representative representative) {
+        this.representative = representative;
+    }
+
     public static class SuitBuilder {
         private Suit suit = new Suit();
 
@@ -116,11 +150,6 @@ public class Suit {
             return this;
         }
 
-        public SuitBuilder withType(String typeName) {
-            suit.setType(SuitType.valueOf(typeName));
-            return this;
-        }
-
         public SuitBuilder withType(SuitType type) {
             suit.setType(type);
             return this;
@@ -131,8 +160,29 @@ public class Suit {
             return this;
         }
 
+        public SuitBuilder withRepresentative(Representative representative) {
+            suit.setRepresentative(representative);
+            return this;
+        }
+
         public Suit getSuit() {
             return suit;
         }
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("representative",getRepresentative().toString())
+                .append("category",getCategory().toString())
+                .append("type", getType().toString())
+                .append("plaintiff",getPlaintiff().toString())
+                .append("defendant",getDefendant().toString())
+                .append("initialSumm",String.valueOf(initialSumm))
+                .append("agreedSumm",String.valueOf(agreedSumm))
+                .append("year",getYear().toString())
+                .append("result",getResult().toString())
+                .toString()
+                ;
     }
 }

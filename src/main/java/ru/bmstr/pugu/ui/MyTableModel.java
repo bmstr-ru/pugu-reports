@@ -58,4 +58,14 @@ public class MyTableModel extends AbstractTableModel {
     public void reDraw() {
         SwingUtilities.invokeLater(() -> this.fireTableDataChanged() );
     }
+
+    public void filter(String searchString) {
+        allContent.filter(searchString);
+        reDraw();
+    }
+
+    public void unFilter() {
+        allContent.unFilter();
+        reDraw();
+    }
 }

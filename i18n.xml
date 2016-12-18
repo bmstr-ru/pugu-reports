@@ -19,10 +19,14 @@
     <entry key="button.delete">Удалить</entry>
     <entry key="button.cancel">Отмена</entry>
     <entry key="delete.question">Вы действительно хотите удалить выбранные иски?</entry>
+    <entry key="search.textField">Поиск</entry>
 
     <entry key="data.folder">данные</entry>
     <entry key="suit.enter">Введите данные иска</entry>
     <entry key="suit.from">Иск от </entry>
+
+    <entry key="label.type">Тип иска:</entry>
+    <entry key="label.representative">Представитель:</entry>
     <entry key="label.year">Год:</entry>
     <entry key="label.category">Категория:</entry>
     <entry key="label.plaintiff">Истец:</entry>
@@ -32,47 +36,54 @@
     <entry key="label.agreedSumm">Сумма удовлетворённых требований:</entry>
 
     <entry key="enum.EMPTY"></entry>
-    <entry key="enum.TYSHA_69">1069</entry>
-    <entry key="enum.OSPARIVANII_RESH_GOS_ORG">Об оспаривании решения гос. органов</entry>
-    <entry key="enum.IZYATIE_IMUSHESTVA">Изъятие имущества</entry>
-    <entry key="enum.IVS">ИВС</entry>
-    <entry key="enum.TYSHA_70">1070</entry>
-    <entry key="enum.SUDOPROIZVODSTVO">Судопроизводство</entry>
-    <entry key="enum.OSPARIV_NORM_ACTA">Об оспариваании нормативного акта</entry>
-    <entry key="enum.OBZHALOV_PRIKAZ_3_3">Об обжаловании приказа 3.3</entry>
-    <entry key="enum.VOSSTANOVLENIE">Восстановление</entry>
-    <entry key="enum.SNYATIYE_DISC_VZYSK">О снятии дисциплинарного взыскания</entry>
-    <entry key="enum.VOSM_VREDA_ZDOROV">Возмещение вреда здоровью</entry>
-    <entry key="enum.RESHENIE_PO_ZHILISH">Решение по жилищн.</entry>
-    <entry key="enum.VSYSK_OBYAZAT_PLATEZH">Взыскание обязательных платежей</entry>
-    <entry key="enum.INDEKSACIYA_DENEZHNYH_SUMM">Индексация денежных сумм</entry>
-    <entry key="enum.PENSIONNIYE">Пенсионные</entry>
-    <entry key="enum.ISPOLN_DOGOVOR_OBYAZ">Об исполнении договорных обязательств</entry>
-    <entry key="enum.ZASHITA_CHEST">О защите чести</entry>
-    <entry key="enum.NARUSH_PORYADKA_RASSMOTR_OBRASHENIYA">Нарушение порядка рассмотрен обращения</entry>
-    <entry key="enum.MIGRATSIYA">По миграции</entry>
-    <entry key="enum.INIYE">Иные</entry>
-    <entry key="enum.OSOBOGO_PROIZVODSTVA">Особого производства</entry>
-    <entry key="enum.INIYE8">Иные8</entry>
-    <entry key="enum.ISPOLNEN_DOGOVORNYH">Об исполнении договорных обязательств</entry>
-    <entry key="enum.REGRESS">В порядке регресса</entry>
-    <entry key="enum.VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV">В возмещение ущерба с виновных сотрудников</entry>
-    <entry key="enum.VZYSKANII_S_VINOVNYH">О взыскании с виновных в возмещение вреда здоровью</entry>
-    <entry key="enum.INIYE923">Иные 9.2.3</entry>
-    <entry key="enum.ZHILISHNYE">По жилищным</entry>
-    <entry key="enum.ZASHITE_DELOVOY">О защите деловой</entry>
-    <entry key="enum.INIYE95">Иные 9.5</entry>
+    <entry key="enum.OSPARIVANII_RESH_GOS_ORG">2.1. Об оспаривании решений, действий (бездействия) органов, организаций, подразделений и их должностных лиц и(или) о возмещении вреда, причиненного данными действиями (бездействием)</entry>
+    <entry key="enum.TYSHA_69">2.1.1. В порядке статьи 1069 ГК РФ</entry>
+    <entry key="enum.IZYATIE_IMUSHESTVA">2.1.2. О возмещении вреда, причиненного в связи с изъятием имущества</entry>
+    <entry key="enum.IVS">2.1.3. О ненадлежащем содержании граждан в ИВС</entry>
+    <entry key="enum.TYSHA_70">2.1.4. В порядке статьи 1070 ГК РФ</entry>
+    <entry key="enum.SUDOPROIZVODSTVO">2.1.5. О взыскании компенсации за нарушение права на судопроизводство в разумный срок и права на исполнение судебного акта в разумный срок</entry>
+    <entry key="enum.INIYE216">2.1.6. Иные</entry>
+    <entry key="enum.OSPARIV_NORM_ACTA">2.2. Об оспаривании нормативного правового акта МВД России</entry>
+    <entry key="enum.OBZHALOV_PRIKAZA">2.3 Об обжаловании приказа (решения), а также иного документа, связанного с прохождением службы (работой)</entry>
+    <entry key="enum.VOSSTANOVLENIE">2.3.1. О восстановлении на службе (работе)</entry>
+    <entry key="enum.SNYATIYE_DISC_VZYSK">2.3.2. О снятии дисциплинарного взыскания</entry>
+    <entry key="enum.INIYE233">2.3.3. О снятии дисциплинарного взыскания</entry>
+    <entry key="enum.VOSM_VREDA_ZDOROV">2.4. О возмещении вреда здоровью, в том числе по выплате пособий, связанных с гибелью (смертью) сотрудника, и индексации указанных сумм</entry>
+    <entry key="enum.RESHENIE_PO_ZHILISH">2.5. Об оспаривании решений по жилищным вопросам</entry>
+    <entry key="enum.VSYSK_OBYAZAT_PLATEZH">2.6. О взыскании обязательных платежей</entry>
+    <entry key="enum.INDEKSACIYA_DENEZHNYH_SUMM">2.6.1. Об индексации присужденных денежных сумм (кроме выплат в возмещение вреда здоровью)</entry>
+    <entry key="enum.PENSIONNIYE">2.6.2. Пенсионных выплат</entry>
+    <entry key="enum.INIYE263">2.6.3. Иные</entry>
+    <entry key="enum.ISPOLN_DOGOVOR_OBYAZ">2.7. Об исполнении договорных обязательств</entry>
+    <entry key="enum.ZASHITA_CHEST">2.8. О защите чести, достоинства и деловой репутации</entry>
+    <entry key="enum.NARUSH_PORYADKA_RASSMOTR_OBRASHENIYA">2.9. О нарушении порядка рассмотрения обращений граждан, организаций и общественных объединений</entry>
+    <entry key="enum.MIGRATSIYA">2.10. По делам миграции</entry>
+    <entry key="enum.INIYE211">2.11. По иным категориям дел</entry>
+
+    <entry key="enum.OSOBOGO_PROIZVODSTVA">7. Дела об установлении фактов, имеющих юридическое значение или подлежащих рассмотрению в порядке особого производства</entry>
+    <entry key="enum.THIRD_PARTY">8. Третьи лица</entry>
+    <entry key="enum.ISPOLNEN_DOGOVORNYH">9.1. Об исполнении договорных обязательств (в том числе взыскание штрафов и пени)</entry>
+    <entry key="enum.REGRESS">9.2. В порядке регресса</entry>
+    <entry key="enum.VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV">9.2.1. В возмещение ущерба с виновных сотрудников (федеральных государственных гражданских служащих, работников):</entry>
+    <entry key="enum.VZYSKANII_S_VINOVNYH">9.2.2. О взыскании с виновных лиц сумм, выплаченных в возмещение вреда здоровью</entry>
+    <entry key="enum.REGRESS_INIYE">9.2.3 Иные</entry>
+    <entry key="enum.ZHILISHNYE">9.3. По жилищным спорам</entry>
+    <entry key="enum.ZASHITE_DELOVOY">9.4. О защите деловой репутации</entry>
+    <entry key="enum.INIYE_OUR">9.5 Иные</entry>
 
     <entry key="enum.APPROVE">Удовлетворён</entry>
     <entry key="enum.DECLINE">Отказано</entry>
     <entry key="enum.NONE">Не рассмотрен</entry>
+    <entry key="enum.AGREED">Мировое соглашение</entry>
 
-    <entry key="enum.USUAL">Иск к нам</entry>
-    <entry key="enum.OUR">Иск наш</entry>
-    <entry key="enum.APPELATION">Жалобы не вступившие</entry>
-    <entry key="enum.CASSATION">Жалобы вступившие</entry>
-    <entry key="enum.OUR_APPELATION">Жалобы наши не вступившие</entry>
-    <entry key="enum.OUR_CASSATION">Жалобы наши вступившие</entry>
+    <entry key="enum.USUAL">2. Иск к нам</entry>
+    <entry key="enum.SPECIAL">7. Особого производства</entry>
+    <entry key="enum.THIRD_PARTY">8. Третьи лица</entry>
+    <entry key="enum.OUR">9. Иск наш</entry>
+    <entry key="enum.APPELATION">14. Жалобы не вступившие</entry>
+    <entry key="enum.CASSATION">15. Жалобы вступившие</entry>
+    <entry key="enum.OUR_APPELATION">16. Жалобы наши не вступившие</entry>
+    <entry key="enum.OUR_CASSATION">17. Жалобы наши вступившие</entry>
 
     <entry key="enum.PODRAZDELENIE">ГУ</entry>
     <entry key="enum.KAZNA">Казна</entry>
@@ -81,45 +92,58 @@
     <entry key="enum.BOITSOVA.name">Ольга</entry>
     <entry key="enum.BOITSOVA.midname">Николаевна</entry>
     <entry key="enum.BOITSOVA.surname">Бойцова</entry>
+
     <entry key="enum.AZARENKO.name">Илья</entry>
     <entry key="enum.AZARENKO.midname">Викторович</entry>
     <entry key="enum.AZARENKO.surname">Азаренко</entry>
+
     <entry key="enum.RANEVA.name">Анна</entry>
     <entry key="enum.RANEVA.midname">Александровна</entry>
     <entry key="enum.RANEVA.surname">Ранева</entry>
+
     <entry key="enum.STRELNIKOV.name">Вадим</entry>
     <entry key="enum.STRELNIKOV.midname">Александрович</entry>
     <entry key="enum.STRELNIKOV.surname">Стрельников</entry>
+
     <entry key="enum.BALANDINA.name">Анна</entry>
     <entry key="enum.BALANDINA.midname">Николаевна</entry>
     <entry key="enum.BALANDINA.surname">Баландина</entry>
+
     <entry key="enum.ABASOVA.name">Мария</entry>
-    <entry key="enum.ABASOVA.midname"></entry>
+    <entry key="enum.ABASOVA.midname"> </entry>
     <entry key="enum.ABASOVA.surname">Абасова</entry>
+
     <entry key="enum.ERMASHEVA.name">Анастасия</entry>
     <entry key="enum.ERMASHEVA.midname">Александровна</entry>
     <entry key="enum.ERMASHEVA.surname">Ермашёва</entry>
+
     <entry key="enum.SUKHARNIKOVA.name">Александра</entry>
     <entry key="enum.SUKHARNIKOVA.midname">Викторовна</entry>
     <entry key="enum.SUKHARNIKOVA.surname">Сухарникова</entry>
+
     <entry key="enum.HARCHOV.name">Владислав</entry>
     <entry key="enum.HARCHOV.midname"></entry>
     <entry key="enum.HARCHOV.surname">Харчев</entry>
+
     <entry key="enum.BARANOVSKAYA.name">Анна</entry>
     <entry key="enum.BARANOVSKAYA.midname">Викторовна</entry>
     <entry key="enum.BARANOVSKAYA.surname">Барановская</entry>
+
     <entry key="enum.GILYAZOVA.name">Альмира</entry>
     <entry key="enum.GILYAZOVA.midname">Рашидовна</entry>
     <entry key="enum.GILYAZOVA.surname">Гилязова</entry>
+
     <entry key="enum.BASTRAKOVA.name">Екатерина</entry>
-    <entry key="enum.BASTRAKOVA.midname">, </entry>
+    <entry key="enum.BASTRAKOVA.midname"> </entry>
     <entry key="enum.BASTRAKOVA.surname">Бастракова</entry>
+
     <entry key="enum.CHUGINA.name">Ирина</entry>
     <entry key="enum.CHUGINA.midname">Валерьевна</entry>
     <entry key="enum.CHUGINA.surname">Чугина</entry>
+
     <entry key="enum.DARIA.name">Даша</entry>
-    <entry key="enum.DARIA.midname">Даша</entry>
-    <entry key="enum.DARIA.surname">Даша</entry>
+    <entry key="enum.DARIA.midname"></entry>
+    <entry key="enum.DARIA.surname">Меркулова</entry>
 
     <entry key="enum.tableHeader.n1">№</entry>
     <entry key="enum.tableHeader.n2">Год</entry>

@@ -26,6 +26,8 @@ public class PropertyNames {
     public static final String DATA_FOLDER = "data.folder";
     public static final String SUIT_ENTER = "suit.enter";
     public static final String SUIT_FROM = "suit.from";
+    public static final String LABEL_TYPE = "label.type";
+    public static final String LABEL_REPRESENTATIVE = "label.representative";
     public static final String LABEL_YEAR = "label.year";
     public static final String LABEL_CATEGORY = "label.category";
     public static final String LABEL_PLAINTIFF = "label.plaintiff";
@@ -36,4 +38,5 @@ public class PropertyNames {
     public static final String REPORT_TEMPLATE = "report.template";
     public static final String REPORT_FILENAME = "report.filename";
     public static final String REPORT_TEMPLATE_MISSING = "report.template.missing";
+    public static final String SEARCH_TEXT_FIELD = "search.textField";
 }

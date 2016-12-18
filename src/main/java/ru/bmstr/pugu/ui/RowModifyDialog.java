@@ -18,8 +18,10 @@ import static ru.bmstr.pugu.properties.PropertyNames.*;
 public class RowModifyDialog extends JDialog {
 
     private static final int DEFAULT_WIDTH = 500;
-    private static final int DEFAULT_HEIGHT = 300;
+    private static final int DEFAULT_HEIGHT = 350;
 
+    private JComboBox typeChoise;
+    private JComboBox representativeChoise;
     private JComboBox yearChoise;
     private JComboBox categoryChoise;
     private DefaultComboBoxModel usualCategories;
@@ -30,7 +32,8 @@ public class RowModifyDialog extends JDialog {
     private JFormattedTextField initialSummInput;
     private JFormattedTextField agreedSummInput;
     private JComboBox resultChoise;
-    private ButtonGroup buttonGroup;
+    private JLabel typeLabel;
+    private JLabel representativeLabel;
     private JLabel yearLabel;
     private JLabel categoryLabel;
     private JLabel plaintiffLabel;
@@ -39,12 +42,6 @@ public class RowModifyDialog extends JDialog {
     private JLabel resultLabel;
     private JLabel agreedSummLabel;
 
-    JRadioButton usualButton;
-    JRadioButton ourButton;
-    JRadioButton appelationButton;
-    JRadioButton cassationButton;
-    JRadioButton ourAppelationButton;
-    JRadioButton ourCassationButton;
     JButton save;
 
     private Suit modifiableSuit;
@@ -76,20 +73,14 @@ public class RowModifyDialog extends JDialog {
         this.setLocationRelativeTo(this.getOwner());
         Container pane = this.getContentPane();
         pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
-        pane.add(getTypeChoisePanel());
         pane.add(getInputDataPanel());
         pane.add(getControlButtonsPanel());
     }
 
     private void setLabels() {
         if (!labelsInitialized) {
-            usualButton.setText(propertyLoader.getProperty("enum." + SuitType.USUAL.name()));
-            ourButton.setText(propertyLoader.getProperty("enum." + SuitType.OUR.name()));
-            appelationButton.setText(propertyLoader.getProperty("enum." + SuitType.APPELATION.name()));
-            cassationButton.setText(propertyLoader.getProperty("enum." + SuitType.CASSATION.name()));
-            ourAppelationButton.setText(propertyLoader.getProperty("enum." + SuitType.OUR_APPELATION.name()));
-            ourCassationButton.setText(propertyLoader.getProperty("enum." + SuitType.OUR_CASSATION.name()));
-
+            typeLabel.setText(propertyLoader.getProperty(LABEL_TYPE));
+            representativeLabel.setText(propertyLoader.getProperty(LABEL_REPRESENTATIVE));
             yearLabel.setText(propertyLoader.getProperty(LABEL_YEAR));
             categoryLabel.setText(propertyLoader.getProperty(LABEL_CATEGORY));
             plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
@@ -108,7 +99,8 @@ public class RowModifyDialog extends JDialog {
         setLabels();
         modifiableSuit = null;
         this.setTitle(propertyLoader.getProperty(SUIT_ENTER));
-        usualButton.setSelected(true);
+        typeChoise.setSelectedItem(SuitType.EMPTY);
+        representativeChoise.setSelectedItem(Representative.EMPTY);
         yearChoise.setSelectedItem(Year.Y2016);
         categoryChoise.setSelectedItem(Category.EMPTY);
         defendantChoise.setSelectedItem(Defendant.EMPTY);
@@ -123,6 +115,8 @@ public class RowModifyDialog extends JDialog {
         setLabels();
         modifiableSuit = suit;
         this.setTitle(propertyLoader.getProperty(SUIT_FROM) + suit.getPlaintiff());
+        typeChoise.setSelectedItem(suit.getType());
+        representativeChoise.setSelectedItem(suit.getRepresentative());
         yearChoise.setSelectedItem(suit.getYear());
         categoryChoise.setSelectedItem(suit.getCategory());
         defendantChoise.setSelectedItem(suit.getDefendant());
@@ -137,37 +131,25 @@ public class RowModifyDialog extends JDialog {
     private void setDependantComponents(SuitType type) {
         switch (type) {
             case USUAL:
-                usualButton.setSelected(true);
                 plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
                 defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
                 categoryChoise.setModel(usualCategories);
                 break;
             case OUR:
-                ourButton.setSelected(true);
                 plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
                 defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
                 categoryChoise.setModel(ourCategories);
                 break;
             case APPELATION:
-                appelationButton.setSelected(true);
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                categoryChoise.setModel(emptyCategories);
-                break;
             case CASSATION:
+            case SPECIAL:
+            case THIRD_PARTY:
                 plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
                 defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                cassationButton.setSelected(true);
                 categoryChoise.setModel(emptyCategories);
                 break;
             case OUR_APPELATION:
-                ourAppelationButton.setSelected(true);
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                categoryChoise.setModel(emptyCategories);
-                break;
             case OUR_CASSATION:
-                ourCassationButton.setSelected(true);
                 plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
                 defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
                 categoryChoise.setModel(emptyCategories);
@@ -175,63 +157,12 @@ public class RowModifyDialog extends JDialog {
         }
     }
 
-    private JPanel getTypeChoisePanel() {
-        JPanel panel = new JPanel();
-
-        ActionListener listener = event -> {
-            SwingUtilities.invokeLater(() -> {
-                String command = event.getActionCommand();
-                setDependantComponents(SuitType.valueOf(command));
-            });
-        };
-
-        usualButton = new JRadioButton();
-        usualButton.setActionCommand(SuitType.USUAL.name());
-        usualButton.setSelected(true);
-        usualButton.addActionListener(listener);
-
-        ourButton = new JRadioButton();
-        ourButton.setActionCommand(SuitType.OUR.name());
-        ourButton.addActionListener(listener);
-
-        appelationButton = new JRadioButton();
-        appelationButton.setActionCommand(SuitType.APPELATION.name());
-        appelationButton.addActionListener(listener);
-
-        cassationButton = new JRadioButton();
-        cassationButton.setActionCommand(SuitType.CASSATION.name());
-        cassationButton.addActionListener(listener);
-
-        ourAppelationButton = new JRadioButton();
-        ourAppelationButton.setActionCommand(SuitType.OUR_APPELATION.name());
-        ourAppelationButton.addActionListener(listener);
-
-        ourCassationButton = new JRadioButton();
-        ourCassationButton.setActionCommand(SuitType.OUR_CASSATION.name());
-        ourCassationButton.addActionListener(listener);
-
-        buttonGroup = new ButtonGroup();
-        buttonGroup.add(usualButton);
-        buttonGroup.add(ourButton);
-        buttonGroup.add(appelationButton);
-        buttonGroup.add(cassationButton);
-        buttonGroup.add(ourAppelationButton);
-        buttonGroup.add(ourCassationButton);
-
-        panel.add(usualButton);
-        panel.add(ourButton);
-        panel.add(appelationButton);
-        panel.add(cassationButton);
-        panel.add(ourAppelationButton);
-        panel.add(ourCassationButton);
-
-        return panel;
-    }
-
     private JPanel getInputDataPanel() {
-        GridLayout layout = new GridLayout(7, 2);
+        GridLayout layout = new GridLayout(9, 2);
         JPanel dataPanel = new JPanel(layout);
 
+        typeLabel = new JLabel();
+        representativeLabel = new JLabel();
         yearLabel = new JLabel();
         categoryLabel = new JLabel();
         plaintiffLabel = new JLabel();
@@ -242,6 +173,8 @@ public class RowModifyDialog extends JDialog {
 
         NumberFormat numberFormat = NumberFormat.getNumberInstance();
         numberFormat.setMinimumFractionDigits(0);
+        typeChoise = new JComboBox(SuitType.values());
+        representativeChoise = new JComboBox(Representative.values());
         yearChoise = new JComboBox(Year.values());
         categoryChoise = new JComboBox(usualCategories);
         defendantChoise = new JComboBox(Defendant.values());
@@ -249,6 +182,16 @@ public class RowModifyDialog extends JDialog {
         initialSummInput = new JFormattedTextField(numberFormat);
         agreedSummInput = new JFormattedTextField(numberFormat);
         resultChoise = new JComboBox(Result.values());
+
+        typeChoise.addActionListener(event -> {
+            setDependantComponents((SuitType) typeChoise.getSelectedItem());
+        });
+
+        dataPanel.add(typeLabel);
+        dataPanel.add(typeChoise);
+
+        dataPanel.add(representativeLabel);
+        dataPanel.add(representativeChoise);
 
         dataPanel.add(yearLabel);
         dataPanel.add(yearChoise);
@@ -281,7 +224,7 @@ public class RowModifyDialog extends JDialog {
         final JDialog thisDialog = this;
         save.addActionListener(action -> {
             if (modifiableSuit != null) {
-                modifiableSuit.setType(SuitType.valueOf(buttonGroup.getSelection().getActionCommand()));
+                modifiableSuit.setType((SuitType) typeChoise.getSelectedItem());
                 modifiableSuit.setYear((Year) yearChoise.getSelectedItem());
                 modifiableSuit.setCategory((Category) categoryChoise.getSelectedItem());
                 modifiableSuit.setPlaintiff(new String(plaintiffInput.getText()));
@@ -289,17 +232,19 @@ public class RowModifyDialog extends JDialog {
                 modifiableSuit.setInitialSumm(((Number) initialSummInput.getValue()).intValue());
                 modifiableSuit.setAgreedSumm(((Number) agreedSummInput.getValue()).intValue());
                 modifiableSuit.setResult((Result) resultChoise.getSelectedItem());
+                modifiableSuit.setRepresentative((Representative) representativeChoise.getSelectedItem());
                 tableModel.reDraw();
             } else {
                 Suit suit = Suit.getBuilder()
                         .withYear((Year) yearChoise.getSelectedItem())
-                        .withType(buttonGroup.getSelection().getActionCommand())
+                        .withType((SuitType) typeChoise.getSelectedItem())
                         .withCategory((Category) categoryChoise.getSelectedItem())
                         .withDefendant((Defendant) defendantChoise.getSelectedItem())
                         .withPlaintiff(plaintiffInput.getText())
                         .withInitialSumm(((Number) initialSummInput.getValue()).intValue())
                         .withAgreedSumm(((Number) agreedSummInput.getValue()).intValue())
                         .withResult((Result) resultChoise.getSelectedItem())
+                        .withRepresentative((Representative) representativeChoise.getSelectedItem())
                         .getSuit();
                 tableModel.addRow(suit);
             }

@@ -8,7 +8,10 @@ import ru.bmstr.pugu.properties.PropertyLoader;
  * Created by bmstr on 04.12.2016.
  */
 public enum SuitType {
+    EMPTY,
     USUAL,
+    SPECIAL,
+    THIRD_PARTY,
     OUR,
     APPELATION,
     CASSATION,

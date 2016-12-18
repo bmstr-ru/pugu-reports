@@ -52,4 +52,12 @@ public class TableData extends JTable {
     public void reDraw() {
         tableModel.reDraw();
     }
+
+    public void filter(String searchString) {
+        tableModel.filter(searchString);
+    }
+
+    public void unFilter() {
+        tableModel.unFilter();
+    }
 }

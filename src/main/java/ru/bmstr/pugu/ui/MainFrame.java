@@ -10,7 +10,7 @@ import ru.bmstr.pugu.reports.ReportGenerator;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.io.File;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
@@ -199,6 +199,45 @@ public class MainFrame extends JFrame {
         });
         panel.add(add);
         panel.add(substract);
+        panel.add(new JLabel("                               "));
+        final JTextField searchTextField = new JTextField();
+        searchTextField.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchTextField.getText())) {
+                    searchTextField.setText("");
+                    searchTextField.setForeground(Color.BLACK);
+                    searchTextField.setFont(new Font("searchText",Font.PLAIN,11));
+                }
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (searchTextField.getText().isEmpty()) {
+                    searchTextField.setText(propertyLoader.getProperty(SEARCH_TEXT_FIELD));
+                    searchTextField.setForeground(Color.GRAY);
+                    searchTextField.setFont(new Font("stub",Font.ITALIC,11));
+                }
+            }
+        });
+        searchTextField.setText(propertyLoader.getProperty(SEARCH_TEXT_FIELD));
+        searchTextField.setForeground(Color.GRAY);
+        searchTextField.setFont(new Font("stub",Font.ITALIC,11));
+
+        searchTextField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (searchTextField.getText().isEmpty()) {
+                    contentTable.unFilter();
+                } else {
+                    contentTable.filter(searchTextField.getText());
+                }
+            }
+        });
+
+        searchTextField.setPreferredSize(new Dimension(200,23));
+        panel.add(searchTextField);
+
         return panel;
     }
 
