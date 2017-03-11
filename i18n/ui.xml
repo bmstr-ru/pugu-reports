@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>empty comment</comment>
+    <entry key="question">Перезаписать или добавить к имеющимся данным?</entry>
+    <entry key="question.title">Перезаписать</entry>
+    <entry key="button.overwrite">Перезаписать</entry>
+    <entry key="button.save">Сохранить</entry>
+    <entry key="button.add">Добавить</entry>
+    <entry key="report.title">Судебно-исковая работа</entry>
+    <entry key="choose.at.least.one">Выберете хотя бы один иск для удаления</entry>
+    <entry key="button.delete">Удалить</entry>
+    <entry key="button.cancel">Отмена</entry>
+    <entry key="delete.question">Вы действительно хотите удалить выбранные иски?</entry>
+    <entry key="search.textField">Поиск</entry>
+
+    <entry key="suit.enter">Введите данные иска</entry>
+    <entry key="suit.from">Иск от </entry>
+
+    <entry key="label.type">Тип иска:</entry>
+    <entry key="label.representative">Представитель:</entry>
+    <entry key="label.year">Год:</entry>
+    <entry key="label.category">Категория:</entry>
+    <entry key="label.plaintiff">Истец:</entry>
+    <entry key="label.deffender">Ответчик:</entry>
+    <entry key="label.initialSumm">Сумма иска:</entry>
+    <entry key="label.result">Решение:</entry>
+    <entry key="label.agreedSumm">Сумма удовлетворённых требований:</entry>
+</properties>

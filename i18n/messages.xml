@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>empty comment</comment>
+    <entry key="report.template">шаблон отчёта.docx</entry>
+    <entry key="report.filename">Отчёт по судебно-исковой работе.docx</entry>
+
+    <entry key="report.template.missing">Не найден файл шаблона отчёта "шаблон отчёта.docx"</entry>
+    <entry key="menu.report.info.title">Отчёт создан</entry>
+    <entry key="menu.report.info.message">Отчёт успешно создан! Проверьте файл "filename"</entry>
+
+    <entry key="save.error.title">Ошибка</entry>
+    <entry key="save.error.type.empty">Тип иска не может быть пустым!</entry>
+    <entry key="save.error.invalid.summ.initial">Неверное значение суммы иска! Введите целую сумму без копеек.</entry>
+    <entry key="save.error.invalid.summ.agreed">Неверное значение удовлетворённой суммы! Введите целую сумму без копеек.</entry>
+</properties>

@@ -2,39 +2,6 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <comment>empty comment</comment>
-    <entry key="frame.title">Отчёты ПУГУ</entry>
-    <entry key="menu.exit">Выход</entry>
-    <entry key="menu.file">Файл</entry>
-    <entry key="menu.data.store">Сохранить данные</entry>
-    <entry key="menu.data.restore">Восстановить данные</entry>
-    <entry key="menu.report">Отчёт</entry>
-    <entry key="menu.report.generate">Создать отчёт</entry>
-    <entry key="question">Перезаписать или добавить к имеющимся данным?</entry>
-    <entry key="question.title">Перезаписать</entry>
-    <entry key="button.overwrite">Перезаписать</entry>
-    <entry key="button.save">Сохранить</entry>
-    <entry key="button.add">Добавить</entry>
-    <entry key="report.title">Судебно-исковая работа</entry>
-    <entry key="choose.at.least.one">Выберете хотя бы один иск для удаления</entry>
-    <entry key="button.delete">Удалить</entry>
-    <entry key="button.cancel">Отмена</entry>
-    <entry key="delete.question">Вы действительно хотите удалить выбранные иски?</entry>
-    <entry key="search.textField">Поиск</entry>
-
-    <entry key="data.folder">данные</entry>
-    <entry key="suit.enter">Введите данные иска</entry>
-    <entry key="suit.from">Иск от </entry>
-
-    <entry key="label.type">Тип иска:</entry>
-    <entry key="label.representative">Представитель:</entry>
-    <entry key="label.year">Год:</entry>
-    <entry key="label.category">Категория:</entry>
-    <entry key="label.plaintiff">Истец:</entry>
-    <entry key="label.deffender">Ответчик:</entry>
-    <entry key="label.initialSumm">Сумма иска:</entry>
-    <entry key="label.result">Решение:</entry>
-    <entry key="label.agreedSumm">Сумма удовлетворённых требований:</entry>
-
     <entry key="enum.EMPTY"></entry>
     <entry key="enum.OSPARIVANII_RESH_GOS_ORG">2.1. Об оспаривании решений, действий (бездействия) органов, организаций, подразделений и их должностных лиц и(или) о возмещении вреда, причиненного данными действиями (бездействием)</entry>
     <entry key="enum.TYSHA_69">2.1.1. В порядке статьи 1069 ГК РФ</entry>
@@ -157,16 +124,4 @@
     <entry key="enum.tableHeader.n7">Ответчик</entry>
     <entry key="enum.tableHeader.n8">Решение</entry>
     <entry key="enum.tableHeader.n9">Удовлетворённая сумма</entry>
-
-    <entry key="report.template">шаблон отчёта.docx</entry>
-    <entry key="report.filename">Отчёт по судебно-исковой работе.docx</entry>
-
-    <entry key="report.template.missing">Не найден файл шаблона отчёта "шаблон отчёта.docx"</entry>
-    <entry key="menu.report.info.title">Отчёт создан</entry>
-    <entry key="menu.report.info.message">Отчёт успешно создан! Проверьте файл "filename"</entry>
-
-    <entry key="save.error.title">Ошибка</entry>
-    <entry key="save.error.type.empty">Тип иска не может быть пустым!</entry>
-    <entry key="save.error.invalid.summ.initial">Неверное значение суммы иска! Введите целую сумму без копеек.</entry>
-    <entry key="save.error.invalid.summ.agreed">Неверное значение удовлетворённой суммы! Введите целую сумму без копеек.</entry>
 </properties>
