@@ -62,13 +62,13 @@ public class RowModifyDialog extends JDialog {
         usualCategories = new DefaultComboBoxModel(
                 Arrays.asList(Category.values())
                         .stream()
-                        .filter(category -> category.getType() == SuitType.USUAL || category == Category.EMPTY)
+                        .filter(category -> category.getType() == SuitType.USUAL)
                         .toArray(size -> new Category[size])
         );
         ourCategories = new DefaultComboBoxModel(
                 Arrays.asList(Category.values())
                         .stream()
-                        .filter(category -> category.getType() == SuitType.OUR || category == Category.EMPTY)
+                        .filter(category -> category.getType() == SuitType.OUR )
                         .toArray(size -> new Category[size])
         );
         emptyCategories = new DefaultComboBoxModel(new Category[]{});
@@ -102,15 +102,15 @@ public class RowModifyDialog extends JDialog {
         setLabels();
         modifiableSuit = null;
         this.setTitle(propertyLoader.getProperty(SUIT_ENTER));
-        typeChoise.setSelectedItem(SuitType.EMPTY);
-        representativeChoise.setSelectedItem(Representative.EMPTY_REPRESENTATIVE);
+//        typeChoise.setSelectedItem(SuitType.EMPTY);
+//        representativeChoise.setSelectedItem(Representative.EMPTY_REPRESENTATIVE);
         yearChoise.setSelectedItem(Year.Y2016);
-        categoryChoise.setSelectedItem(Category.EMPTY);
-        defendantChoise.setSelectedItem(Defendant.EMPTY);
+//        categoryChoise.setSelectedItem(Category.EMPTY);
+//        defendantChoise.setSelectedItem(Defendant.EMPTY);
         plaintiffInput.setText("");
         initialSummInput.setValue(0);
         agreedSummInput.setValue(0);
-        resultChoise.setSelectedItem(Result.EMPTY);
+//        resultChoise.setSelectedItem(Result.EMPTY);
         this.setVisible(true);
     }
 
@@ -226,49 +226,49 @@ public class RowModifyDialog extends JDialog {
 
         final JDialog thisDialog = this;
         save.addActionListener(action -> {
-            if (typeChoise.getSelectedItem() == SuitType.EMPTY) {
-                JOptionPane.showMessageDialog(iAm,
-                        propertyLoader.getProperty(SAVE_ERROR_TYPE_EMPTY),
-                        propertyLoader.getProperty(SAVE_ERROR_TITLE),
-                        JOptionPane.ERROR_MESSAGE);
-            } else if (!(sumIsValid(initialSummInput))) {
-                JOptionPane.showMessageDialog(iAm,
-                        propertyLoader.getProperty(SAVE_ERROR_INVALID_INITIAL_SUMM),
-                        propertyLoader.getProperty(SAVE_ERROR_TITLE),
-                        JOptionPane.ERROR_MESSAGE);
-            } else if (!(sumIsValid(agreedSummInput))) {
-                JOptionPane.showMessageDialog(iAm,
-                        propertyLoader.getProperty(SAVE_ERROR_INVALID_AGREED_SUMM),
-                        propertyLoader.getProperty(SAVE_ERROR_TITLE),
-                        JOptionPane.ERROR_MESSAGE);
-            } else {
-                if (modifiableSuit != null) {
-                    modifiableSuit.setRepresentative(representativeChoise.getSelectedItem() == null ? Representative.EMPTY_REPRESENTATIVE : (Representative) representativeChoise.getSelectedItem());
-                    modifiableSuit.setType(typeChoise.getSelectedItem() == null ? SuitType.EMPTY : (SuitType) typeChoise.getSelectedItem());
-                    modifiableSuit.setYear(yearChoise.getSelectedItem() == null ? Year.Y2016 : (Year) yearChoise.getSelectedItem());
-                    modifiableSuit.setCategory(categoryChoise.getSelectedItem() == null ? Category.EMPTY : (Category) categoryChoise.getSelectedItem());
-                    modifiableSuit.setPlaintiff(plaintiffInput.getText() == null ? "" : plaintiffInput.getText());
-                    modifiableSuit.setDefendant(defendantChoise.getSelectedItem() == null ? Defendant.EMPTY : (Defendant) defendantChoise.getSelectedItem());
-                    modifiableSuit.setInitialSumm(initialSummInput.getValue() == null ? 0 : ((Number) initialSummInput.getValue()).intValue());
-                    modifiableSuit.setAgreedSumm(agreedSummInput.getValue() == null ? 0 : ((Number) agreedSummInput.getValue()).intValue());
-                    modifiableSuit.setResult(resultChoise.getSelectedItem() == null ? Result.NONE : (Result) resultChoise.getSelectedItem());
-                    tableModel.reDraw();
-                } else {
-                    Suit suit = Suit.getBuilder()
-                            .withRepresentative(representativeChoise.getSelectedItem() == null ? Representative.EMPTY_REPRESENTATIVE : (Representative) representativeChoise.getSelectedItem())
-                            .withType(typeChoise.getSelectedItem() == null ? SuitType.EMPTY : (SuitType) typeChoise.getSelectedItem())
-                            .withYear(yearChoise.getSelectedItem() == null ? Year.Y2016 : (Year) yearChoise.getSelectedItem())
-                            .withCategory(categoryChoise.getSelectedItem() == null ? Category.EMPTY : (Category) categoryChoise.getSelectedItem())
-                            .withDefendant(defendantChoise.getSelectedItem() == null ? Defendant.EMPTY : (Defendant) defendantChoise.getSelectedItem())
-                            .withPlaintiff(plaintiffInput.getText() == null ? "" : plaintiffInput.getText())
-                            .withInitialSumm(initialSummInput.getValue() == null ? 0 : ((Number) initialSummInput.getValue()).intValue())
-                            .withAgreedSumm(agreedSummInput.getValue() == null ? 0 :((Number) agreedSummInput.getValue()).intValue())
-                            .withResult(resultChoise.getSelectedItem() == null ? Result.NONE : (Result) resultChoise.getSelectedItem())
-                            .getSuit();
-                    tableModel.addRow(suit);
-                }
-                thisDialog.setVisible(false);
-            }
+//            if (typeChoise.getSelectedItem() == SuitType.EMPTY) {
+//                JOptionPane.showMessageDialog(iAm,
+//                        propertyLoader.getProperty(SAVE_ERROR_TYPE_EMPTY),
+//                        propertyLoader.getProperty(SAVE_ERROR_TITLE),
+//                        JOptionPane.ERROR_MESSAGE);
+//            } else if (!(sumIsValid(initialSummInput))) {
+//                JOptionPane.showMessageDialog(iAm,
+//                        propertyLoader.getProperty(SAVE_ERROR_INVALID_INITIAL_SUMM),
+//                        propertyLoader.getProperty(SAVE_ERROR_TITLE),
+//                        JOptionPane.ERROR_MESSAGE);
+//            } else if (!(sumIsValid(agreedSummInput))) {
+//                JOptionPane.showMessageDialog(iAm,
+//                        propertyLoader.getProperty(SAVE_ERROR_INVALID_AGREED_SUMM),
+//                        propertyLoader.getProperty(SAVE_ERROR_TITLE),
+//                        JOptionPane.ERROR_MESSAGE);
+//            } else {
+//                if (modifiableSuit != null) {
+//                    modifiableSuit.setRepresentative(representativeChoise.getSelectedItem() == null ? Representative.EMPTY_REPRESENTATIVE : (Representative) representativeChoise.getSelectedItem());
+//                    modifiableSuit.setType(typeChoise.getSelectedItem() == null ? SuitType.EMPTY : (SuitType) typeChoise.getSelectedItem());
+//                    modifiableSuit.setYear(yearChoise.getSelectedItem() == null ? Year.Y2016 : (Year) yearChoise.getSelectedItem());
+//                    modifiableSuit.setCategory(categoryChoise.getSelectedItem() == null ? Category.EMPTY : (Category) categoryChoise.getSelectedItem());
+//                    modifiableSuit.setPlaintiff(plaintiffInput.getText() == null ? "" : plaintiffInput.getText());
+//                    modifiableSuit.setDefendant(defendantChoise.getSelectedItem() == null ? Defendant.EMPTY : (Defendant) defendantChoise.getSelectedItem());
+//                    modifiableSuit.setInitialSumm(initialSummInput.getValue() == null ? 0 : ((Number) initialSummInput.getValue()).intValue());
+//                    modifiableSuit.setAgreedSumm(agreedSummInput.getValue() == null ? 0 : ((Number) agreedSummInput.getValue()).intValue());
+//                    modifiableSuit.setResult(resultChoise.getSelectedItem() == null ? Result.NONE : (Result) resultChoise.getSelectedItem());
+//                    tableModel.reDraw();
+//                } else {
+//                    Suit suit = Suit.getBuilder()
+//                            .withRepresentative(representativeChoise.getSelectedItem() == null ? Representative.EMPTY_REPRESENTATIVE : (Representative) representativeChoise.getSelectedItem())
+//                            .withType(typeChoise.getSelectedItem() == null ? SuitType.EMPTY : (SuitType) typeChoise.getSelectedItem())
+//                            .withYear(yearChoise.getSelectedItem() == null ? Year.Y2016 : (Year) yearChoise.getSelectedItem())
+//                            .withCategory(categoryChoise.getSelectedItem() == null ? Category.EMPTY : (Category) categoryChoise.getSelectedItem())
+//                            .withDefendant(defendantChoise.getSelectedItem() == null ? Defendant.EMPTY : (Defendant) defendantChoise.getSelectedItem())
+//                            .withPlaintiff(plaintiffInput.getText() == null ? "" : plaintiffInput.getText())
+//                            .withInitialSumm(initialSummInput.getValue() == null ? 0 : ((Number) initialSummInput.getValue()).intValue())
+//                            .withAgreedSumm(agreedSummInput.getValue() == null ? 0 :((Number) agreedSummInput.getValue()).intValue())
+//                            .withResult(resultChoise.getSelectedItem() == null ? Result.NONE : (Result) resultChoise.getSelectedItem())
+//                            .getSuit();
+//                    tableModel.addRow(suit);
+//                }
+//                thisDialog.setVisible(false);
+//            }
         });
         controlPanel.add(save);
         return controlPanel;

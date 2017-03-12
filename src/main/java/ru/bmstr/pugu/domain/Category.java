@@ -73,6 +73,10 @@ public enum Category {
         return type;
     }
 
+    public Category getParent() {
+        return parent;
+    }
+
     public String toString() {
         return EnumNameHelper.getName(name());
     }

@@ -247,15 +247,15 @@ public class MainFrame extends JFrame {
     }
 
     private void applyFilter() {
-        if (searchTextField.getText().isEmpty() && representativeChoise.getSelectedItem() == Representative.ALL) {
-            contentTable.unFilter();
-        } else {
-            String searchText = searchTextField.getText();
-            if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchText)) {
-                searchText = "";
-            }
-            contentTable.filter(((Representative)representativeChoise.getSelectedItem()), searchText);
-        }
+//        if (searchTextField.getText().isEmpty() && representativeChoise.getSelectedItem() == Representative.ALL) {
+//            contentTable.unFilter();
+//        } else {
+//            String searchText = searchTextField.getText();
+//            if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchText)) {
+//                searchText = "";
+//            }
+//            contentTable.filter(((Representative)representativeChoise.getSelectedItem()), searchText);
+//        }
 
     }
 
