@@ -16,13 +16,6 @@ public class Result {
     @DatabaseField
     private String name;
 
-    public Result() {
-    }
-
-    public Result(ru.bmstr.pugu.domain.Result result) {
-        this.name = EnumNameHelper.getName(result.name());
-    }
-
     public String toString() {
         return getName();
     }

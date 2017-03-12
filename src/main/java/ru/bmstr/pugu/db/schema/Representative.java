@@ -15,19 +15,12 @@ public class Representative {
 
     @DatabaseField
     private String name;
+
     @DatabaseField
     private String midname;
+
     @DatabaseField
     private String surname;
-
-    public Representative() {
-    }
-
-    public Representative(ru.bmstr.pugu.domain.Representative representative) {
-        this.setName(EnumNameHelper.getName(representative.name()+".name"));
-        this.setMidname(EnumNameHelper.getName(representative.name()+".midname"));
-        this.setSurname(EnumNameHelper.getName(representative.name()+".surname"));
-    }
 
     public String toString() {
         return EnumNameHelper.getName(getName() +".surname");

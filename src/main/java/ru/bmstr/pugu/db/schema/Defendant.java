@@ -16,13 +16,6 @@ public class Defendant {
     @DatabaseField
     private String name;
 
-    public Defendant() {
-    }
-
-    public Defendant(ru.bmstr.pugu.domain.Defendant defendant) {
-        this.name = EnumNameHelper.getName(defendant.name());
-    }
-
     public String toString() {
         return EnumNameHelper.getName(getName());
     }

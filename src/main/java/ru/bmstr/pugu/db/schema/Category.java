@@ -26,19 +26,6 @@ public class Category {
     @DatabaseField
     private String name;
 
-    public Category() {
-    }
-
-    public Category(ru.bmstr.pugu.domain.Category category) {
-        this.name = EnumNameHelper.getName(category.name());
-        if (category.getType() != null) {
-            this.type = DatabaseManager.retriveSuitType(category.getType());
-        }
-        if (category.getParent() != null) {
-            this.parent = DatabaseManager.retriveCategory(category.getParent());
-        }
-    }
-
     public String toString() {
         return EnumNameHelper.getName(getName());
     }

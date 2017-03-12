@@ -17,12 +17,6 @@ public class SuitType {
     @DatabaseField
     private String name;
 
-    public SuitType() {}
-
-    public SuitType(ru.bmstr.pugu.domain.SuitType suitType) {
-        this.name = EnumNameHelper.getName(suitType.name());
-    }
-
     public String toString() {
         return EnumNameHelper.getName(getName());
     }

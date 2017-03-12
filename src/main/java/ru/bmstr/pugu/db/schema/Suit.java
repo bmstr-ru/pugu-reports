@@ -40,67 +40,28 @@ public class Suit {
     @DatabaseField(foreign = true)
     private Representative representative;
 
-//    public Object getAt(int index) {
-//        switch (index) {
-//            case 1:
-//                return getRepresentative();
-//            case 2:
-//                return getYear();
-//            case 3:
-//                switch (getType()) {
-//                    case USUAL:
-//                    case OUR:
-//                        return getCategory();
-//                    case SPECIAL:
-//                    case THIRD_PARTY:
-//                    case APPELATION:
-//                    case CASSATION:
-//                    case OUR_APPELATION:
-//                    case OUR_CASSATION:
-//                        return getType();
-//                    case EMPTY:
-//                        return "---";
-//                }
-//            case 4:
-//                switch (getType()) {
-//                    case USUAL:
-//                    case SPECIAL:
-//                    case THIRD_PARTY:
-//                    case APPELATION:
-//                    case CASSATION:
-//                        return getPlaintiff();
-//                    case OUR:
-//                    case OUR_APPELATION:
-//                    case OUR_CASSATION:
-//                        return getDefendant();
-//                    case EMPTY:
-//                        return "---";
-//                }
-//            case 5:
-//                return getInitialSumm();
-//            case 6:
-//                switch (getType()) {
-//                    case USUAL:
-//                    case SPECIAL:
-//                    case THIRD_PARTY:
-//                    case APPELATION:
-//                    case CASSATION:
-//                        return getDefendant();
-//                    case OUR:
-//                    case OUR_APPELATION:
-//                    case OUR_CASSATION:
-//                        return getPlaintiff();
-//                    case EMPTY:
-//                        return "---";
-//                }
-//            case 7:
-//                return getResult();
-//            case 8:
-//                return getAgreedSumm();
-//            default:
-//                throw new RuntimeException("Tried to get column number " + index + " which is missing");
-//        }
-//    }
+    public Object getAt(int index) {
+        switch (index) {
+            case 1:
+                return getRepresentative();
+            case 2:
+                return getYear();
+            case 3:
+                return getCategory();
+            case 4:
+                return getPlaintiff();
+            case 5:
+                return getInitialSumm();
+            case 6:
+                return getDefendant();
+            case 7:
+                return getResult();
+            case 8:
+                return getAgreedSumm();
+            default:
+                throw new RuntimeException("Tried to get column number " + index + " which is missing");
+        }
+    }
 
     public Category getCategory() {
         return category;
