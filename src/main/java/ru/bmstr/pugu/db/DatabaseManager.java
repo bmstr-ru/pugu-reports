@@ -2,27 +2,25 @@ package ru.bmstr.pugu.db;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
-import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
-import com.j256.ormlite.table.TableUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 import org.sqlite.SQLiteConfig;
 import ru.bmstr.pugu.beans.AllBeans;
-import ru.bmstr.pugu.db.schema.Category;
-import ru.bmstr.pugu.db.schema.Defendant;
-import ru.bmstr.pugu.db.schema.Representative;
-import ru.bmstr.pugu.db.schema.Result;
-import ru.bmstr.pugu.db.schema.Suit;
-import ru.bmstr.pugu.db.schema.SuitType;
+import ru.bmstr.pugu.domain.Category;
+import ru.bmstr.pugu.domain.Defendant;
+import ru.bmstr.pugu.domain.Representative;
+import ru.bmstr.pugu.domain.Result;
+import ru.bmstr.pugu.domain.SuitType;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.annotation.PostConstruct;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static ru.bmstr.pugu.properties.PropertyNames.DATA_FOLDER;
@@ -98,34 +96,6 @@ public class DatabaseManager {
 
     }
 
-    public static SuitType retriveSuitType(ru.bmstr.pugu.domain.SuitType suitType) {
-        try {
-            final AnnotationConfigApplicationContext ctx = AllBeans.getContext();
-            DatabaseManager dbManager = ctx.getBean(DatabaseManager.class);
-            Dao<SuitType, Integer> dao = DaoManager.createDao(dbManager.dataConnection, SuitType.class);
-            return dao.queryForAll().stream().filter( type ->
-                type.getName().equals(EnumNameHelper.getName(suitType.name()))
-            ).findFirst().get();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public static Category retriveCategory(ru.bmstr.pugu.domain.Category category) {
-        try {
-            final AnnotationConfigApplicationContext ctx = AllBeans.getContext();
-            DatabaseManager dbManager = ctx.getBean(DatabaseManager.class);
-            Dao<Category, Integer> dao = DaoManager.createDao(dbManager.dataConnection, Category.class);
-            return dao.queryForAll().stream().filter(cat ->
-                    cat.getName().equals(EnumNameHelper.getName(category.name()))
-            ).findFirst().get();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     public void update(Object obj) {
         try {
             Dao dao = daos.get(obj.getClass());
@@ -156,10 +126,19 @@ public class DatabaseManager {
     public Object retrive(Object obj) {
         try {
             Dao dao = daos.get(obj.getClass());
-            dao.query(dao.queryBuilder().where().eq("id", 1).prepare()).get(0);
+            return dao.query(dao.queryBuilder().where().eq("id", 1).prepare()).get(0);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return null;
+    }
+
+
+    public List retriveAll(Class cls) {
+        try {
+            Dao dao = daos.get(cls);
+            return dao.queryForAll();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

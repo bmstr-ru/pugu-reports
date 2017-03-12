@@ -1,19 +1,43 @@
 package ru.bmstr.pugu.domain;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * Created by bmstr on 27.11.2016.
  */
-public class Suit {
+@DatabaseTable
+public class Suit implements Comparable<Suit> {
+
+    @DatabaseField(generatedId = true)
+    private int id;
+
+    @DatabaseField(foreign = true)
     private SuitType type;
+
+    @DatabaseField(foreign = true)
     private Category category;
+
+    @DatabaseField(foreign = true)
     private Defendant defendant;
+
+    @DatabaseField
     private String plaintiff;
+
+    @DatabaseField
     private Integer initialSumm;
+
+    @DatabaseField
     private Integer agreedSumm;
+
+    @DatabaseField(foreign = true)
     private Result result;
-    private Year year;
+
+    @DatabaseField
+    private Integer year;
+
+    @DatabaseField(foreign = true)
     private Representative representative;
 
     public Object getAt(int index) {
@@ -23,52 +47,13 @@ public class Suit {
             case 2:
                 return getYear();
             case 3:
-                switch (getType()) {
-                    case USUAL:
-                    case OUR:
-                        return getCategory();
-                    case SPECIAL:
-                    case THIRD_PARTY:
-                    case APPELATION:
-                    case CASSATION:
-                    case OUR_APPELATION:
-                    case OUR_CASSATION:
-                        return getType();
-                    case EMPTY:
-                        return "---";
-                }
+                return getCategory();
             case 4:
-                switch (getType()) {
-                    case USUAL:
-                    case SPECIAL:
-                    case THIRD_PARTY:
-                    case APPELATION:
-                    case CASSATION:
-                        return getPlaintiff();
-                    case OUR:
-                    case OUR_APPELATION:
-                    case OUR_CASSATION:
-                        return getDefendant();
-                    case EMPTY:
-                        return "---";
-                }
+                return getPlaintiff();
             case 5:
                 return getInitialSumm();
             case 6:
-                switch (getType()) {
-                    case USUAL:
-                    case SPECIAL:
-                    case THIRD_PARTY:
-                    case APPELATION:
-                    case CASSATION:
-                        return getDefendant();
-                    case OUR:
-                    case OUR_APPELATION:
-                    case OUR_CASSATION:
-                        return getPlaintiff();
-                    case EMPTY:
-                        return "---";
-                }
+                return getDefendant();
             case 7:
                 return getResult();
             case 8:
@@ -126,11 +111,11 @@ public class Suit {
         this.result = result;
     }
 
-    public Year getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(Year year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
@@ -152,6 +137,29 @@ public class Suit {
 
     public void setRepresentative(Representative representative) {
         this.representative = representative;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public int compareTo(Suit suit2) {
+        int compareResult = this.getType().getId() - suit2.getType().getId();
+        if (compareResult == 0) {
+            compareResult = this.getCategory().getId() - suit2.getCategory().getId();
+            if (compareResult == 0) {
+                compareResult = this.getYear() - suit2.getYear();
+                if (compareResult == 0) {
+                    compareResult = this.getPlaintiff().compareTo(suit2.getPlaintiff());
+                }
+            }
+        }
+        return compareResult;
     }
 
     public static class SuitBuilder {
@@ -192,7 +200,7 @@ public class Suit {
             return this;
         }
 
-        public SuitBuilder withYear(Year year) {
+        public SuitBuilder withYear(Integer year) {
             suit.setYear(year);
             return this;
         }

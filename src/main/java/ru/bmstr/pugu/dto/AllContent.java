@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.domain.*;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
@@ -29,8 +30,6 @@ import static ru.bmstr.pugu.properties.PropertyNames.*;
 public class AllContent {
 
     private static final Logger log = LogManager.getLogger(AllContent.class);
-    private static final String DEFAULT_CONTENT_FILENAME = "allData.json";
-    private File DATA_PATH;
 
     private List<Suit> suits = new ArrayList<>();
     private List<Suit> filteredSuits;
@@ -43,97 +42,16 @@ public class AllContent {
     @Autowired
     private PropertyLoader propertyLoader;
 
+    @Autowired
+    private DatabaseManager databaseManager;
+
     @PostConstruct
     private void loadLastData() {
-        DATA_PATH = new File(propertyLoader.getProperty(DATA_FOLDER));
-        DATA_PATH.mkdirs();
-        for (Representative representative : Representative.values()) {
-            restoreAndAdd(new File(DATA_PATH, representative.name() + ".json"));
-        }
-//        File dataFile = new File(DATA_PATH, DEFAULT_CONTENT_FILENAME);
-//        restoreAndOverwrite(dataFile);
+        suits = databaseManager.retriveAll(Suit.class);
     }
 
     public void sort() {
         suits.sort(comparator);
-    }
-
-    private List<Suit> restore(File dataFile) {
-        try {
-            if (dataFile.exists()) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
-                mapper.enable(SerializationFeature.INDENT_OUTPUT);
-                return mapper.readValue(dataFile, mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
-            }
-        } catch (IOException e) {
-            log.error("Error while restoring data from json file", e);
-        }
-        return Collections.emptyList();
-    }
-
-    public void restoreAndOverwrite(File dataFile) {
-        suits = restore(dataFile);
-        sort();
-    }
-
-    public void restoreAndAdd(File dataFile) {
-        suits.addAll(restore(dataFile));
-        sort();
-    }
-
-    @PreDestroy
-    public void store() {
-        storeSplit(DATA_PATH);
-        store(new File(DATA_PATH, DEFAULT_CONTENT_FILENAME));
-    }
-
-    public void storeSplit(File directoryTo) {
-        try {
-            directoryTo.mkdirs();
-            if (directoryTo.exists()) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.enable(SerializationFeature.INDENT_OUTPUT);
-                for (Representative representative : Representative.values()) {
-                    mapper.writeValue(
-                            new File(directoryTo, representative.name() + ".json"),
-                            suits.stream().filter(suit -> suit.getRepresentative() == representative).collect(Collectors.toList()));
-                }
-            } else {
-                log.error("Unable to create directory " + directoryTo.getAbsolutePath());
-            }
-        } catch (IOException e) {
-            log.error("Error while storing data to json file", e);
-        }
-    }
-
-    public void store(File saveTo) {
-        try {
-            if (saveTo.exists()) {
-                backUp(saveTo);
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.enable(SerializationFeature.INDENT_OUTPUT);
-            mapper.writeValue(saveTo, suits);
-        } catch (IOException e) {
-            log.error("Error while storing data to json file", e);
-        }
-    }
-
-    public void backUp(File file) {
-        LocalDateTime timePoint = LocalDateTime.now();
-        String backUpFilePath = file.getAbsolutePath()
-                .replace(
-                        ".json",
-                        "_" + timePoint.getYear() + "-" +
-                                timePoint.getMonthValue() + "-" +
-                                timePoint.getDayOfMonth() + "_" +
-                                timePoint.getHour() + "-" +
-                                timePoint.getMinute() + "-" +
-                                timePoint.getSecond() + ".json");
-        file.renameTo(new File(backUpFilePath));
-
     }
 
     public void addRow(Suit suit) {
