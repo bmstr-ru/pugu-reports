@@ -20,11 +20,11 @@ public class Main {
     public static void doRun() throws SQLException {
         final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AllBeans.class);
         AllBeans.setContext(ctx);
-        final DatabaseManager dbManager = ctx.getBean(DatabaseManager.class);
-        dbManager.createStaticDatabase();
-//        final MainFrame window = ctx.getBean(MainFrame.class);
-//        SwingUtilities.invokeLater(() -> window.initialize());
-//        Runtime.getRuntime().addShutdownHook(new Thread(() -> ctx.close()));
+//        final DatabaseManager dbManager = ctx.getBean(DatabaseManager.class);
+//        dbManager.createStaticDatabase();
+        final MainFrame window = ctx.getBean(MainFrame.class);
+        SwingUtilities.invokeLater(() -> window.initialize());
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> ctx.close()));
     }
 
     public static void testSqlite() {

@@ -54,11 +54,11 @@ public class TableData extends JTable {
         tableModel.reDraw();
     }
 
-    public void filter(Representative representative, String searchString) {
-        tableModel.filter(representative, searchString);
-    }
-
     public void unFilter() {
         tableModel.unFilter();
+    }
+
+    public void filter(Representative representative, String subString) {
+        tableModel.filter(representative, subString);
     }
 }

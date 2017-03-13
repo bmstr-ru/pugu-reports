@@ -1,13 +1,16 @@
 package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.domain.*;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.swing.*;
+import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
@@ -52,6 +55,9 @@ public class RowModifyDialog extends JDialog {
     @Autowired
     private PropertyLoader propertyLoader;
 
+    @Autowired
+    private DatabaseManager databaseManager;
+
     private boolean labelsInitialized = false;
 
     private final RowModifyDialog iAm;
@@ -60,15 +66,15 @@ public class RowModifyDialog extends JDialog {
         super(owner, "", true);
         iAm = this;
         usualCategories = new DefaultComboBoxModel(
-                Arrays.asList(Category.values())
+                ((ArrayList<Category>) databaseManager.retriveAll(Category.class))
                         .stream()
-                        .filter(category -> category.getType() == SuitType.USUAL)
+                        .filter(category -> category.getType().getDirection() == Direction.TO_US)
                         .toArray(size -> new Category[size])
         );
         ourCategories = new DefaultComboBoxModel(
-                Arrays.asList(Category.values())
+                ((ArrayList<Category>) databaseManager.retriveAll(Category.class))
                         .stream()
-                        .filter(category -> category.getType() == SuitType.OUR )
+                        .filter(category -> category.getType().getDirection() == Direction.OUR)
                         .toArray(size -> new Category[size])
         );
         emptyCategories = new DefaultComboBoxModel(new Category[]{});
@@ -104,7 +110,7 @@ public class RowModifyDialog extends JDialog {
         this.setTitle(propertyLoader.getProperty(SUIT_ENTER));
 //        typeChoise.setSelectedItem(SuitType.EMPTY);
 //        representativeChoise.setSelectedItem(Representative.EMPTY_REPRESENTATIVE);
-        yearChoise.setSelectedItem(Year.Y2016);
+//        yearChoise.setSelectedItem(Year.Y2016);
 //        categoryChoise.setSelectedItem(Category.EMPTY);
 //        defendantChoise.setSelectedItem(Defendant.EMPTY);
         plaintiffInput.setText("");
@@ -132,32 +138,32 @@ public class RowModifyDialog extends JDialog {
     }
 
     private void setDependantComponents(SuitType type) {
-        switch (type) {
-            case USUAL:
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                categoryChoise.setModel(usualCategories);
-                break;
-            case OUR:
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                categoryChoise.setModel(ourCategories);
-                break;
-            case APPELATION:
-            case CASSATION:
-            case SPECIAL:
-            case THIRD_PARTY:
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                categoryChoise.setModel(emptyCategories);
-                break;
-            case OUR_APPELATION:
-            case OUR_CASSATION:
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                categoryChoise.setModel(emptyCategories);
-                break;
-        }
+//        switch (type) {
+//            case USUAL:
+//                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+//                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+//                categoryChoise.setModel(usualCategories);
+//                break;
+//            case OUR:
+//                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+//                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+//                categoryChoise.setModel(ourCategories);
+//                break;
+//            case APPELATION:
+//            case CASSATION:
+//            case SPECIAL:
+//            case THIRD_PARTY:
+//                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+//                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+//                categoryChoise.setModel(emptyCategories);
+//                break;
+//            case OUR_APPELATION:
+//            case OUR_CASSATION:
+//                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+//                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+//                categoryChoise.setModel(emptyCategories);
+//                break;
+//        }
     }
 
     private JPanel getInputDataPanel() {
@@ -176,15 +182,15 @@ public class RowModifyDialog extends JDialog {
 
         NumberFormat numberFormat = NumberFormat.getNumberInstance();
         numberFormat.setMinimumFractionDigits(0);
-        typeChoise = new JComboBox(SuitType.values());
-        representativeChoise = new JComboBox(Representative.values());
-        yearChoise = new JComboBox(Year.values());
+        typeChoise = new JComboBox();
+        representativeChoise = new JComboBox();
+        yearChoise = new JComboBox();
         categoryChoise = new JComboBox(usualCategories);
-        defendantChoise = new JComboBox(Defendant.values());
+        defendantChoise = new JComboBox();
         plaintiffInput = new JTextField();
         initialSummInput = new JFormattedTextField(numberFormat);
         agreedSummInput = new JFormattedTextField(numberFormat);
-        resultChoise = new JComboBox(Result.values());
+        resultChoise = new JComboBox();
 
         typeChoise.addActionListener(event -> {
             setDependantComponents((SuitType) typeChoise.getSelectedItem());

@@ -2,6 +2,7 @@ package ru.bmstr.pugu.domain;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import org.springframework.util.StringUtils;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 
 /**
@@ -23,7 +24,17 @@ public class Representative {
     private String surname;
 
     public String toString() {
-        return EnumNameHelper.getName(getName() +".surname");
+        return surname;
+    }
+
+    public String getFullFio() {
+        return surname + " " + name + " " + midname;
+    }
+
+    public String getShortFio() {
+        return surname +
+                (StringUtils.isEmpty(name) ? "" : " " + name.substring(0, 1) + ".") +
+                (StringUtils.isEmpty(midname) ? "" : " " + midname.substring(0, 1) + ".");
     }
 
     public int getId() {
@@ -57,4 +68,22 @@ public class Representative {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+    public static boolean isEmpty(Representative representative) {
+        return StringUtils.isEmpty(representative.surname);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Representative)) {
+            return false;
+        }
+        return ((Representative) obj).id == this.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return getFullFio().hashCode();
+    }
+
 }

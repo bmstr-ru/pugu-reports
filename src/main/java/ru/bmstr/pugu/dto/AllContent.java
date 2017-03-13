@@ -1,27 +1,19 @@
 package ru.bmstr.pugu.dto;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.domain.*;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import java.io.File;
-import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import static ru.bmstr.pugu.properties.PropertyNames.*;
 
 /**
  * Created by bmstr on 30.11.2016.
@@ -34,8 +26,6 @@ public class AllContent {
     private List<Suit> suits = new ArrayList<>();
     private List<Suit> filteredSuits;
 
-    private boolean filtered = false;
-
     @Autowired
     private SuitComparator comparator;
 
@@ -45,17 +35,12 @@ public class AllContent {
     @Autowired
     private DatabaseManager databaseManager;
 
-    @PostConstruct
-    private void loadLastData() {
-        suits = databaseManager.retriveAll(Suit.class);
-    }
-
     public void sort() {
-        suits.sort(comparator);
+        getSuits().sort(comparator);
     }
 
     public void addRow(Suit suit) {
-        suits.add(suit);
+        databaseManager.create(suit);
         sort();
     }
 
@@ -63,44 +48,23 @@ public class AllContent {
         List<Integer> toDeleteRows = Arrays.stream(ArrayUtils.toObject(rows))
                 .sorted((i1, i2) -> Integer.compare(i2, i1))
                 .collect(Collectors.toList());
-        if (filtered) {
-            toDeleteRows.stream()
-                    .map(i -> filteredSuits.get(i))
-                    .forEach(suit -> suits.remove(suit));
-            toDeleteRows.forEach(i -> {
-                filteredSuits.remove(i.intValue());
-            });
-        } else {
-            toDeleteRows.forEach(i -> {
-                suits.remove(i.intValue());
-            });
-        }
+        toDeleteRows.forEach(i ->
+            databaseManager.delete(getSuits().get(i.intValue()))
+        );
         sort();
     }
 
     public int getRowCount() {
-        if (filtered) {
-            return filteredSuits.size();
-        } else {
-            return suits.size();
-        }
+        return getSuits().size();
     }
 
     public Suit getSuit(int rowId) {
-        if (filtered) {
-            return filteredSuits.get(rowId);
-        } else {
-            return suits.get(rowId);
-        }
+        return getSuits().get(rowId);
     }
 
     public Object getValueAt(int rowIndex, int columnIndex) {
         Suit suit;
-        if (filtered) {
-            suit = filteredSuits.get(rowIndex);
-        } else {
-            suit = suits.get(rowIndex);
-        }
+        suit = getSuits().get(rowIndex);
 
         switch (columnIndex) {
             case 0:
@@ -117,47 +81,46 @@ public class AllContent {
                         result.put(String.format("%02d_%02d", column, row), "")
                 )
         );
-        result.putAll(calculateLine("01", suits.stream().filter(suit -> suit.getType() == SuitType.USUAL).collect(Collectors.toList())));
-        result.putAll(calculateLineOfTypeAndCategory("02", SuitType.USUAL, Category.OSPARIVANII_RESH_GOS_ORG, suits));
-        result.putAll(calculateLineOfTypeAndCategory("03", SuitType.USUAL, Category.TYSHA_69, suits));
-        result.putAll(calculateLineOfTypeAndCategory("04", SuitType.USUAL, Category.IZYATIE_IMUSHESTVA, suits));
-        result.putAll(calculateLineOfTypeAndCategory("05", SuitType.USUAL, Category.IVS, suits));
-        result.putAll(calculateLineOfTypeAndCategory("06", SuitType.USUAL, Category.TYSHA_70, suits));
-        result.putAll(calculateLineOfTypeAndCategory("07", SuitType.USUAL, Category.SUDOPROIZVODSTVO, suits));
-        result.putAll(calculateLineOfTypeAndCategory("08", SuitType.USUAL, Category.OSPARIV_NORM_ACTA, suits));
-        result.putAll(calculateLineOfTypeAndCategory("09", SuitType.USUAL, Category.OBZHALOV_PRIKAZA, suits));
-        result.putAll(calculateLineOfTypeAndCategory("10", SuitType.USUAL, Category.VOSSTANOVLENIE, suits));
-        result.putAll(calculateLineOfTypeAndCategory("11", SuitType.USUAL, Category.SNYATIYE_DISC_VZYSK, suits));
-        result.putAll(calculateLineOfTypeAndCategory("12", SuitType.USUAL, Category.VOSM_VREDA_ZDOROV, suits));
-        result.putAll(calculateLineOfTypeAndCategory("13", SuitType.USUAL, Category.RESHENIE_PO_ZHILISH, suits));
-        result.putAll(calculateLineOfTypeAndCategory("14", SuitType.USUAL, Category.VSYSK_OBYAZAT_PLATEZH, suits));
-        result.putAll(calculateLineOfTypeAndCategory("15", SuitType.USUAL, Category.INDEKSACIYA_DENEZHNYH_SUMM, suits));
-        result.putAll(calculateLineOfTypeAndCategory("16", SuitType.USUAL, Category.PENSIONNIYE, suits));
-        result.putAll(calculateLineOfTypeAndCategory("17", SuitType.USUAL, Category.ISPOLN_DOGOVOR_OBYAZ, suits));
-        result.putAll(calculateLineOfTypeAndCategory("18", SuitType.USUAL, Category.ZASHITA_CHEST, suits));
-        result.putAll(calculateLineOfTypeAndCategory("19", SuitType.USUAL, Category.NARUSH_PORYADKA_RASSMOTR_OBRASHENIYA, suits));
-        result.putAll(calculateLineOfTypeAndCategory("20", SuitType.USUAL, Category.MIGRATSIYA, suits));
-        result.putAll(calculateLineOfTypeAndCategory("21", SuitType.USUAL, Category.INIYE211, suits));
-        result.putAll(calculateLine("22", suits.stream().filter(suit -> suit.getType() == SuitType.SPECIAL).collect(Collectors.toList())));
-        result.putAll(calculateLineOfTypeAndDefendant("23", SuitType.USUAL, Defendant.KAZNA, suits));
-        result.putAll(calculateLineOfTypeAndDefendant("24", SuitType.USUAL, Defendant.MVD, suits));
-        result.putAll(calculateLineOfTypeAndDefendant("25", SuitType.USUAL, Defendant.PODRAZDELENIE, suits));
-
-        result.putAll(calculateLine("26", suits.stream().filter(suit -> suit.getType() == SuitType.APPELATION).collect(Collectors.toList())));
-        result.putAll(calculateLine("27", suits.stream().filter(suit -> suit.getType() == SuitType.CASSATION).collect(Collectors.toList())));
-
-        result.putAll(calculateLine("30", suits.stream().filter(suit -> suit.getType() == SuitType.OUR).collect(Collectors.toList())));
-        result.putAll(calculateLineOfTypeAndCategory("31", SuitType.OUR, Category.ISPOLNEN_DOGOVORNYH, suits));
-        result.putAll(calculateLineOfTypeAndCategory("32", SuitType.OUR, Category.REGRESS, suits));
-        result.putAll(calculateLineOfTypeAndCategory("33", SuitType.OUR, Category.VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV, suits));
-        result.putAll(calculateLineOfTypeAndCategory("34", SuitType.OUR, Category.VZYSKANII_S_VINOVNYH, suits));
-        result.putAll(calculateLineOfTypeAndCategory("35", SuitType.OUR, Category.ZHILISHNYE, suits));
-        result.putAll(calculateLineOfTypeAndCategory("36", SuitType.OUR, Category.ZASHITE_DELOVOY, suits));
-        result.putAll(calculateLineOfTypeAndCategory("37", SuitType.OUR, Category.INIYE_OUR, suits));
-
-        result.putAll(calculateLine("38", suits.stream().filter(suit -> suit.getType() == SuitType.OUR_APPELATION).collect(Collectors.toList())));
-        result.putAll(calculateLine("39", suits.stream().filter(suit -> suit.getType() == SuitType.OUR_CASSATION).collect(Collectors.toList())));
-
+//        result.putAll(calculateLine("01", suits.stream().filter(suit -> suit.getType() == SuitType.USUAL).collect(Collectors.toList())));
+//        result.putAll(calculateLineOfTypeAndCategory("02", SuitType.USUAL, Category.OSPARIVANII_RESH_GOS_ORG, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("03", SuitType.USUAL, Category.TYSHA_69, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("04", SuitType.USUAL, Category.IZYATIE_IMUSHESTVA, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("05", SuitType.USUAL, Category.IVS, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("06", SuitType.USUAL, Category.TYSHA_70, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("07", SuitType.USUAL, Category.SUDOPROIZVODSTVO, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("08", SuitType.USUAL, Category.OSPARIV_NORM_ACTA, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("09", SuitType.USUAL, Category.OBZHALOV_PRIKAZA, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("10", SuitType.USUAL, Category.VOSSTANOVLENIE, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("11", SuitType.USUAL, Category.SNYATIYE_DISC_VZYSK, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("12", SuitType.USUAL, Category.VOSM_VREDA_ZDOROV, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("13", SuitType.USUAL, Category.RESHENIE_PO_ZHILISH, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("14", SuitType.USUAL, Category.VSYSK_OBYAZAT_PLATEZH, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("15", SuitType.USUAL, Category.INDEKSACIYA_DENEZHNYH_SUMM, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("16", SuitType.USUAL, Category.PENSIONNIYE, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("17", SuitType.USUAL, Category.ISPOLN_DOGOVOR_OBYAZ, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("18", SuitType.USUAL, Category.ZASHITA_CHEST, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("19", SuitType.USUAL, Category.NARUSH_PORYADKA_RASSMOTR_OBRASHENIYA, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("20", SuitType.USUAL, Category.MIGRATSIYA, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("21", SuitType.USUAL, Category.INIYE211, suits));
+//        result.putAll(calculateLine("22", suits.stream().filter(suit -> suit.getType() == SuitType.SPECIAL).collect(Collectors.toList())));
+//        result.putAll(calculateLineOfTypeAndDefendant("23", SuitType.USUAL, Defendant.KAZNA, suits));
+//        result.putAll(calculateLineOfTypeAndDefendant("24", SuitType.USUAL, Defendant.MVD, suits));
+//        result.putAll(calculateLineOfTypeAndDefendant("25", SuitType.USUAL, Defendant.PODRAZDELENIE, suits));
+//
+//        result.putAll(calculateLine("26", suits.stream().filter(suit -> suit.getType() == SuitType.APPELATION).collect(Collectors.toList())));
+//        result.putAll(calculateLine("27", suits.stream().filter(suit -> suit.getType() == SuitType.CASSATION).collect(Collectors.toList())));
+//
+//        result.putAll(calculateLine("30", suits.stream().filter(suit -> suit.getType() == SuitType.OUR).collect(Collectors.toList())));
+//        result.putAll(calculateLineOfTypeAndCategory("31", SuitType.OUR, Category.ISPOLNEN_DOGOVORNYH, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("32", SuitType.OUR, Category.REGRESS, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("33", SuitType.OUR, Category.VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("34", SuitType.OUR, Category.VZYSKANII_S_VINOVNYH, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("35", SuitType.OUR, Category.ZHILISHNYE, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("36", SuitType.OUR, Category.ZASHITE_DELOVOY, suits));
+//        result.putAll(calculateLineOfTypeAndCategory("37", SuitType.OUR, Category.INIYE_OUR, suits));
+//
+//        result.putAll(calculateLine("38", suits.stream().filter(suit -> suit.getType() == SuitType.OUR_APPELATION).collect(Collectors.toList())));
+//        result.putAll(calculateLine("39", suits.stream().filter(suit -> suit.getType() == SuitType.OUR_CASSATION).collect(Collectors.toList())));
 
         result.forEach((k, v) -> {
             if (!v.isEmpty()) {
@@ -180,11 +143,21 @@ public class AllContent {
     }
 
     public Map<String, String> calculateLine(String row, List<Suit> suitsList) {
-        List<Suit> usualSuitsColumn1 = suitsList.stream().filter(suit -> suit.getYear() == Year.Y2016).collect(Collectors.toList());
-        List<Suit> agreedSuitsColumn2 = suitsList.stream().filter(suit -> suit.getResult() == Result.APPROVE).collect(Collectors.toList());
-        List<Suit> declineSuitsColumn3 = suitsList.stream().filter(suit -> suit.getResult() == Result.DECLINE).collect(Collectors.toList());
-        List<Suit> agreedSuitsColumn4 = suitsList.stream().filter(suit -> suit.getResult() == Result.AGREED).collect(Collectors.toList());
-        List<Suit> postponedSuitsColumn5 = suitsList.stream().filter(suit -> suit.getResult() == Result.NONE).collect(Collectors.toList());
+        List<Suit> usualSuitsColumn1 = suitsList.stream()
+                .filter(suit -> suit.getYear() == 2016)
+                .collect(Collectors.toList());
+        List<Suit> agreedSuitsColumn2 = suitsList.stream()
+//                .filter(suit -> suit.getResult() == Result.APPROVE)
+                .collect(Collectors.toList());
+        List<Suit> declineSuitsColumn3 = suitsList.stream()
+//                .filter(suit -> suit.getResult() == Result.DECLINE)
+                .collect(Collectors.toList());
+        List<Suit> agreedSuitsColumn4 = suitsList.stream()
+//                .filter(suit -> suit.getResult() == Result.AGREED)
+                .collect(Collectors.toList());
+        List<Suit> postponedSuitsColumn5 = suitsList.stream()
+//                .filter(suit -> suit.getResult() == Result.NONE)
+                .collect(Collectors.toList());
 
         Map<String, String> result = new HashMap<>();
         result.put("01_" + row, String.valueOf(usualSuitsColumn1.size()));
@@ -220,32 +193,32 @@ public class AllContent {
         return result;
     }
 
-    private List<Suit> filterRepresentative(List<Suit> toFilterSuits, final Representative representative) {
-        return toFilterSuits.stream()
-                .filter(suit -> suit.getRepresentative() == representative)
-                .collect(Collectors.toList());
-    }
-
-    private List<Suit> filterString(List<Suit> toFilterSuits, String searchString) {
-        final String finalSearchString = searchString.toLowerCase();
-        return toFilterSuits.stream()
-                .filter(suit -> suit.toString().toLowerCase().contains(finalSearchString))
-                .collect(Collectors.toList());
-    }
-
-    public void filter(Representative representative, String searchString) {
-        filtered = true;
-
-        filteredSuits = suits;
-        if (representative != Representative.ALL) {
-            filteredSuits = filterRepresentative(filteredSuits, representative);
-        }
-        if (!searchString.isEmpty()) {
-            filteredSuits = filterString(filteredSuits, searchString);
-        }
-    }
-
     public void unFilter() {
-        filtered = false;
+        getAllSuits();
+    }
+
+    public void filter(Representative representative, String subString) {
+        setSuits(getAllSuits().stream().filter( suit ->
+            (Representative.isEmpty(representative) ? true : suit.getRepresentative().equals(representative))
+                    &&
+                    (StringUtils.isEmpty(subString) ? true : suit.toString().toLowerCase().contains(subString.toLowerCase()))
+        ).collect(Collectors.toList()));
+    }
+
+    private void setSuits(List<Suit> suits) {
+        this.suits = suits;
+    }
+
+    private List<Suit> getSuits() {
+        if (suits == null) {
+            return getAllSuits();
+        } else {
+            return suits;
+        }
+    }
+
+    private List<Suit> getAllSuits() {
+        suits = databaseManager.retriveAll(Suit.class);
+        return suits;
     }
 }

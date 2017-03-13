@@ -17,6 +17,17 @@ public class SuitType {
     @DatabaseField
     private String name;
 
+    @DatabaseField
+    private Direction direction;
+
+    public SuitType() {
+    }
+
+    public SuitType(String name, Direction direction) {
+        this.name = name;
+        this.direction = direction;
+    }
+
     public String toString() {
         return EnumNameHelper.getName(getName());
     }
@@ -52,5 +63,13 @@ public class SuitType {
         } else {
             return name.hashCode();
         }
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }

@@ -3,8 +3,12 @@ package ru.bmstr.pugu.ui;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.domain.Representative;
+import ru.bmstr.pugu.domain.Suit;
 import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.PropertyLoader;
 import ru.bmstr.pugu.reports.ReportGenerator;
@@ -13,6 +17,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.util.ArrayList;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
 
@@ -47,6 +52,9 @@ public class MainFrame extends JFrame {
     @Autowired
     private ReportGenerator reportGenerator;
 
+    @Autowired
+    private DatabaseManager databaseManager;
+
     static {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -78,53 +86,8 @@ public class MainFrame extends JFrame {
         JMenu menu = new JMenu(propertyLoader.getProperty(MENU_FILE));
         menuBar.add(menu);
 
-        // Сохранить данные
-        JMenuItem menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_STORE));
-        menuItem.addActionListener(action -> {
-            SwingUtilities.invokeLater(() -> {
-                int saveChoise = saveAsFileChooser.showSaveDialog(window);
-                if (saveChoise == JFileChooser.APPROVE_OPTION) {
-                    File file = saveAsFileChooser.getSelectedFile();
-                    if (!file.getName().endsWith(".json")) {
-                        file = new File(file.getAbsolutePath() + ".json");
-                    }
-                    allContent.store(file);
-                }
-            });
-        });
-        menu.add(menuItem);
-
-        // Сохранить данные
-        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_RESTORE));
-        menuItem.addActionListener(action -> {
-            SwingUtilities.invokeLater(() -> {
-                int openChoise = saveAsFileChooser.showOpenDialog(window);
-                if (openChoise == JFileChooser.APPROVE_OPTION) {
-                    String[] choiseButtons = {propertyLoader.getProperty(BUTTON_OVERWRITE),
-                            propertyLoader.getProperty(BUTTON_ADD)};
-                    int choise = JOptionPane.showOptionDialog(window,
-                            propertyLoader.getProperty(QUESTION),
-                            propertyLoader.getProperty(QUESTION_TITLE),
-                            JOptionPane.YES_NO_OPTION,
-                            JOptionPane.QUESTION_MESSAGE,
-                            null,     //do not use a custom Icon
-                            choiseButtons,  //the titles of buttons
-                            choiseButtons[0]);
-                    File file = saveAsFileChooser.getSelectedFile();
-                    if (choise == 0) {
-                        allContent.restoreAndOverwrite(file);
-                    } else {
-                        allContent.restoreAndAdd(file);
-                    }
-                    contentTable.reDraw();
-                }
-            });
-        });
-        menu.add(menuItem);
-
-        menu.addSeparator();
         // Выход
-        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_EXIT));
+        JMenuItem menuItem = new JMenuItem(propertyLoader.getProperty(MENU_EXIT));
         menuItem.addActionListener(event -> {
             window.dispatchEvent(
                     new WindowEvent(window, WindowEvent.WINDOW_CLOSING)
@@ -176,7 +139,7 @@ public class MainFrame extends JFrame {
         panel.setLayout(new FlowLayout());
         panel.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 
-        representativeChoise = new JComboBox(Representative.values());
+        representativeChoise = new JComboBox(databaseManager.retriveAllWithEmpty(Representative.class).toArray());
         representativeChoise.addActionListener(event -> {
             applyFilter();
         });
@@ -247,16 +210,15 @@ public class MainFrame extends JFrame {
     }
 
     private void applyFilter() {
-//        if (searchTextField.getText().isEmpty() && representativeChoise.getSelectedItem() == Representative.ALL) {
-//            contentTable.unFilter();
-//        } else {
-//            String searchText = searchTextField.getText();
-//            if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchText)) {
-//                searchText = "";
-//            }
-//            contentTable.filter(((Representative)representativeChoise.getSelectedItem()), searchText);
-//        }
-
+        if (searchTextField.getText().isEmpty() && StringUtils.isEmpty(((Representative)representativeChoise.getSelectedItem()).getSurname())) {
+            contentTable.unFilter();
+        } else {
+            String searchText = searchTextField.getText();
+            if (propertyLoader.getProperty(SEARCH_TEXT_FIELD).equals(searchText)) {
+                searchText = "";
+            }
+            contentTable.filter(((Representative)representativeChoise.getSelectedItem()), searchText);
+        }
     }
 
     private JScrollPane createTablePanel() {

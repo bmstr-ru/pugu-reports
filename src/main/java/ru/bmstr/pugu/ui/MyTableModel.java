@@ -1,6 +1,7 @@
 package ru.bmstr.pugu.ui;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import ru.bmstr.pugu.domain.Representative;
 import ru.bmstr.pugu.domain.Suit;
@@ -60,13 +61,15 @@ public class MyTableModel extends AbstractTableModel {
         SwingUtilities.invokeLater(() -> this.fireTableDataChanged() );
     }
 
-    public void filter(Representative representative, String searchString) {
-        allContent.filter(representative, searchString);
-        reDraw();
-    }
 
     public void unFilter() {
         allContent.unFilter();
         reDraw();
     }
+
+    public void filter(Representative representative, String subString) {
+        allContent.filter(representative, subString);
+        reDraw();
+    }
+
 }
