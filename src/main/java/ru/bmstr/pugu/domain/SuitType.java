@@ -3,6 +3,7 @@ package ru.bmstr.pugu.domain;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import org.springframework.util.StringUtils;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 
 /**
@@ -10,6 +11,8 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
  */
 @DatabaseTable
 public class SuitType {
+
+    public static final SuitType EMPTY_SUIT_TYPE = new SuitType();
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -20,16 +23,8 @@ public class SuitType {
     @DatabaseField
     private Direction direction;
 
-    public SuitType() {
-    }
-
-    public SuitType(String name, Direction direction) {
-        this.name = name;
-        this.direction = direction;
-    }
-
     public String toString() {
-        return EnumNameHelper.getName(getName());
+        return name;
     }
 
     public int getId() {
@@ -71,5 +66,9 @@ public class SuitType {
 
     public void setDirection(Direction direction) {
         this.direction = direction;
+    }
+
+    public static boolean isEmpty(SuitType suitType) {
+        return StringUtils.isEmpty(suitType.name);
     }
 }

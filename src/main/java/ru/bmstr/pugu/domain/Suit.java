@@ -13,13 +13,13 @@ public class Suit implements Comparable<Suit> {
     @DatabaseField(generatedId = true)
     private int id;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private SuitType type;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Category category;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Defendant defendant;
 
     @DatabaseField
@@ -31,7 +31,7 @@ public class Suit implements Comparable<Suit> {
     @DatabaseField
     private Integer agreedSumm;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Result result;
 
     @DatabaseField

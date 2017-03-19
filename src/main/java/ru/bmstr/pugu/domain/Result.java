@@ -2,6 +2,7 @@ package ru.bmstr.pugu.domain;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import org.springframework.util.StringUtils;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 
 /**
@@ -9,6 +10,8 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
  */
 @DatabaseTable
 public class Result {
+
+    public static final Result EMPTY_RESULT = new Result();
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -34,5 +37,9 @@ public class Result {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static boolean isEmpty(Result result) {
+        return StringUtils.isEmpty(result.name);
     }
 }

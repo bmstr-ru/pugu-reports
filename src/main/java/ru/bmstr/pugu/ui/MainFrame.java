@@ -69,6 +69,9 @@ public class MainFrame extends JFrame {
         addMenuBar();
         adjustSize();
         addMainContentArea(window.getContentPane());
+
+        rowModifyDialog.initialize();
+
         this.setVisible(true);
     }
 

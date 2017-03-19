@@ -41,7 +41,7 @@ public class DatabaseManager {
             config.setEncoding(SQLiteConfig.Encoding.UTF8);
             Class.forName("org.sqlite.JDBC");
             // create a database connection
-            dataConnection = new JdbcConnectionSource("jdbc:sqlite:" + propertyLoader.getProperty(DATA_FOLDER) + "/static.db");
+            dataConnection = new JdbcConnectionSource("jdbc:sqlite:" + propertyLoader.getProperty(DATA_FOLDER) + "/allData.sqlite");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

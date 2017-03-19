@@ -2,6 +2,7 @@ package ru.bmstr.pugu.domain;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import org.springframework.util.StringUtils;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 
 import java.util.Collections;
@@ -13,20 +14,22 @@ import java.util.List;
 @DatabaseTable
 public class Category {
 
+    public static final Category EMPTY_CATEGORY = new Category();
+
     @DatabaseField(generatedId = true)
     private int id;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private SuitType type;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Category parent;
 
     @DatabaseField
     private String name;
 
     public String toString() {
-        return EnumNameHelper.getName(getName());
+        return name;
     }
 
     private boolean hasParent(Category searchParent) {
@@ -78,5 +81,9 @@ public class Category {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public static boolean isEmpty(Category category) {
+        return StringUtils.isEmpty(category.name);
     }
 }

@@ -11,6 +11,8 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
 @DatabaseTable
 public class Representative {
 
+    public static final Representative EMPTY_REPRESENTATIVE = new Representative();
+
     @DatabaseField(generatedId = true)
     private int id;
 
