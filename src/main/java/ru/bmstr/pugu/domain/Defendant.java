@@ -40,6 +40,6 @@ public class Defendant {
     }
 
     public static boolean isEmpty(Defendant defendant) {
-        return StringUtils.isEmpty(defendant.name);
+        return defendant == null || StringUtils.isEmpty(defendant.name);
     }
 }

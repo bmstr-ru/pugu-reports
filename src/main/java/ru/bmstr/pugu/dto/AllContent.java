@@ -23,8 +23,12 @@ public class AllContent {
 
     private static final Logger log = LogManager.getLogger(AllContent.class);
 
-    private List<Suit> suits = new ArrayList<>();
+    private List<Suit> suits;
     private List<Suit> filteredSuits;
+
+    private boolean filtered = false;
+    private Representative filterRepresentative;
+    private String filterString;
 
     @Autowired
     private SuitComparator comparator;
@@ -35,13 +39,8 @@ public class AllContent {
     @Autowired
     private DatabaseManager databaseManager;
 
-    public void sort() {
-        getSuits().sort(comparator);
-    }
-
     public void addRow(Suit suit) {
         databaseManager.create(suit);
-        sort();
     }
 
     public void deleteRows(int[] rows) {
@@ -49,9 +48,8 @@ public class AllContent {
                 .sorted((i1, i2) -> Integer.compare(i2, i1))
                 .collect(Collectors.toList());
         toDeleteRows.forEach(i ->
-            databaseManager.delete(getSuits().get(i.intValue()))
+                databaseManager.delete(getSuits().get(i.intValue()))
         );
-        sort();
     }
 
     public int getRowCount() {
@@ -194,31 +192,25 @@ public class AllContent {
     }
 
     public void unFilter() {
-        getAllSuits();
+        filtered = false;
     }
 
     public void filter(Representative representative, String subString) {
-        setSuits(getAllSuits().stream().filter( suit ->
-            (Representative.isEmpty(representative) ? true : suit.getRepresentative().equals(representative))
-                    &&
-                    (StringUtils.isEmpty(subString) ? true : suit.toString().toLowerCase().contains(subString.toLowerCase()))
-        ).collect(Collectors.toList()));
-    }
-
-    private void setSuits(List<Suit> suits) {
-        this.suits = suits;
+        filterRepresentative = representative;
+        filterString = subString;
+        filtered = true;
     }
 
     private List<Suit> getSuits() {
-        if (suits == null) {
-            return getAllSuits();
-        } else {
-            return suits;
-        }
-    }
-
-    private List<Suit> getAllSuits() {
         suits = databaseManager.retriveAll(Suit.class);
+        if (filtered) {
+            suits = suits.stream().filter(suit ->
+                    (Representative.isEmpty(filterRepresentative) ? true : suit.getRepresentative().equals(filterRepresentative))
+                            &&
+                            (StringUtils.isEmpty(filterString) ? true : suit.toString().toLowerCase().contains(filterString.toLowerCase()))
+            ).collect(Collectors.toList());
+        }
+        suits.sort(comparator);
         return suits;
     }
 }

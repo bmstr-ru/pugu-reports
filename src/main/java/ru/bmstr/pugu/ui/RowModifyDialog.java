@@ -29,6 +29,7 @@ public class RowModifyDialog extends JDialog {
     private JComboBox categoryChoise;
     private DefaultComboBoxModel usualCategories;
     private DefaultComboBoxModel ourCategories;
+    private DefaultComboBoxModel emptyCategory;
     private JComboBox defendantChoise;
     private JTextField plaintiffInput;
     private JFormattedTextField initialSummInput;
@@ -79,6 +80,7 @@ public class RowModifyDialog extends JDialog {
                         .filter(category -> category.getType().getDirection() == Direction.OUR)
                         .toArray(size -> new Category[size])
         );
+        emptyCategory = new DefaultComboBoxModel(new Category[] {Category.EMPTY_CATEGORY});
         this.setSize(new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT));
         this.setLocationRelativeTo(this.getOwner());
         Container pane = this.getContentPane();
@@ -139,17 +141,28 @@ public class RowModifyDialog extends JDialog {
     }
 
     private void setDependantComponents(SuitType type) {
-        switch (type.getDirection()) {
-            case TO_US:
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                categoryChoise.setModel(usualCategories);
-                break;
-            case OUR:
-                plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
-                defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
-                categoryChoise.setModel(ourCategories);
-                break;
+        if (type.getDirection() == null) {
+            plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+            defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+            categoryChoise.setModel(emptyCategory);
+        } else {
+            switch (type.getDirection()) {
+                case TO_US:
+                    plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                    defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                    categoryChoise.setModel(usualCategories);
+                    break;
+                case OUR:
+                    plaintiffLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                    defendantLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                    categoryChoise.setModel(ourCategories);
+                    break;
+                default:
+                    plaintiffLabel.setText(propertyLoader.getProperty(LABEL_PLAINTIFF));
+                    defendantLabel.setText(propertyLoader.getProperty(LABEL_DEFFENDER));
+                    categoryChoise.setModel(emptyCategory);
+                    break;
+            }
         }
     }
 
@@ -245,6 +258,7 @@ public class RowModifyDialog extends JDialog {
                     modifiableSuit.setInitialSumm(initialSummInput.getValue() == null ? 0 : ((Number) initialSummInput.getValue()).intValue());
                     modifiableSuit.setAgreedSumm(agreedSummInput.getValue() == null ? 0 : ((Number) agreedSummInput.getValue()).intValue());
                     modifiableSuit.setResult((Result.isEmpty((Result) resultChoise.getSelectedItem())) ? null : (Result) resultChoise.getSelectedItem());
+                    databaseManager.update(modifiableSuit);
                     tableModel.reDraw();
                 } else {
                     Suit suit = Suit.getBuilder()

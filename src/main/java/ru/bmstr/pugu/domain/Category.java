@@ -84,6 +84,6 @@ public class Category {
     }
 
     public static boolean isEmpty(Category category) {
-        return StringUtils.isEmpty(category.name);
+        return category == null || StringUtils.isEmpty(category.name);
     }
 }

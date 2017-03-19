@@ -72,7 +72,7 @@ public class Representative {
     }
 
     public static boolean isEmpty(Representative representative) {
-        return StringUtils.isEmpty(representative.surname);
+        return representative == null || StringUtils.isEmpty(representative.surname);
     }
 
     @Override

@@ -40,6 +40,6 @@ public class Result {
     }
 
     public static boolean isEmpty(Result result) {
-        return StringUtils.isEmpty(result.name);
+        return result == null || StringUtils.isEmpty(result.name);
     }
 }

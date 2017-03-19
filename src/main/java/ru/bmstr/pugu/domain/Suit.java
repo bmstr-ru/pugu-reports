@@ -37,7 +37,7 @@ public class Suit implements Comparable<Suit> {
     @DatabaseField
     private Integer year;
 
-    @DatabaseField(foreign = true)
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Representative representative;
 
     public Object getAt(int index) {

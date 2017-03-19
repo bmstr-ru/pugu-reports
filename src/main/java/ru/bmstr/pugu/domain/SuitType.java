@@ -69,6 +69,6 @@ public class SuitType {
     }
 
     public static boolean isEmpty(SuitType suitType) {
-        return StringUtils.isEmpty(suitType.name);
+        return suitType == null || StringUtils.isEmpty(suitType.name);
     }
 }
