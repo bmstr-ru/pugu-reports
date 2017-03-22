@@ -111,15 +111,15 @@ public class RowModifyDialog extends JDialog {
         setLabels();
         modifiableSuit = null;
         this.setTitle(propertyLoader.getProperty(SUIT_ENTER));
-        typeChoise.setSelectedItem(0);
-        representativeChoise.setSelectedItem(0);
+        typeChoise.setSelectedIndex(0);
+        representativeChoise.setSelectedIndex(0);
         yearChoise.setSelectedItem(2017);
-        categoryChoise.setSelectedItem(0);
-        defendantChoise.setSelectedItem(0);
+        categoryChoise.setSelectedIndex(0);
+        defendantChoise.setSelectedIndex(0);
         plaintiffInput.setText("");
         initialSummInput.setValue(0);
         agreedSummInput.setValue(0);
-        resultChoise.setSelectedItem(0);
+        resultChoise.setSelectedIndex(0);
         this.setVisible(true);
     }
 
