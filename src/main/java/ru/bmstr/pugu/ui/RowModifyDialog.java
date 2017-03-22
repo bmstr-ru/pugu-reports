@@ -107,12 +107,16 @@ public class RowModifyDialog extends JDialog {
         }
     }
 
-    public void showAddRow() {
+    public void showAddRow(Representative representative) {
         setLabels();
         modifiableSuit = null;
         this.setTitle(propertyLoader.getProperty(SUIT_ENTER));
         typeChoise.setSelectedIndex(0);
-        representativeChoise.setSelectedIndex(0);
+        if (Representative.isEmpty(representative)) {
+            representativeChoise.setSelectedIndex(0);
+        } else {
+            representativeChoise.setSelectedItem(representative);
+        }
         yearChoise.setSelectedItem(2017);
         categoryChoise.setSelectedIndex(0);
         defendantChoise.setSelectedIndex(0);

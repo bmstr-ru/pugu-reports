@@ -149,7 +149,7 @@ public class MainFrame extends JFrame {
         panel.add(representativeChoise);
         JButton add = new JButton("+");
         add.addActionListener(actionEvent -> {
-            SwingUtilities.invokeLater(() -> rowModifyDialog.showAddRow());
+            SwingUtilities.invokeLater(() -> rowModifyDialog.showAddRow((Representative) representativeChoise.getSelectedItem()));
         });
         JButton substract = new JButton("-");
         substract.addActionListener(action -> {
