@@ -11,6 +11,7 @@ import ru.bmstr.pugu.domain.*;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.annotation.PostConstruct;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -47,9 +48,16 @@ public class AllContent {
         List<Integer> toDeleteRows = Arrays.stream(ArrayUtils.toObject(rows))
                 .sorted((i1, i2) -> Integer.compare(i2, i1))
                 .collect(Collectors.toList());
-        toDeleteRows.forEach(i ->
-                databaseManager.delete(getSuits().get(i.intValue()))
-        );
+        toDeleteRows.forEach(i -> {
+            Suit suit = getSuits().get(i.intValue());
+            if (suit.getAppeal() != null) {
+                databaseManager.delete(suit.getAppeal());
+            }
+            if (suit.getCassation() != null) {
+                databaseManager.delete(suit.getCassation());
+            }
+            databaseManager.delete(suit);
+        });
     }
 
     public int getRowCount() {
@@ -141,8 +149,9 @@ public class AllContent {
     }
 
     public Map<String, String> calculateLine(String row, List<Suit> suitsList) {
+        Integer currentYear = LocalDateTime.now().getYear();
         List<Suit> usualSuitsColumn1 = suitsList.stream()
-                .filter(suit -> suit.getYear() == 2016)
+                .filter(suit -> suit.getYear() == currentYear)
                 .collect(Collectors.toList());
         List<Suit> agreedSuitsColumn2 = suitsList.stream()
 //                .filter(suit -> suit.getResult() == Result.APPROVE)

@@ -21,7 +21,7 @@ public class TableData extends JTable {
     private MyTableModel tableModel;
 
     @Autowired
-    private RowModifyDialog rowModifyDialog;
+    private NewRowModifyDialog rowModifyDialog;
 
     @PostConstruct
     private void loadDefaultValues() {

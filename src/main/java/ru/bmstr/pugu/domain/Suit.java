@@ -40,6 +40,12 @@ public class Suit implements Comparable<Suit> {
     @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Representative representative;
 
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
+    private Appeal appeal;
+
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
+    private Cassation cassation;
+
     public Object getAt(int index) {
         switch (index) {
             case 1:
@@ -162,6 +168,22 @@ public class Suit implements Comparable<Suit> {
         return compareResult;
     }
 
+    public Appeal getAppeal() {
+        return appeal;
+    }
+
+    public void setAppeal(Appeal appeal) {
+        this.appeal = appeal;
+    }
+
+    public Cassation getCassation() {
+        return cassation;
+    }
+
+    public void setCassation(Cassation cassation) {
+        this.cassation = cassation;
+    }
+
     public static class SuitBuilder {
         private Suit suit = new Suit();
 
@@ -210,7 +232,17 @@ public class Suit implements Comparable<Suit> {
             return this;
         }
 
-        public Suit getSuit() {
+        public SuitBuilder withAppeal(Appeal appeal) {
+            suit.setAppeal(appeal);
+            return this;
+        }
+
+        public SuitBuilder withCassation(Cassation cassation) {
+            suit.setCassation(cassation);
+            return this;
+        }
+
+        public Suit build() {
             return suit;
         }
     }
@@ -218,15 +250,15 @@ public class Suit implements Comparable<Suit> {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("representative", getRepresentative().toString())
-                .append("category", getCategory().toString())
-                .append("type", getType().toString())
-                .append("plaintiff", getPlaintiff().toString())
-                .append("defendant", getDefendant().toString())
-                .append("initialSumm", String.valueOf(initialSumm))
-                .append("agreedSumm", String.valueOf(agreedSumm))
-                .append("year", getYear().toString())
-                .append("result", getResult().toString())
+                .append("representative", representative)
+                .append("category", category)
+                .append("type", type)
+                .append("plaintiff", plaintiff)
+                .append("defendant", defendant)
+                .append("initialSumm", initialSumm)
+                .append("agreedSumm", agreedSumm)
+                .append("year", year)
+                .append("result", result)
                 .toString()
                 ;
     }

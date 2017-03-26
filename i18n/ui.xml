@@ -17,6 +17,7 @@
     <entry key="suit.enter">Введите данные иска</entry>
     <entry key="suit.from">Иск от </entry>
 
+    <entry key="label.suitData">Данные иска:</entry>
     <entry key="label.type">Тип иска:</entry>
     <entry key="label.representative">Представитель:</entry>
     <entry key="label.year">Год:</entry>
@@ -25,5 +26,8 @@
     <entry key="label.deffender">Ответчик:</entry>
     <entry key="label.initialSumm">Сумма иска:</entry>
     <entry key="label.result">Решение:</entry>
-    <entry key="label.agreedSumm">Сумма удовлетворённых требований:</entry>
+    <entry key="label.agreedSum">Сумма удовл.:</entry>
+    <entry key="hasAppeal">Есть апелляция:</entry>
+    <entry key="hasCassation">Есть кассация:</entry>
+    <entry key="inSupremeCourt">В верховном суде</entry>
 </properties>

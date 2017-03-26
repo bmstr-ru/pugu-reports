@@ -54,6 +54,8 @@ public class DatabaseManager {
             daos.put(Result.class, DaoManager.createDao(dataConnection, Result.class));
             daos.put(Category.class, DaoManager.createDao(dataConnection, Category.class));
             daos.put(Suit.class, DaoManager.createDao(dataConnection, Suit.class));
+            daos.put(Cassation.class, DaoManager.createDao(dataConnection, Cassation.class));
+            daos.put(Appeal.class, DaoManager.createDao(dataConnection, Appeal.class));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -65,14 +67,19 @@ public class DatabaseManager {
 //        TableUtils.dropTable(dataConnection, Defendant.class, false);
 //        TableUtils.dropTable(dataConnection, Representative.class, false);
 //        TableUtils.dropTable(dataConnection, Result.class, false);
+        TableUtils.dropTable(dataConnection, Cassation.class, false);
+//        TableUtils.dropTable(dataConnection, Appeal.class, false);
+//        TableUtils.dropTable(dataConnection, Suit.class, false);
+
 //
 //        TableUtils.createTable(dataConnection, SuitType.class);
 //        TableUtils.createTable(dataConnection, Category.class);
 //        TableUtils.createTable(dataConnection, Defendant.class);
 //        TableUtils.createTable(dataConnection, Representative.class);
 //        TableUtils.createTable(dataConnection, Result.class);
-        TableUtils.createTable(dataConnection, Suit.class);
-
+        TableUtils.createTable(dataConnection, Cassation.class);
+//        TableUtils.createTable(dataConnection, Appeal.class);
+//        TableUtils.createTable(dataConnection, Suit.class);
     }
 
     public void update(Object obj) {

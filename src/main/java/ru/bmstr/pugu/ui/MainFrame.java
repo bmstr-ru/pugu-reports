@@ -44,7 +44,7 @@ public class MainFrame extends JFrame {
     private AllContent allContent;
 
     @Autowired
-    private RowModifyDialog rowModifyDialog;
+    private NewRowModifyDialog rowModifyDialog;
 
     @Autowired
     private JFileChooser saveAsFileChooser;

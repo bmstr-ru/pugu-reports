@@ -26,6 +26,7 @@ public class PropertyNames {
     public static final String DATA_FOLDER = "data.folder";
     public static final String SUIT_ENTER = "suit.enter";
     public static final String SUIT_FROM = "suit.from";
+    public static final String LABEL_SUIT_DATA = "label.suitData";
     public static final String LABEL_TYPE = "label.type";
     public static final String LABEL_REPRESENTATIVE = "label.representative";
     public static final String LABEL_YEAR = "label.year";
@@ -35,6 +36,9 @@ public class PropertyNames {
     public static final String LABEL_INITIAL_SUMM = "label.initialSumm";
     public static final String LABEL_RESULT = "label.result";
     public static final String LABEL_AGREED_SUMM = "label.agreedSumm";
+    public static final String HAS_APPEAL = "hasAppeal";
+    public static final String HAS_CASSATION = "hasCassation";
+    public static final String IN_SUPREME_COURT = "inSupremeCourt";
     public static final String REPORT_TEMPLATE = "report.template";
     public static final String REPORT_FILENAME = "report.filename";
     public static final String REPORT_TEMPLATE_MISSING = "report.template.missing";

@@ -13,6 +13,8 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
 public class SuitType {
 
     public static final SuitType EMPTY_SUIT_TYPE = new SuitType();
+    public static final String OUR_CODE = "9";
+    public static final String TO_US_CODE = "2";
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -23,8 +25,11 @@ public class SuitType {
     @DatabaseField
     private Direction direction;
 
+    @DatabaseField
+    private String code;
+
     public String toString() {
-        return name;
+        return code == null ? "" : code+". "+name;
     }
 
     public int getId() {
@@ -70,5 +75,13 @@ public class SuitType {
 
     public static boolean isEmpty(SuitType suitType) {
         return suitType == null || StringUtils.isEmpty(suitType.name);
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

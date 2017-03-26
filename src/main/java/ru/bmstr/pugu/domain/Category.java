@@ -28,8 +28,11 @@ public class Category {
     @DatabaseField
     private String name;
 
+    @DatabaseField
+    private String code;
+
     public String toString() {
-        return name;
+        return code == null ? "" : code+". "+name;
     }
 
     private boolean hasParent(Category searchParent) {
@@ -85,5 +88,13 @@ public class Category {
 
     public static boolean isEmpty(Category category) {
         return category == null || StringUtils.isEmpty(category.name);
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

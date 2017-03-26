@@ -6,12 +6,9 @@ import ru.bmstr.pugu.domain.*;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
 
@@ -275,7 +272,7 @@ public class RowModifyDialog extends JDialog {
                             .withInitialSumm(initialSummInput.getValue() == null ? 0 : ((Number) initialSummInput.getValue()).intValue())
                             .withAgreedSumm(agreedSummInput.getValue() == null ? 0 :((Number) agreedSummInput.getValue()).intValue())
                             .withResult((Result.isEmpty((Result) resultChoise.getSelectedItem())) ? null : (Result) resultChoise.getSelectedItem())
-                            .getSuit();
+                            .build();
                     tableModel.addRow(suit);
                 }
                 thisDialog.setVisible(false);
