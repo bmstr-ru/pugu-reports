@@ -58,6 +58,7 @@ public class TableData extends JTable {
     }
 
     public void filter(Representative representative, String subString) {
+        this.clearSelection();
         tableModel.filter(representative, subString);
     }
 }

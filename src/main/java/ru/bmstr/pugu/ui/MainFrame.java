@@ -226,9 +226,15 @@ public class MainFrame extends JFrame {
         searchTextField.setForeground(Color.GRAY);
         searchTextField.setFont(new Font("stub", Font.ITALIC, 11));
 
-        searchTextField.addKeyListener(new KeyAdapter() {
+//        searchTextField.addKeyListener(new KeyAdapter() {
+//            @Override
+//            public void keyReleased(KeyEvent e) {
+//                applyFilter();
+//            }
+//        });
+        searchTextField.addActionListener(new AbstractAction() {
             @Override
-            public void keyReleased(KeyEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 applyFilter();
             }
         });

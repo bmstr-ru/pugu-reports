@@ -28,12 +28,11 @@ public class AllContent {
 
     private static final Logger log = LogManager.getLogger(AllContent.class);
 
-    private List<Suit> suits;
-    private List<Suit> filteredSuits;
-
-    private boolean filtered = false;
+    private volatile boolean filtered = false;
     private Representative filterRepresentative;
     private String filterString;
+
+    List<Suit> suits;
 
     @Autowired
     private SuitComparator comparator;
