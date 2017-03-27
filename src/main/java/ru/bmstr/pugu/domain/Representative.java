@@ -1,5 +1,6 @@
 package ru.bmstr.pugu.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import org.springframework.util.StringUtils;
@@ -9,6 +10,7 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
  * Created by bmstr on 03.12.2016.
  */
 @DatabaseTable
+@JsonIgnoreProperties({ "shortFio", "fullFio" })
 public class Representative {
 
     public static final Representative EMPTY_REPRESENTATIVE = new Representative();

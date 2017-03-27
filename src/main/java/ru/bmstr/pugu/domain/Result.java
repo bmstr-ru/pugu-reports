@@ -42,4 +42,21 @@ public class Result {
     public static boolean isEmpty(Result result) {
         return result == null || StringUtils.isEmpty(result.name);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Result)) {
+            return false;
+        }
+        return ((Result) obj).id == this.id;
+    }
+
+    @Override
+    public int hashCode() {
+        if (name == null) {
+            return super.hashCode();
+        } else {
+            return name.hashCode();
+        }
+    }
 }

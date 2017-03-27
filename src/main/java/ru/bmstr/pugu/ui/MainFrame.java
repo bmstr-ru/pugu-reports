@@ -3,12 +3,10 @@ package ru.bmstr.pugu.ui;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.domain.Representative;
-import ru.bmstr.pugu.domain.Suit;
 import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.PropertyLoader;
 import ru.bmstr.pugu.reports.ReportGenerator;
@@ -17,7 +15,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-import java.util.ArrayList;
 
 import static ru.bmstr.pugu.properties.PropertyNames.*;
 
@@ -44,7 +41,7 @@ public class MainFrame extends JFrame {
     private AllContent allContent;
 
     @Autowired
-    private NewRowModifyDialog rowModifyDialog;
+    private RowModifyDialog rowModifyDialog;
 
     @Autowired
     private JFileChooser saveAsFileChooser;
@@ -89,8 +86,38 @@ public class MainFrame extends JFrame {
         JMenu menu = new JMenu(propertyLoader.getProperty(MENU_FILE));
         menuBar.add(menu);
 
+        // Сохранить данные
+        JMenuItem menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_STORE));
+        menuItem.addActionListener(action -> {
+            SwingUtilities.invokeLater(() -> {
+                int saveChoise = saveAsFileChooser.showSaveDialog(window);
+                if (saveChoise == JFileChooser.APPROVE_OPTION) {
+                    File file = saveAsFileChooser.getSelectedFile();
+                    if (!file.getName().endsWith(".json")) {
+                        file = new File(file.getAbsolutePath() + ".json");
+                    }
+                    allContent.store(file);
+                }
+            });
+        });
+        menu.add(menuItem);
+
+        // Восстановить данные
+        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_DATA_RESTORE));
+        menuItem.addActionListener(action -> {
+            SwingUtilities.invokeLater(() -> {
+                int openChoise = saveAsFileChooser.showOpenDialog(window);
+                if (openChoise == JFileChooser.APPROVE_OPTION) {
+                    File file = saveAsFileChooser.getSelectedFile();
+                    allContent.restoreAndAdd(file);
+                    contentTable.reDraw();
+                }
+            });
+        });
+        menu.add(menuItem);
+
         // Выход
-        JMenuItem menuItem = new JMenuItem(propertyLoader.getProperty(MENU_EXIT));
+        menuItem = new JMenuItem(propertyLoader.getProperty(MENU_EXIT));
         menuItem.addActionListener(event -> {
             window.dispatchEvent(
                     new WindowEvent(window, WindowEvent.WINDOW_CLOSING)

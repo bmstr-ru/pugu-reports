@@ -33,9 +33,9 @@ public class PropertyNames {
     public static final String LABEL_CATEGORY = "label.category";
     public static final String LABEL_PLAINTIFF = "label.plaintiff";
     public static final String LABEL_DEFFENDER = "label.deffender";
-    public static final String LABEL_INITIAL_SUMM = "label.initialSumm";
+    public static final String LABEL_INITIAL_SUMM = "label.initialSum";
     public static final String LABEL_RESULT = "label.result";
-    public static final String LABEL_AGREED_SUMM = "label.agreedSumm";
+    public static final String LABEL_AGREED_SUMM = "label.agreedSum";
     public static final String HAS_APPEAL = "hasAppeal";
     public static final String HAS_CASSATION = "hasCassation";
     public static final String IN_SUPREME_COURT = "inSupremeCourt";

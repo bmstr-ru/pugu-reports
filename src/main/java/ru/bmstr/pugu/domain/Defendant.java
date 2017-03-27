@@ -42,4 +42,22 @@ public class Defendant {
     public static boolean isEmpty(Defendant defendant) {
         return defendant == null || StringUtils.isEmpty(defendant.name);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Defendant)) {
+            return false;
+        }
+        return ((Defendant) obj).id == this.id;
+    }
+
+    @Override
+    public int hashCode() {
+        if (name == null) {
+            return super.hashCode();
+        } else {
+            return name.hashCode();
+        }
+    }
+
 }

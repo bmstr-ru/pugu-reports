@@ -6,7 +6,6 @@ import ru.bmstr.pugu.domain.Representative;
 
 import javax.annotation.PostConstruct;
 import javax.swing.*;
-import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -21,7 +20,7 @@ public class TableData extends JTable {
     private MyTableModel tableModel;
 
     @Autowired
-    private NewRowModifyDialog rowModifyDialog;
+    private RowModifyDialog rowModifyDialog;
 
     @PostConstruct
     private void loadDefaultValues() {

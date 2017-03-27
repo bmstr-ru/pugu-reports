@@ -1,5 +1,8 @@
 package ru.bmstr.pugu.dto;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +13,8 @@ import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.domain.*;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
-import javax.annotation.PostConstruct;
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -78,6 +82,46 @@ public class AllContent {
             default:
                 return suit.getAt(columnIndex);
         }
+    }
+
+    public void store(File saveTo) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            mapper.writeValue(saveTo, getSuits());
+        } catch (IOException e) {
+            log.error("Error while storing data to json file", e);
+        }
+    }
+
+
+    public void restoreAndAdd(File dataFile) {
+        restore(dataFile).stream().forEach(suit -> {
+            if (suit.getAppeal() != null) {
+                suit.getAppeal().setId(0);
+                databaseManager.create(suit.getAppeal());
+            }
+            if (suit.getCassation() != null) {
+                suit.getCassation().setId(0);
+                databaseManager.create(suit.getCassation());
+            }
+            suit.setId(0);
+            databaseManager.create(suit);
+        });
+    }
+
+    private List<Suit> restore(File dataFile) {
+        try {
+            if (dataFile.exists()) {
+                ObjectMapper mapper = new ObjectMapper();
+                mapper.configure(JsonParser.Feature.ALLOW_COMMENTS, true);
+                mapper.enable(SerializationFeature.INDENT_OUTPUT);
+                return mapper.readValue(dataFile, mapper.getTypeFactory().constructCollectionType(List.class, Suit.class));
+            }
+        } catch (IOException e) {
+            log.error("Error while restoring data from json file", e);
+        }
+        return Collections.emptyList();
     }
 
     public HashMap<String, String> calculateTags() {

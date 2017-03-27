@@ -35,6 +35,23 @@ public class Category {
         return code == null ? "" : code+". "+name;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Category)) {
+            return false;
+        }
+        return ((Category) obj).id == this.id;
+    }
+
+    @Override
+    public int hashCode() {
+        if (code == null) {
+            return super.hashCode();
+        } else {
+            return code.hashCode();
+        }
+    }
+
     private boolean hasParent(Category searchParent) {
         if (searchParent == this || (this.getParent() != null && this.getParent() == searchParent)) {
             return true;

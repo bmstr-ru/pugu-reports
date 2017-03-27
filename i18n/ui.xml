@@ -24,7 +24,7 @@
     <entry key="label.category">Категория:</entry>
     <entry key="label.plaintiff">Истец:</entry>
     <entry key="label.deffender">Ответчик:</entry>
-    <entry key="label.initialSumm">Сумма иска:</entry>
+    <entry key="label.initialSum">Сумма иска:</entry>
     <entry key="label.result">Решение:</entry>
     <entry key="label.agreedSum">Сумма удовл.:</entry>
     <entry key="hasAppeal">Есть апелляция:</entry>
