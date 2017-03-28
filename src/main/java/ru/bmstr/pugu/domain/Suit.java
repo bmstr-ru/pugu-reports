@@ -73,12 +73,24 @@ public class Suit implements Comparable<Suit> {
         return category;
     }
 
+    public int getCategoryId() {
+        if (getCategory() == null) {
+            return 0;
+        } else {
+            return getCategory().getId();
+        }
+    }
+
     public Defendant getDefendant() {
         return defendant;
     }
 
     public String getPlaintiff() {
-        return plaintiff;
+        if (plaintiff == null) {
+            return "";
+        } else {
+            return plaintiff;
+        }
     }
 
     public Integer getInitialSumm() {
@@ -121,6 +133,14 @@ public class Suit implements Comparable<Suit> {
         return year;
     }
 
+    public int getYearId() {
+        if (getYear() == null) {
+            return 0;
+        } else {
+            return getYear();
+        }
+    }
+
     public void setYear(Integer year) {
         this.year = year;
     }
@@ -131,6 +151,14 @@ public class Suit implements Comparable<Suit> {
 
     public SuitType getType() {
         return type;
+    }
+
+    public int getTypeId() {
+        if (getType() == null) {
+            return 0;
+        } else {
+            return getType().getId();
+        }
     }
 
     public void setType(SuitType type) {
@@ -155,11 +183,11 @@ public class Suit implements Comparable<Suit> {
 
     @Override
     public int compareTo(Suit suit2) {
-        int compareResult = this.getType().getId() - suit2.getType().getId();
+        int compareResult = this.getTypeId() - suit2.getTypeId();
         if (compareResult == 0) {
-            compareResult = this.getCategory().getId() - suit2.getCategory().getId();
+            compareResult = this.getCategoryId() - suit2.getCategoryId();
             if (compareResult == 0) {
-                compareResult = this.getYear() - suit2.getYear();
+                compareResult = this.getYearId() - suit2.getYearId();
                 if (compareResult == 0) {
                     compareResult = this.getPlaintiff().compareTo(suit2.getPlaintiff());
                 }

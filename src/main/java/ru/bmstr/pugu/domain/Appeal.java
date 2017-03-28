@@ -16,6 +16,9 @@ public class Appeal {
     @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Result result;
 
+    @DatabaseField
+    private Integer year;
+
     public int getId() {
         return id;
     }
@@ -44,6 +47,14 @@ public class Appeal {
         return new AppealBuilder();
     }
 
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
     public static class AppealBuilder {
         private Appeal appeal = new Appeal();
 
@@ -54,6 +65,11 @@ public class Appeal {
 
         public AppealBuilder withResult(Result result) {
             appeal.setResult(result);
+            return this;
+        }
+
+        public AppealBuilder withYear(Integer year) {
+            appeal.setYear(year);
             return this;
         }
 

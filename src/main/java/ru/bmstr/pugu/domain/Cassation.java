@@ -19,6 +19,9 @@ public class Cassation {
     @DatabaseField
     private boolean inSupremeCourt;
 
+    @DatabaseField
+    private Integer year;
+
     public int getId() {
         return id;
     }
@@ -67,6 +70,14 @@ public class Cassation {
         this.inSupremeCourt = inSupremeCourt;
     }
 
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
     public static class CassationBuilder {
 
         private Cassation cassation = new Cassation();
@@ -80,6 +91,12 @@ public class Cassation {
             cassation.setResult(result);
             return this;
         }
+
+        public CassationBuilder withYear(Integer year) {
+            cassation.setYear(year);
+            return this;
+        }
+
         public CassationBuilder withInSupremeCourt(boolean inSupremeCourt) {
             cassation.setInSupremeCourt(inSupremeCourt);
             return this;

@@ -29,8 +29,8 @@ public class AllContent {
     private static final Logger log = LogManager.getLogger(AllContent.class);
 
     private volatile boolean filtered = false;
-    private Representative filterRepresentative;
-    private String filterString;
+    private volatile Representative filterRepresentative;
+    private volatile String filterString;
 
     List<Suit> suits;
 
