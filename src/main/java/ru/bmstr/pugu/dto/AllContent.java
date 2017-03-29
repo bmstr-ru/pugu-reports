@@ -16,6 +16,7 @@ import ru.bmstr.pugu.properties.PropertyLoader;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -32,6 +33,8 @@ public class AllContent {
     private volatile Representative filterRepresentative;
     private volatile String filterString;
 
+    private volatile boolean changed = false;
+    private volatile LocalDateTime lastUpdateTime = LocalDateTime.now();
     List<Suit> suits;
 
     @Autowired
@@ -245,24 +248,34 @@ public class AllContent {
 
     public void unFilter() {
         filtered = false;
+        fireChanged();
     }
 
     public void filter(Representative representative, String subString) {
         filterRepresentative = representative;
         filterString = subString;
+        fireChanged();
         filtered = true;
     }
 
     private List<Suit> getSuits() {
-        suits = databaseManager.retriveAll(Suit.class);
-        if (filtered) {
-            suits = suits.stream().filter(suit ->
-                    (Representative.isEmpty(filterRepresentative) ? true : suit.getRepresentative().equals(filterRepresentative))
-                            &&
-                            (StringUtils.isEmpty(filterString) ? true : suit.toString().toLowerCase().contains(filterString.toLowerCase()))
-            ).collect(Collectors.toList());
+        if (suits == null || changed || lastUpdateTime.until(LocalDateTime.now(), ChronoUnit.SECONDS) > 10) {
+            suits = databaseManager.retriveAll(Suit.class);
+            if (filtered) {
+                suits = suits.stream().filter(suit ->
+                        (Representative.isEmpty(filterRepresentative) ? true : suit.getRepresentative().equals(filterRepresentative))
+                                &&
+                                (StringUtils.isEmpty(filterString) ? true : suit.toString().toLowerCase().contains(filterString.toLowerCase()))
+                ).collect(Collectors.toList());
+            }
+            suits.sort(comparator);
+            changed = false;
+            lastUpdateTime = LocalDateTime.now();
         }
-        suits.sort(comparator);
         return suits;
+    }
+
+    public void fireChanged() {
+        changed = true;
     }
 }

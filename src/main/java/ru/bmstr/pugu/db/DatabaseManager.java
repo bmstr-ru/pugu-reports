@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.sqlite.SQLiteConfig;
 import ru.bmstr.pugu.beans.AllBeans;
 import ru.bmstr.pugu.domain.*;
+import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
@@ -30,6 +31,9 @@ import static ru.bmstr.pugu.properties.PropertyNames.DATA_FOLDER;
 public class DatabaseManager {
     @Autowired
     private PropertyLoader propertyLoader;
+
+    @Autowired
+    private AllContent allContent;
 
     private Map<Class, Dao> daos;
     private ConnectionSource dataConnection;
@@ -88,6 +92,8 @@ public class DatabaseManager {
             dao.update(obj);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            allContent.fireChanged();
         }
     }
 
@@ -97,6 +103,8 @@ public class DatabaseManager {
             dao.create(obj);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            allContent.fireChanged();
         }
     }
 
@@ -106,6 +114,8 @@ public class DatabaseManager {
             dao.delete(obj);
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        } finally {
+            allContent.fireChanged();
         }
     }
 

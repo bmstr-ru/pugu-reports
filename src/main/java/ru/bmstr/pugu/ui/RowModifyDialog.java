@@ -197,6 +197,8 @@ public class RowModifyDialog extends JDialog {
         );
 
         categoryLabel.setText(propertyLoader.getProperty(LABEL_CATEGORY));
+        appealYearLabel.setText(propertyLoader.getProperty(LABEL_YEAR_APPEAL));
+        cassationYearLabel.setText(propertyLoader.getProperty(LABEL_YEAR_CASSATION));
 
         GroupLayout categoryPanelLayout = new GroupLayout(categoryPanel);
         categoryPanel.setLayout(categoryPanelLayout);
@@ -609,6 +611,7 @@ public class RowModifyDialog extends JDialog {
                         } else {
                             modifiableSuit.getAppeal().setResult((Result.isEmpty((Result) appealResultChoise.getSelectedItem())) ? null : (Result) appealResultChoise.getSelectedItem());
                             modifiableSuit.getAppeal().setAgreedSum(appealAgreedSumInput.getValue() == null ? 0 : ((Number) appealAgreedSumInput.getValue()).intValue());
+                            modifiableSuit.getAppeal().setYear((Integer)appealYearChoise.getSelectedItem());
                             databaseManager.update(modifiableSuit.getAppeal());
                         }
                     } else if (modifiableSuit.getAppeal() != null) {
@@ -628,6 +631,7 @@ public class RowModifyDialog extends JDialog {
                         } else {
                             modifiableSuit.getCassation().setResult((Result.isEmpty((Result) cassationResultChoise.getSelectedItem())) ? null : (Result) cassationResultChoise.getSelectedItem());
                             modifiableSuit.getCassation().setAgreedSum(cassationAgreedSumInput.getValue() == null ? 0 : ((Number) cassationAgreedSumInput.getValue()).intValue());
+                            modifiableSuit.getCassation().setYear((Integer)appealYearChoise.getSelectedItem());
                             databaseManager.update(modifiableSuit.getCassation());
                         }
                     } else if (modifiableSuit.getCassation() != null) {

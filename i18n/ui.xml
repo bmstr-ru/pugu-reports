@@ -21,6 +21,8 @@
     <entry key="label.type">Тип иска:</entry>
     <entry key="label.representative">Представитель:</entry>
     <entry key="label.year">Год:</entry>
+    <entry key="label.year.appeal">Год аппеляции:</entry>
+    <entry key="label.year.cassation">Год кассации:</entry>
     <entry key="label.category">Категория:</entry>
     <entry key="label.plaintiff">Истец:</entry>
     <entry key="label.deffender">Ответчик:</entry>

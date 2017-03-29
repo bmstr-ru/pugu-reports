@@ -1,5 +1,6 @@
 package ru.bmstr.pugu.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -8,6 +9,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * Created by bmstr on 27.11.2016.
  */
 @DatabaseTable
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Suit implements Comparable<Suit> {
 
     @DatabaseField(generatedId = true)

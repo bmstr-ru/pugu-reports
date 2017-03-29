@@ -30,6 +30,8 @@ public class PropertyNames {
     public static final String LABEL_TYPE = "label.type";
     public static final String LABEL_REPRESENTATIVE = "label.representative";
     public static final String LABEL_YEAR = "label.year";
+    public static final String LABEL_YEAR_APPEAL = "label.year.appeal";
+    public static final String LABEL_YEAR_CASSATION = "label.year.cassation";
     public static final String LABEL_CATEGORY = "label.category";
     public static final String LABEL_PLAINTIFF = "label.plaintiff";
     public static final String LABEL_DEFFENDER = "label.deffender";
