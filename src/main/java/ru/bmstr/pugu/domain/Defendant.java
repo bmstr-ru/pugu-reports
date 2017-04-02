@@ -11,6 +11,10 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
 @DatabaseTable
 public class Defendant {
 
+    public static Defendant GU;
+    public static Defendant MVD;
+    public static Defendant KAZNA;
+
     public static final Defendant EMPTY_DEFENDANT = new Defendant();
 
     @DatabaseField(generatedId = true)
@@ -45,7 +49,7 @@ public class Defendant {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Defendant)) {
+        if ((obj == null) || !(obj instanceof Defendant)) {
             return false;
         }
         return ((Defendant) obj).id == this.id;
@@ -59,5 +63,6 @@ public class Defendant {
             return name.hashCode();
         }
     }
+
 
 }

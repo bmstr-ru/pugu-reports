@@ -5,7 +5,7 @@ import com.j256.ormlite.field.DatabaseField;
 /**
  * Created by bmstr on 26.03.2017.
  */
-public class Cassation {
+public class Cassation implements Countable {
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -21,6 +21,18 @@ public class Cassation {
 
     @DatabaseField
     private Integer year;
+
+    public Cassation() {
+
+    }
+
+    public Cassation(Cassation originalCassation) {
+        this.id = originalCassation.id;
+        this.agreedSum = originalCassation.agreedSum;
+        this.result = originalCassation.result;
+        this.inSupremeCourt = originalCassation.inSupremeCourt;
+        this.year = originalCassation.year;
+    }
 
     public int getId() {
         return id;
@@ -40,6 +52,11 @@ public class Cassation {
 
     public Result getResult() {
         return result;
+    }
+
+    @Override
+    public Integer getInitialSum() {
+        return null;
     }
 
     public void setResult(Result result) {

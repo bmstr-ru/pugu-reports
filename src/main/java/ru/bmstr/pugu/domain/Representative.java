@@ -79,7 +79,7 @@ public class Representative {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Representative)) {
+        if ((obj == null) || !(obj instanceof Representative)) {
             return false;
         }
         return ((Representative) obj).id == this.id;

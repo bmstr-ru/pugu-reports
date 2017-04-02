@@ -4,13 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.regexp.RE;
 
 /**
  * Created by bmstr on 27.11.2016.
  */
 @DatabaseTable
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Suit implements Comparable<Suit> {
+public class Suit implements Comparable<Suit>, Countable {
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -48,6 +49,29 @@ public class Suit implements Comparable<Suit> {
     @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Cassation cassation;
 
+    public Suit() {
+
+    }
+
+    public Suit(Suit originalSuit) {
+        this.id = originalSuit.id;
+        this.type = originalSuit.type;
+        this.category = originalSuit.category;
+        this.defendant = originalSuit.defendant;
+        this.plaintiff = originalSuit.plaintiff;
+        this.initialSumm = originalSuit.initialSumm;
+        this.agreedSumm = originalSuit.agreedSumm;
+        this.result = originalSuit.result;
+        this.year = originalSuit.year;
+        this.representative = originalSuit.representative;
+        if (originalSuit.appeal != null) {
+            this.appeal = new Appeal(originalSuit.appeal);
+        }
+        if (originalSuit.cassation != null) {
+            this.cassation = new Cassation(originalSuit.cassation);
+        }
+    }
+
     public Object getAt(int index) {
         switch (index) {
             case 1:
@@ -55,7 +79,7 @@ public class Suit implements Comparable<Suit> {
             case 2:
                 return getYear();
             case 3:
-                return getCategory();
+                return getCategory() != null ? getCategory() : getType();
             case 4:
                 return getPlaintiff();
             case 5:
@@ -105,6 +129,16 @@ public class Suit implements Comparable<Suit> {
 
     public Result getResult() {
         return result;
+    }
+
+    @Override
+    public Integer getInitialSum() {
+        return getInitialSumm();
+    }
+
+    @Override
+    public Integer getAgreedSum() {
+        return getAgreedSumm();
     }
 
     public void setCategory(Category category) {
@@ -275,6 +309,31 @@ public class Suit implements Comparable<Suit> {
         public Suit build() {
             return suit;
         }
+    }
+
+    public Suit getFinalSuit() {
+        Suit finalSuit = new Suit(this);
+        if (appeal != null) {
+            if (Result.UNRESOLVED.equals(appeal.getResult()) || Result.isEmpty(appeal.getResult())) {
+                finalSuit.setResult(Result.UNRESOLVED);
+                finalSuit.setAgreedSumm(0);
+            } else if (Result.DECLINED.equals(appeal.getResult())) {
+                finalSuit.setResult(result.getOpposite());
+                if (appeal.getAgreedSum() > 0) {
+                    finalSuit.setAgreedSumm(appeal.getAgreedSum());
+                }
+            } else if (Result.APPROVED.equals(appeal.getResult())) {
+                finalSuit.setResult(result.getOpposite());
+                if (appeal.getAgreedSum() > 0) {
+                    finalSuit.setAgreedSumm(appeal.getAgreedSum());
+                }
+            } else if (Result.AGREED.equals(appeal.getResult())){
+                finalSuit.setResult(Result.AGREED);
+                finalSuit.setAgreedSumm(appeal.getAgreedSum());
+            }
+        }
+
+        return finalSuit;
     }
 
     @Override

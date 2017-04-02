@@ -13,8 +13,10 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
 public class SuitType {
 
     public static final SuitType EMPTY_SUIT_TYPE = new SuitType();
-    public static final String OUR_CODE = "9";
-    public static final String TO_US_CODE = "2";
+    public static SuitType TO_US;
+    public static SuitType SPECIAL;
+    public static SuitType THIRD_PARTY;
+    public static SuitType OUR;
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -50,7 +52,7 @@ public class SuitType {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof SuitType)) {
+        if ((obj == null) || !(obj instanceof SuitType)) {
             return false;
         }
         return ((SuitType) obj).id == this.id;

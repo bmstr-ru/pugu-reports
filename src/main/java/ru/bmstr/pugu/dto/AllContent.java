@@ -133,46 +133,48 @@ public class AllContent {
                         result.put(String.format("%02d_%02d", column, row), "")
                 )
         );
-//        result.putAll(calculateLine("01", suits.stream().filter(suit -> suit.getType() == SuitType.USUAL).collect(Collectors.toList())));
-//        result.putAll(calculateLineOfTypeAndCategory("02", SuitType.USUAL, Category.OSPARIVANII_RESH_GOS_ORG, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("03", SuitType.USUAL, Category.TYSHA_69, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("04", SuitType.USUAL, Category.IZYATIE_IMUSHESTVA, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("05", SuitType.USUAL, Category.IVS, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("06", SuitType.USUAL, Category.TYSHA_70, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("07", SuitType.USUAL, Category.SUDOPROIZVODSTVO, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("08", SuitType.USUAL, Category.OSPARIV_NORM_ACTA, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("09", SuitType.USUAL, Category.OBZHALOV_PRIKAZA, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("10", SuitType.USUAL, Category.VOSSTANOVLENIE, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("11", SuitType.USUAL, Category.SNYATIYE_DISC_VZYSK, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("12", SuitType.USUAL, Category.VOSM_VREDA_ZDOROV, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("13", SuitType.USUAL, Category.RESHENIE_PO_ZHILISH, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("14", SuitType.USUAL, Category.VSYSK_OBYAZAT_PLATEZH, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("15", SuitType.USUAL, Category.INDEKSACIYA_DENEZHNYH_SUMM, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("16", SuitType.USUAL, Category.PENSIONNIYE, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("17", SuitType.USUAL, Category.ISPOLN_DOGOVOR_OBYAZ, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("18", SuitType.USUAL, Category.ZASHITA_CHEST, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("19", SuitType.USUAL, Category.NARUSH_PORYADKA_RASSMOTR_OBRASHENIYA, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("20", SuitType.USUAL, Category.MIGRATSIYA, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("21", SuitType.USUAL, Category.INIYE211, suits));
-//        result.putAll(calculateLine("22", suits.stream().filter(suit -> suit.getType() == SuitType.SPECIAL).collect(Collectors.toList())));
-//        result.putAll(calculateLineOfTypeAndDefendant("23", SuitType.USUAL, Defendant.KAZNA, suits));
-//        result.putAll(calculateLineOfTypeAndDefendant("24", SuitType.USUAL, Defendant.MVD, suits));
-//        result.putAll(calculateLineOfTypeAndDefendant("25", SuitType.USUAL, Defendant.PODRAZDELENIE, suits));
-//
-//        result.putAll(calculateLine("26", suits.stream().filter(suit -> suit.getType() == SuitType.APPELATION).collect(Collectors.toList())));
-//        result.putAll(calculateLine("27", suits.stream().filter(suit -> suit.getType() == SuitType.CASSATION).collect(Collectors.toList())));
-//
-//        result.putAll(calculateLine("30", suits.stream().filter(suit -> suit.getType() == SuitType.OUR).collect(Collectors.toList())));
-//        result.putAll(calculateLineOfTypeAndCategory("31", SuitType.OUR, Category.ISPOLNEN_DOGOVORNYH, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("32", SuitType.OUR, Category.REGRESS, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("33", SuitType.OUR, Category.VOZMESH_USHERB_VINOVNYH_SOTRUDNIKOV, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("34", SuitType.OUR, Category.VZYSKANII_S_VINOVNYH, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("35", SuitType.OUR, Category.ZHILISHNYE, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("36", SuitType.OUR, Category.ZASHITE_DELOVOY, suits));
-//        result.putAll(calculateLineOfTypeAndCategory("37", SuitType.OUR, Category.INIYE_OUR, suits));
-//
-//        result.putAll(calculateLine("38", suits.stream().filter(suit -> suit.getType() == SuitType.OUR_APPELATION).collect(Collectors.toList())));
-//        result.putAll(calculateLine("39", suits.stream().filter(suit -> suit.getType() == SuitType.OUR_CASSATION).collect(Collectors.toList())));
+        changed = true;
+        List<Suit> finalSuits = getSuits().stream().map( suit -> suit.getFinalSuit()).collect(Collectors.toList());
+        result.putAll(calculateLine("01", finalSuits.stream().filter(suit -> SuitType.TO_US.equals(suit.getType())).collect(Collectors.toList())));
+        result.putAll(calculateLineOfCategory("02", "2.1", suits));
+        result.putAll(calculateLineOfCategory("03", "2.1.1", suits));
+        result.putAll(calculateLineOfCategory("04", "2.1.2", suits));
+        result.putAll(calculateLineOfCategory("05", "2.1.3", suits));
+        result.putAll(calculateLineOfCategory("06", "2.1.4", suits));
+        result.putAll(calculateLineOfCategory("07", "2.1.5", suits));
+        result.putAll(calculateLineOfCategory("08", "2.2", suits));
+        result.putAll(calculateLineOfCategory("09", "2.3", suits));
+        result.putAll(calculateLineOfCategory("10", "2.3.1", suits));
+        result.putAll(calculateLineOfCategory("11", "2.3.2", suits));
+        result.putAll(calculateLineOfCategory("12", "2.4", suits));
+        result.putAll(calculateLineOfCategory("13", "2.5", suits));
+        result.putAll(calculateLineOfCategory("14", "2.6", suits));
+        result.putAll(calculateLineOfCategory("15", "2.6.1", suits));
+        result.putAll(calculateLineOfCategory("16", "2.6.2", suits));
+        result.putAll(calculateLineOfCategory("17", "2.7", suits));
+        result.putAll(calculateLineOfCategory("18", "2.8", suits));
+        result.putAll(calculateLineOfCategory("19", "2.9", suits));
+        result.putAll(calculateLineOfCategory("20", "2.10", suits));
+        result.putAll(calculateLineOfCategory("21", "2.11", suits));
+        result.putAll(calculateLine("22", suits.stream().filter(suit -> SuitType.SPECIAL.equals(suit.getType())).collect(Collectors.toList())));
+        result.putAll(calculateLineOfTypeAndDefendant("23", SuitType.TO_US, Defendant.KAZNA, suits));
+        result.putAll(calculateLineOfTypeAndDefendant("24", SuitType.TO_US, Defendant.MVD, suits));
+        result.putAll(calculateLineOfTypeAndDefendant("25", SuitType.TO_US, Defendant.GU, suits));
+
+//        result.putAll(calculateLine("26", suits.stream().filter(suit -> SuitType.TO_US.equals(suit.getType()) && suit.getAppeal() != null).collect(Collectors.toList())));
+//        result.putAll(calculateLine("27", suits.stream().filter(suit -> SuitType.TO_US.equals(suit.getType()) && suit.getCassation() != null).collect(Collectors.toList())));
+
+        result.putAll(calculateLine("30", suits.stream().filter(suit -> SuitType.OUR.equals(suit.getType())).collect(Collectors.toList())));
+        result.putAll(calculateLineOfCategory("31", "9.1", suits));
+        result.putAll(calculateLineOfCategory("32", "9.2", suits));
+        result.putAll(calculateLineOfCategory("33", "9.2.1", suits));
+        result.putAll(calculateLineOfCategory("34", "9.2.2", suits));
+        result.putAll(calculateLineOfCategory("35", "9.3", suits));
+        result.putAll(calculateLineOfCategory("36", "9.4", suits));
+        result.putAll(calculateLineOfCategory("37", "9.5", suits));
+
+//        result.putAll(calculateLine("38", suits.stream().filter(suit -> SuitType.OUR.equals(suit.getType()) && suit.getAppeal() != null).collect(Collectors.toList())));
+//        result.putAll(calculateLine("39", suits.stream().filter(suit -> SuitType.OUR.equals(suit.getType()) && suit.getCassation() != null).collect(Collectors.toList())));
 
         result.forEach((k, v) -> {
             if (!v.isEmpty()) {
@@ -184,32 +186,33 @@ public class AllContent {
 
     public Map<String, String> calculateLineOfTypeAndDefendant(String row, SuitType type, Defendant defendant, List<Suit> suitsList) {
         return calculateLine(row, suitsList.stream().filter(suit ->
-                suit.getType() == type && suit.getDefendant() == defendant
+                type.equals(suit.getType())  && defendant.equals(suit.getDefendant())
         ).collect(Collectors.toList()));
     }
 
-    public Map<String, String> calculateLineOfTypeAndCategory(String row, SuitType type, Category category, List<Suit> suitsList) {
+    public Map<String, String> calculateLineOfCategory(String row, String categoryCode, List<Suit> suitsList) {
+        Category category = databaseManager.categoryOfCode(categoryCode);
         return calculateLine(row, suitsList.stream().filter(suit ->
-                suit.getType() == type && Category.childsOf(category).contains(suit.getCategory())
+                databaseManager.childsOf(category).contains(suit.getCategory())
         ).collect(Collectors.toList()));
     }
 
     public Map<String, String> calculateLine(String row, List<Suit> suitsList) {
         Integer currentYear = LocalDateTime.now().getYear();
         List<Suit> usualSuitsColumn1 = suitsList.stream()
-                .filter(suit -> suit.getYear() == currentYear)
+                .filter(suit -> currentYear.equals(suit.getYear()))
                 .collect(Collectors.toList());
-        List<Suit> agreedSuitsColumn2 = suitsList.stream()
-//                .filter(suit -> suit.getResult() == Result.APPROVE)
+        List<Suit> approvedSuitsColumn2 = suitsList.stream()
+                .filter(suit -> Result.APPROVED.equals(suit.getResult()))
                 .collect(Collectors.toList());
         List<Suit> declineSuitsColumn3 = suitsList.stream()
-//                .filter(suit -> suit.getResult() == Result.DECLINE)
+                .filter(suit -> Result.DECLINED.equals(suit.getResult()))
                 .collect(Collectors.toList());
         List<Suit> agreedSuitsColumn4 = suitsList.stream()
-//                .filter(suit -> suit.getResult() == Result.AGREED)
+                .filter(suit -> Result.AGREED.equals(suit.getResult()))
                 .collect(Collectors.toList());
         List<Suit> postponedSuitsColumn5 = suitsList.stream()
-//                .filter(suit -> suit.getResult() == Result.NONE)
+                .filter(suit -> Result.UNRESOLVED.equals(suit.getResult()))
                 .collect(Collectors.toList());
 
         Map<String, String> result = new HashMap<>();
@@ -218,15 +221,15 @@ public class AllContent {
                 usualSuitsColumn1.stream().mapToInt(suit -> suit.getInitialSumm()).sum() / 1000
                 )
         );
-        result.put("03_" + row, String.valueOf(agreedSuitsColumn2.size()));
+        result.put("03_" + row, String.valueOf(approvedSuitsColumn2.size()));
         result.put("04_" + row, String.valueOf(
-                agreedSuitsColumn2.stream().mapToInt(suit -> suit.getAgreedSumm()).sum() / 1000
+                approvedSuitsColumn2.stream().mapToInt(suit -> suit.getAgreedSumm()).sum() / 1000
                 )
         );
         result.put("05_" + row, String.valueOf(declineSuitsColumn3.size()));
         result.put("06_" + row, String.valueOf(
                 (declineSuitsColumn3.stream().mapToInt(suit -> suit.getInitialSumm()).sum() +
-                        agreedSuitsColumn2.stream().mapToInt(suit -> {
+                        approvedSuitsColumn2.stream().mapToInt(suit -> {
                             int declinedSumm = suit.getInitialSumm() - suit.getAgreedSumm();
                             return declinedSumm > 0 ? declinedSumm : 0;
                         }).sum()

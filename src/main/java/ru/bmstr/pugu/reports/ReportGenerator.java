@@ -9,6 +9,7 @@ import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
+import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.dto.AllContent;
 import ru.bmstr.pugu.properties.PropertyLoader;
 
@@ -33,7 +34,11 @@ public class ReportGenerator {
     @Autowired
     private PropertyLoader propertyLoader;
 
+    @Autowired
+    private DatabaseManager databaseManager;
+
     public void generateReport() {
+        databaseManager.fetchPredefinedData();
         WordprocessingMLPackage wordPackage;
         try {
             InputStream templateStream;

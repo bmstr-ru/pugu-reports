@@ -10,6 +10,10 @@ import ru.bmstr.pugu.properties.EnumNameHelper;
  */
 @DatabaseTable
 public class Result {
+    public static Result APPROVED;
+    public static Result DECLINED;
+    public static Result UNRESOLVED;
+    public static Result AGREED;
 
     public static final Result EMPTY_RESULT = new Result();
 
@@ -43,9 +47,19 @@ public class Result {
         return result == null || StringUtils.isEmpty(result.name);
     }
 
+    public Result getOpposite() {
+        if (this.equals(APPROVED)) {
+            return DECLINED;
+        } else if (this.equals(DECLINED)) {
+            return APPROVED;
+        } else {
+            throw new RuntimeException("Cannot get opposite result of "+this);
+        }
+    }
+
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Result)) {
+        if ((obj == null) || !(obj instanceof Result)) {
             return false;
         }
         return ((Result) obj).id == this.id;

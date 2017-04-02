@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static ru.bmstr.pugu.properties.PropertyNames.DATA_FOLDER;
 
@@ -149,5 +150,36 @@ public class DatabaseManager {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void fetchPredefinedData() {
+        List<Defendant> defendants = retriveAll(Defendant.class);
+        Defendant.GU = defendants.stream().filter(d -> d.getId() == 1).findFirst().get();
+        Defendant.KAZNA = defendants.stream().filter(d -> d.getId() == 2).findFirst().get();
+        Defendant.MVD = defendants.stream().filter(d -> d.getId() == 3).findFirst().get();
+
+        List<Result> results = retriveAll(Result.class);
+        Result.APPROVED = results.stream().filter(d -> d.getId() == 1).findFirst().get();
+        Result.DECLINED = results.stream().filter(d -> d.getId() == 2).findFirst().get();
+        Result.UNRESOLVED = results.stream().filter(d -> d.getId() == 3).findFirst().get();
+        Result.AGREED = results.stream().filter(d -> d.getId() == 4).findFirst().get();
+
+        List<SuitType> suitTypes = retriveAll(SuitType.class);
+        SuitType.TO_US = suitTypes.stream().filter(d -> d.getId() == 1).findFirst().get();
+        SuitType.SPECIAL = suitTypes.stream().filter(d -> d.getId() == 2).findFirst().get();
+        SuitType.THIRD_PARTY = suitTypes.stream().filter(d -> d.getId() == 3).findFirst().get();
+        SuitType.OUR = suitTypes.stream().filter(d -> d.getId() == 4).findFirst().get();
+    }
+
+    public Category categoryOfCode(String code) {
+        return ((List<Category>) retriveAll(Category.class)).stream()
+                .filter(category -> category.getCode().equals(code))
+                .findFirst().get();
+    }
+
+    public List<Category> childsOf(Category category) {
+        return ((List<Category>) this.retriveAll(Category.class)).stream()
+                .filter(child -> child.hasParent(category))
+                .collect(Collectors.toList());
     }
 }

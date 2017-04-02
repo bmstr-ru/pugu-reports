@@ -1,11 +1,12 @@
 package ru.bmstr.pugu.domain;
 
 import com.j256.ormlite.field.DatabaseField;
+import org.springframework.util.StringUtils;
 
 /**
  * Created by bmstr on 26.03.2017.
  */
-public class Appeal {
+public class Appeal implements Countable {
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -18,6 +19,17 @@ public class Appeal {
 
     @DatabaseField
     private Integer year;
+
+    public Appeal() {
+
+    }
+
+    public Appeal(Appeal originalAppeal) {
+        this.id = originalAppeal.id;
+        this.agreedSum = originalAppeal.agreedSum;
+        this.result = originalAppeal.result;
+        this.year = originalAppeal.year;
+    }
 
     public int getId() {
         return id;
@@ -37,6 +49,11 @@ public class Appeal {
 
     public Result getResult() {
         return result;
+    }
+
+    @Override
+    public Integer getInitialSum() {
+        return null;
     }
 
     public void setResult(Result result) {

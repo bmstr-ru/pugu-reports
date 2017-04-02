@@ -2,11 +2,16 @@ package ru.bmstr.pugu.domain;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
+import ru.bmstr.pugu.db.DatabaseManager;
 import ru.bmstr.pugu.properties.EnumNameHelper;
 
+import javax.xml.crypto.Data;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by bmstr on 27.11.2016.
@@ -15,6 +20,9 @@ import java.util.List;
 public class Category {
 
     public static final Category EMPTY_CATEGORY = new Category();
+
+    @Autowired
+    private DatabaseManager databaseManager;
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -37,7 +45,7 @@ public class Category {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Category)) {
+        if ((obj == null) || !(obj instanceof Category)) {
             return false;
         }
         return ((Category) obj).id == this.id;
@@ -52,8 +60,8 @@ public class Category {
         }
     }
 
-    private boolean hasParent(Category searchParent) {
-        if (searchParent == this || (this.getParent() != null && this.getParent() == searchParent)) {
+    public boolean hasParent(Category searchParent) {
+        if (this.equals(searchParent) || searchParent.equals(this.getParent())) {
             return true;
         } else {
             if (this.getParent() == null) {
@@ -62,13 +70,6 @@ public class Category {
                 return this.getParent().hasParent(searchParent);
             }
         }
-    }
-
-    public static List<Category> childsOf(Category searchParent) {
-//        return Arrays.stream(Category.values())
-//                .filter(child -> child.hasParent(searchParent))
-//                .collect(Collectors.toList());
-        return Collections.emptyList();
     }
 
     public SuitType getType() {
