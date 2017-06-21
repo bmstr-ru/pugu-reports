@@ -1,10 +1,10 @@
 package ru.bmstr.pugu.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.regexp.RE;
 
 /**
  * Created by bmstr on 27.11.2016.
@@ -48,6 +48,8 @@ public class Suit implements Comparable<Suit>, Countable {
 
     @DatabaseField(foreign = true, foreignAutoRefresh = true)
     private Cassation cassation;
+
+    private boolean adjusted = false;
 
     public Suit() {
 
@@ -129,11 +131,6 @@ public class Suit implements Comparable<Suit>, Countable {
 
     public Result getResult() {
         return result;
-    }
-
-    @Override
-    public Integer getInitialSum() {
-        return getInitialSumm();
     }
 
     @Override
@@ -311,28 +308,25 @@ public class Suit implements Comparable<Suit>, Countable {
         }
     }
 
-    public Suit getFinalSuit() {
+    public Suit finalSuit() {
         Suit finalSuit = new Suit(this);
         if (appeal != null) {
             if (Result.UNRESOLVED.equals(appeal.getResult()) || Result.isEmpty(appeal.getResult())) {
                 finalSuit.setResult(Result.UNRESOLVED);
                 finalSuit.setAgreedSumm(0);
             } else if (Result.DECLINED.equals(appeal.getResult())) {
-                finalSuit.setResult(result.getOpposite());
-                if (appeal.getAgreedSum() > 0) {
-                    finalSuit.setAgreedSumm(appeal.getAgreedSum());
-                }
+                finalSuit.setResult(result);
             } else if (Result.APPROVED.equals(appeal.getResult())) {
-                finalSuit.setResult(result.getOpposite());
+                finalSuit.setResult(result.opposite());
                 if (appeal.getAgreedSum() > 0) {
                     finalSuit.setAgreedSumm(appeal.getAgreedSum());
                 }
-            } else if (Result.AGREED.equals(appeal.getResult())){
+            } else if (Result.AGREED.equals(appeal.getResult())) {
                 finalSuit.setResult(Result.AGREED);
                 finalSuit.setAgreedSumm(appeal.getAgreedSum());
             }
         }
-
+        finalSuit.adjustSums();
         return finalSuit;
     }
 
@@ -350,5 +344,17 @@ public class Suit implements Comparable<Suit>, Countable {
                 .append("result", result)
                 .toString()
                 ;
+    }
+
+    private void adjustSums() {
+        if (!adjusted) {
+            if (agreedSumm > 0) {
+                agreedSumm = (agreedSumm + 500) / 1000;
+            }
+            if (initialSumm > 0) {
+                initialSumm = (initialSumm + 500) / 1000;
+            }
+            adjusted = true;
+        }
     }
 }

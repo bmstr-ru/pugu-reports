@@ -5,7 +5,6 @@ package ru.bmstr.pugu.domain;
  */
 public interface Countable {
     Result getResult();
-    Integer getInitialSum();
     Integer getAgreedSum();
     Integer getYear();
 }

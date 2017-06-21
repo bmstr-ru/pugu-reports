@@ -47,7 +47,7 @@ public class Result {
         return result == null || StringUtils.isEmpty(result.name);
     }
 
-    public Result getOpposite() {
+    public Result opposite() {
         if (this.equals(APPROVED)) {
             return DECLINED;
         } else if (this.equals(DECLINED)) {

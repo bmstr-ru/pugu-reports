@@ -54,11 +54,6 @@ public class Cassation implements Countable {
         return result;
     }
 
-    @Override
-    public Integer getInitialSum() {
-        return null;
-    }
-
     public void setResult(Result result) {
         this.result = result;
     }

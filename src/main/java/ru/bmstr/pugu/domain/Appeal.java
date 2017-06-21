@@ -21,7 +21,6 @@ public class Appeal implements Countable {
     private Integer year;
 
     public Appeal() {
-
     }
 
     public Appeal(Appeal originalAppeal) {
@@ -49,11 +48,6 @@ public class Appeal implements Countable {
 
     public Result getResult() {
         return result;
-    }
-
-    @Override
-    public Integer getInitialSum() {
-        return null;
     }
 
     public void setResult(Result result) {

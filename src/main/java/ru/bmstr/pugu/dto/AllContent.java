@@ -134,44 +134,44 @@ public class AllContent {
                 )
         );
         changed = true;
-        List<Suit> finalSuits = getSuits().stream().map( suit -> suit.getFinalSuit()).collect(Collectors.toList());
+        List<Suit> finalSuits = getSuits().stream().map(suit -> suit.finalSuit()).collect(Collectors.toList());
         result.putAll(calculateLine("01", finalSuits.stream().filter(suit -> SuitType.TO_US.equals(suit.getType())).collect(Collectors.toList())));
-        result.putAll(calculateLineOfCategory("02", "2.1", suits));
-        result.putAll(calculateLineOfCategory("03", "2.1.1", suits));
-        result.putAll(calculateLineOfCategory("04", "2.1.2", suits));
-        result.putAll(calculateLineOfCategory("05", "2.1.3", suits));
-        result.putAll(calculateLineOfCategory("06", "2.1.4", suits));
-        result.putAll(calculateLineOfCategory("07", "2.1.5", suits));
-        result.putAll(calculateLineOfCategory("08", "2.2", suits));
-        result.putAll(calculateLineOfCategory("09", "2.3", suits));
-        result.putAll(calculateLineOfCategory("10", "2.3.1", suits));
-        result.putAll(calculateLineOfCategory("11", "2.3.2", suits));
-        result.putAll(calculateLineOfCategory("12", "2.4", suits));
-        result.putAll(calculateLineOfCategory("13", "2.5", suits));
-        result.putAll(calculateLineOfCategory("14", "2.6", suits));
-        result.putAll(calculateLineOfCategory("15", "2.6.1", suits));
-        result.putAll(calculateLineOfCategory("16", "2.6.2", suits));
-        result.putAll(calculateLineOfCategory("17", "2.7", suits));
-        result.putAll(calculateLineOfCategory("18", "2.8", suits));
-        result.putAll(calculateLineOfCategory("19", "2.9", suits));
-        result.putAll(calculateLineOfCategory("20", "2.10", suits));
-        result.putAll(calculateLineOfCategory("21", "2.11", suits));
-        result.putAll(calculateLine("22", suits.stream().filter(suit -> SuitType.SPECIAL.equals(suit.getType())).collect(Collectors.toList())));
-        result.putAll(calculateLineOfTypeAndDefendant("23", SuitType.TO_US, Defendant.KAZNA, suits));
-        result.putAll(calculateLineOfTypeAndDefendant("24", SuitType.TO_US, Defendant.MVD, suits));
-        result.putAll(calculateLineOfTypeAndDefendant("25", SuitType.TO_US, Defendant.GU, suits));
+        result.putAll(calculateLineOfCategory("02", "2.1", finalSuits));
+        result.putAll(calculateLineOfCategory("03", "2.1.1", finalSuits));
+        result.putAll(calculateLineOfCategory("04", "2.1.2", finalSuits));
+        result.putAll(calculateLineOfCategory("05", "2.1.3", finalSuits));
+        result.putAll(calculateLineOfCategory("06", "2.1.4", finalSuits));
+        result.putAll(calculateLineOfCategory("07", "2.1.5", finalSuits));
+        result.putAll(calculateLineOfCategory("08", "2.2", finalSuits));
+        result.putAll(calculateLineOfCategory("09", "2.3", finalSuits));
+        result.putAll(calculateLineOfCategory("10", "2.3.1", finalSuits));
+        result.putAll(calculateLineOfCategory("11", "2.3.2", finalSuits));
+        result.putAll(calculateLineOfCategory("12", "2.4", finalSuits));
+        result.putAll(calculateLineOfCategory("13", "2.5", finalSuits));
+        result.putAll(calculateLineOfCategory("14", "2.6", finalSuits));
+        result.putAll(calculateLineOfCategory("15", "2.6.1", finalSuits));
+        result.putAll(calculateLineOfCategory("16", "2.6.2", finalSuits));
+        result.putAll(calculateLineOfCategory("17", "2.7", finalSuits));
+        result.putAll(calculateLineOfCategory("18", "2.8", finalSuits));
+        result.putAll(calculateLineOfCategory("19", "2.9", finalSuits));
+        result.putAll(calculateLineOfCategory("20", "2.10", finalSuits));
+        result.putAll(calculateLineOfCategory("21", "2.11", finalSuits));
+        result.putAll(calculateLine("22", finalSuits.stream().filter(suit -> SuitType.SPECIAL.equals(suit.getType())).collect(Collectors.toList())));
+        result.putAll(calculateLineOfTypeAndDefendant("23", SuitType.TO_US, Defendant.KAZNA, finalSuits));
+        result.putAll(calculateLineOfTypeAndDefendant("24", SuitType.TO_US, Defendant.MVD, finalSuits));
+        result.putAll(calculateLineOfTypeAndDefendant("25", SuitType.TO_US, Defendant.GU, finalSuits));
 
 //        result.putAll(calculateLine("26", suits.stream().filter(suit -> SuitType.TO_US.equals(suit.getType()) && suit.getAppeal() != null).collect(Collectors.toList())));
 //        result.putAll(calculateLine("27", suits.stream().filter(suit -> SuitType.TO_US.equals(suit.getType()) && suit.getCassation() != null).collect(Collectors.toList())));
 
-        result.putAll(calculateLine("30", suits.stream().filter(suit -> SuitType.OUR.equals(suit.getType())).collect(Collectors.toList())));
-        result.putAll(calculateLineOfCategory("31", "9.1", suits));
-        result.putAll(calculateLineOfCategory("32", "9.2", suits));
-        result.putAll(calculateLineOfCategory("33", "9.2.1", suits));
-        result.putAll(calculateLineOfCategory("34", "9.2.2", suits));
-        result.putAll(calculateLineOfCategory("35", "9.3", suits));
-        result.putAll(calculateLineOfCategory("36", "9.4", suits));
-        result.putAll(calculateLineOfCategory("37", "9.5", suits));
+        result.putAll(calculateLine("30", finalSuits.stream().filter(suit -> SuitType.OUR.equals(suit.getType())).collect(Collectors.toList())));
+        result.putAll(calculateLineOfCategory("31", "9.1", finalSuits));
+        result.putAll(calculateLineOfCategory("32", "9.2", finalSuits));
+        result.putAll(calculateLineOfCategory("33", "9.2.1", finalSuits));
+        result.putAll(calculateLineOfCategory("34", "9.2.2", finalSuits));
+        result.putAll(calculateLineOfCategory("35", "9.3", finalSuits));
+        result.putAll(calculateLineOfCategory("36", "9.4", finalSuits));
+        result.putAll(calculateLineOfCategory("37", "9.5", finalSuits));
 
 //        result.putAll(calculateLine("38", suits.stream().filter(suit -> SuitType.OUR.equals(suit.getType()) && suit.getAppeal() != null).collect(Collectors.toList())));
 //        result.putAll(calculateLine("39", suits.stream().filter(suit -> SuitType.OUR.equals(suit.getType()) && suit.getCassation() != null).collect(Collectors.toList())));
@@ -186,7 +186,7 @@ public class AllContent {
 
     public Map<String, String> calculateLineOfTypeAndDefendant(String row, SuitType type, Defendant defendant, List<Suit> suitsList) {
         return calculateLine(row, suitsList.stream().filter(suit ->
-                type.equals(suit.getType())  && defendant.equals(suit.getDefendant())
+                type.equals(suit.getType()) && defendant.equals(suit.getDefendant())
         ).collect(Collectors.toList()));
     }
 
@@ -218,12 +218,12 @@ public class AllContent {
         Map<String, String> result = new HashMap<>();
         result.put("01_" + row, String.valueOf(usualSuitsColumn1.size()));
         result.put("02_" + row, String.valueOf(
-                usualSuitsColumn1.stream().mapToInt(suit -> suit.getInitialSumm()).sum() / 1000
+                usualSuitsColumn1.stream().mapToInt(suit -> suit.getInitialSumm()).sum()
                 )
         );
         result.put("03_" + row, String.valueOf(approvedSuitsColumn2.size()));
         result.put("04_" + row, String.valueOf(
-                approvedSuitsColumn2.stream().mapToInt(suit -> suit.getAgreedSumm()).sum() / 1000
+                approvedSuitsColumn2.stream().mapToInt(suit -> suit.getAgreedSumm()).sum()
                 )
         );
         result.put("05_" + row, String.valueOf(declineSuitsColumn3.size()));
@@ -233,17 +233,17 @@ public class AllContent {
                             int declinedSumm = suit.getInitialSumm() - suit.getAgreedSumm();
                             return declinedSumm > 0 ? declinedSumm : 0;
                         }).sum()
-                ) / 1000
+                )
                 )
         );
         result.put("07_" + row, String.valueOf(agreedSuitsColumn4.size()));
         result.put("08_" + row, String.valueOf(
-                agreedSuitsColumn4.stream().mapToInt(suit -> suit.getInitialSumm()).sum() / 1000
+                agreedSuitsColumn4.stream().mapToInt(suit -> suit.getInitialSumm()).sum()
                 )
         );
         result.put("09_" + row, String.valueOf(postponedSuitsColumn5.size()));
         result.put("10_" + row, String.valueOf(
-                postponedSuitsColumn5.stream().mapToInt(suit -> suit.getInitialSumm()).sum() / 1000
+                postponedSuitsColumn5.stream().mapToInt(suit -> suit.getInitialSumm()).sum()
                 )
         );
         return result;
